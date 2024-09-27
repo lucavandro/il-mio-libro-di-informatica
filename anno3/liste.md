@@ -31,6 +31,15 @@ for elmento in frutti:
 # arancia
 ```
 
+### Lunghezza di una lista
+
+È possibile misurare la lunghezza di una lista utilizzando la funzione `len()`
+
+```python
+frutti = ["mela", "banana", "arancia"]
+print(len(frutti)) # Output: 3
+```
+
 ## 2. Uso degli indici
 
 ### Lettura
@@ -56,15 +65,6 @@ for indice, elmento in enumerate(frutti):
 # 0 mela
 # 1 banana
 # 2 arancia
-```
-
-### Lunghezza di una lista
-
-È possibile misurare la lunghezza di una lista utilizzando la funzione `len()`
-
-```python
-frutti = ["mela", "banana", "arancia"]
-print(len(frutti)) # Output: 3
 ```
 
 ### Modifica
