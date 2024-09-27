@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'Il mio libro di informatica',
+      repo: '', search : {
+        path: [
+          '/',                // => /README.md
+          '/1-input-output', 
+          '/2-selezione',
+          '/3-cicli', 
+          '/4-stringhe', 
+          '/5-dizionari', 
+          '/6-funzioni',
+          '/7-oop',
+        ],
+        placeholder: 'Cerca'
+      }, 
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/anno1':'anno1/index.md',
+        '/anno2':'anno2/index.md',
+        '/anno3':'anno3/index.md',
+        '/anno4':'anno4/index.md',
+        '/anno5':'anno5/index.md',
+      },
+      homepage: 'home.md',
+      loadSidebar: true,
+      auto2top: true,
+      subMaxLevel: 2
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
