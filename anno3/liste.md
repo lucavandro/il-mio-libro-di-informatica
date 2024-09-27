@@ -58,6 +58,15 @@ for indice, elmento in enumerate(frutti):
 # 2 arancia
 ```
 
+### Lunghezza di una lista
+
+È possibile misurare la lunghezza di una lista utilizzando la funzione `len()`
+
+```python
+frutti = ["mela", "banana", "arancia"]
+print(len(frutti)) # Output: 3
+```
+
 ### Modifica
 
 Per modificare un elemento, assegniamo un nuovo valore all'indice:
