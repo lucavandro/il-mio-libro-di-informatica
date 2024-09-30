@@ -78,7 +78,15 @@ print(frutti)  # Output: ["mela", "kiwi", "arancia"]
 
 ### Cancellazione
 
-Per cancellare un elemento, usiamo la keyword `del`:
+Possiamo cancellare un elemento da una lista utilizzando 3 diversi metodi:
+
+1. Utilizzando la keyword `del` se conosciamo **l'indice** di un elemento
+2. Utilizzando il metodo `remove` se conosciamo **il valore di un elemento** di un elemento
+3. Utilizzando il metodo `pop` se vogliamo rimuover **l'ultimo elemento**
+
+#### La keyword `del`
+
+Per cancellare un elemento di cui conosciamo l'indice, usiamo la keyword `del`:
 
 ```python
 del frutti[1]
@@ -86,6 +94,45 @@ print(frutti)  # Output: ["mela", "arancia"]
 ```
 
 Ricorda: dopo la cancellazione, gli indici degli elementi successivi si spostano per riempire lo spazio vuoto.
+
+#### Il metodo `remove`
+
+Per cancellare un elemento di cui conosciamo il valore, usiamo il metodo `remove`
+
+```python
+frutti = ["mela", "banana", "arancia"]
+frutti.remove("banana")
+print(frutti)  # Output: ["mela", "arancia"]
+```
+
+**Attenzione**: il metodo `remove`, se ci sono più elementi con lo stesso valore, elimina solo il primo. Guarda l'esempio:
+
+```python
+frutti = ["mela", "banana", "mela", "arancia", "mela"]
+frutti.remove("mela")
+print(frutti)  # Output: ["banana", "mela", "arancia", "mela"]
+```
+
+Se vuoi eliminare tutti gli elementi con un determinato valore, puoi utilizzare il metodo remove in un ciclo `while` come mostrato nell'esempio.
+
+```python
+frutti = ["mela", "banana", "mela", "arancia", "mela"]
+while "mela" in frutti:
+   frutti.remove("mela")
+
+print(frutti)  # Output: ["banana", "arancia"]
+```
+
+#### Il metodo `pop`
+
+Il metodo pop rimuove l'ultimo elemento della lista e lo restituisce per poterlo eventualmente salvare in una variabile.
+
+```python
+frutti = ["mela", "banana", "arancia"]
+ultimo = frutti.pop()
+print(frutti)  # Output: ["mela", "banana"]
+print(ultimo)  # Output: "arancia" 
+```
 
 ## 3. Slicing
 
@@ -576,7 +623,121 @@ print(frutti.index("banana", 2))  # Output: 3 (cerca a partire dall'indice 2)
 
 La scelta del metodo dipende dalle tue esigenze specifiche: se hai bisogno solo di sapere se un elemento è presente, `in` è la scelta migliore. Se hai bisogno della posizione e sei sicuro che l'elemento sia presente, usa `index()`. Assicurati sempre di gestire potenziali eccezioni quando usi `index()`.
 
-## 8. List Comprehension
+
+
+## 8. Conversione tra Liste e Stringhe
+
+In Python, è comune dover convertire stringhe in liste e viceversa. Questo processo è facilitato dai metodi `split()` per le stringhe e `join()` per le liste. Comprendere questi metodi è essenziale per la manipolazione efficace di dati testuali e strutturati.
+
+### Da Stringa a Lista: Il metodo split()
+
+Il metodo `split()` divide una stringa in una lista di sottostringhe basandosi su un delimitatore specificato.
+
+Sintassi:
+
+```python
+stringa.split(separatore, maxsplit)
+```
+
+- `separatore`: (opzionale) Il carattere usato per dividere la stringa. Se non specificato, usa gli spazi bianchi.
+- `maxsplit`: (opzionale) Il numero massimo di divisioni da effettuare.
+
+Esempi:
+
+1. Divisione basata su spazi:
+   
+   ```python
+   frase = "Python è un linguaggio potente"
+   parole = frase.split()
+   print(parole)  # Output: ['Python', 'è', 'un', 'linguaggio', 'potente']
+   ```
+
+2. Divisione basata su un carattere specifico:
+   
+   ```python
+   data = "2023-09-30"
+   parti = data.split("-")
+   print(parti)  # Output: ['2023', '09', '30']
+   ```
+
+3. Limitare il numero di divisioni:
+
+   ```python
+   testo = "uno,due,tre,quattro,cinque"
+   primi_tre = testo.split(",", 2)
+   print(primi_tre)  # Output: ['uno', 'due', 'tre,quattro,cinque']
+   ```
+
+### Da Lista a Stringa: Il metodo join()
+
+Il metodo `join()` concatena tutti gli elementi di un iterabile (come una lista) in una singola stringa, usando una stringa specificata come separatore.
+
+Sintassi:
+
+```python
+separatore.join(iterabile)
+```
+
+Esempi:
+
+1. Unire una lista di stringhe:
+
+   ```python
+   parole = ['Python', 'è', 'un', 'linguaggio', 'potente']
+   frase = " ".join(parole)
+   print(frase)  # Output: "Python è un linguaggio potente"
+   ```
+
+2. Usare un separatore diverso:
+
+   ```python
+   parti = ['2023', '09', '30']
+   data = "-".join(parti)
+   print(data)  # Output: "2023-09-30"
+   ```
+
+3. Unire una lista di numeri (convertiti in stringhe):
+
+   ```python
+   numeri = [1, 2, 3, 4, 5]
+   stringa_numeri = ",".join(map(str, numeri))
+   print(stringa_numeri)  # Output: "1,2,3,4,5"
+   ```
+
+### Casi d'uso comuni
+
+1. Parsing di dati CSV:
+
+   ```python
+   riga_csv = "nome,età,città"
+   campi = riga_csv.split(",")
+   print(campi)  # Output: ['nome', 'età', 'città']
+   ```
+
+2. Formattazione di output:
+
+   ```python
+   dati = ["Alice", "30", "New York"]
+   output = " | ".join(dati)
+   print(output)  # Output: "Alice | 30 | New York"
+   ```
+
+3. Pulizia di input utente:
+
+   ```python
+   input_utente = "   Python   è   fantastico   "
+   parole_pulite = input_utente.split()
+   testo_pulito = " ".join(parole_pulite)
+   print(testo_pulito)  # Output: "Python è fantastico"
+   ```
+
+#### Considerazioni importanti su `split` e `join`
+
+1. `split()` restituisce sempre una lista, anche se la stringa contiene un solo elemento.
+2. `join()` può essere usato solo su iterabili contenenti stringhe. Se l'iterabile contiene altri tipi di dati, questi devono essere prima convertiti in stringhe.
+3. `split()` senza argomenti divide su qualsiasi sequenza di spazi bianchi (spazi, tab, newline), non solo su singoli spazi.
+
+## 9. List Comprehension
 
 Le list comprehension sono un modo conciso e potente di creare nuove liste in Python. Permettono di generare liste in una singola riga di codice, combinando un ciclo e una condizione opzionale. Sono spesso più leggibili e più veloci rispetto ai cicli tradizionali per creare liste.
 
@@ -667,3 +828,242 @@ for x in range(10):
 - Per operazioni molto complesse che richiedono più di una riga
 - Quando rendono il codice meno leggibile
 - Per effetti collaterali (le list comprehension dovrebbero essere usate principalmente per la creazione di nuove liste)
+
+## 10. Funzioni di Aggregazione: sum(), min(), max()
+
+Python offre diverse funzioni built-in che sono particolarmente utili quando applicate alle liste. Tre delle più comuni sono `sum()`, `min()`, e `max()`. Queste funzioni permettono di eseguire rapidamente operazioni di aggregazione su liste di numeri o altri oggetti confrontabili.
+
+### 1. Funzione sum()
+
+La funzione `sum()` calcola la somma di tutti gli elementi in un iterabile (come una lista).
+
+Sintassi:
+
+```python
+sum(iterabile, start=0)
+```
+
+- `iterabile`: La sequenza di elementi da sommare.
+- `start`: (opzionale) Un valore che viene aggiunto alla somma. Di default è 0.
+
+Esempi:
+
+1. Somma di una lista di numeri:
+
+   ```python
+   numeri = [1, 2, 3, 4, 5]
+   totale = sum(numeri)
+   print(totale)  # Output: 15
+   ```
+
+2. Utilizzo del parametro `start`:
+
+   ```python
+   numeri = [1, 2, 3, 4, 5]
+   totale = sum(numeri, 10)
+   print(totale)  # Output: 25 (15 + 10)
+   ```
+
+3. Somma di numeri float:
+
+   ```python
+   prezzi = [10.99, 24.50, 5.75, 8.25]
+   totale = sum(prezzi)
+   print(f"Totale: €{totale:.2f}")  # Output: Totale: €49.49
+   ```
+
+### 2. Funzione min()
+
+La funzione `min()` restituisce l'elemento più piccolo in un iterabile o il più piccolo di due o più argomenti.
+
+Sintassi:
+
+```python
+min(iterabile)
+# oppure
+min(arg1, arg2, *args, key=func)
+```
+
+Esempi:
+
+1. Trovare il valore minimo in una lista di numeri:
+
+   ```python
+   numeri = [5, 2, 8, 1, 9]
+   minimo = min(numeri)
+   print(minimo)  # Output: 1
+   ```
+
+2. Trovare la stringa più corta in una lista:
+
+   ```python
+   parole = ["ciao", "Python", "programmazione", "lista"]
+   più_corta = min(parole, key=len)
+   print(più_corta)  # Output: ciao
+   ```
+
+3. Trovare il minimo tra più argomenti:
+
+   ```python
+   minimo = min(5, 2, 8, 1, 9)
+   print(minimo)  # Output: 1
+   ```
+
+### 3. Funzione max()
+
+La funzione `max()` restituisce l'elemento più grande in un iterabile o il più grande di due o più argomenti.
+
+Sintassi:
+
+```python
+max(iterabile)
+# oppure
+max(arg1, arg2, *args, key=func)
+```
+
+Esempi:
+
+1. Trovare il valore massimo in una lista di numeri:
+  
+   ```python
+   numeri = [5, 2, 8, 1, 9]
+   massimo = max(numeri)
+   print(massimo)  # Output: 9
+   ```
+
+2. Trovare la stringa più lunga in una lista:
+  
+   ```python
+   parole = ["ciao", "Python", "programmazione", "lista"]
+   più_lunga = max(parole, key=len)
+   print(più_lunga)  # Output: programmazione
+   ```
+
+3. Trovare il massimo tra più argomenti:
+
+   ```python
+   massimo = max(5, 2, 8, 1, 9)
+   print(massimo)  # Output: 9
+   ```
+
+### Casi d'uso avanzati
+
+1. Trovare l'elemento con il valore massimo in una lista di dizionari:
+  
+  ```python
+   studenti = [
+       {"nome": "Alice", "voto": 85},
+       {"nome": "Bob", "voto": 92},
+       {"nome": "Charlie", "voto": 78}
+   ]
+   miglior_studente = max(studenti, key=lambda x: x["voto"])
+   print(f"Miglior studente: {miglior_studente['nome']}")  # Output: Miglior studente: Bob
+   ```
+
+2. Calcolare la media di una lista di numeri:
+   
+   ```python
+   numeri = [10, 20, 30, 40, 50]
+   media = sum(numeri) / len(numeri)
+   print(f"Media: {media}")  # Output: Media: 30.0
+   ```
+
+3. Trovare il secondo valore più grande:
+  
+   ```python
+   numeri = [5, 2, 8, 1, 9, 3]
+   secondo_max = max(n for n in numeri if n != max(numeri))
+   print(f"Secondo valore più grande: {secondo_max}")  # Output: Secondo valore più grande: 8
+   ```
+
+### Considerazioni importanti su `sum()`, `min()`, e `max()`
+
+1. `sum()`, `min()`, e `max()` sollevano un'eccezione `ValueError` se applicate a una lista vuota.
+2. Per `min()` e `max()`, gli elementi della lista devono essere confrontabili tra loro.
+3. L'argomento `key` in `min()` e `max()` permette di specificare una funzione che viene applicata a ogni elemento prima del confronto.
+
+## 11. Liste Python e funzioni random
+
+Le liste in Python sono strutture dati molto versatili che possono contenere diversi tipi di elementi. Quando combinate con le funzioni della libreria `random`, diventano uno strumento potente per generare dati casuali e mescolare informazioni.
+
+In particolare studieremo 4 funzioni:
+1. `shuffle`
+2. `choice`
+3. `choices`
+4. `sample`
+
+### Importare la libreria random
+
+Prima di tutto, dobbiamo importare la libreria `random`:
+
+```python
+from random import shuffle, choice, choices, sample
+```
+
+Non è necessario importare sempre tutte le funzioni. Ad esempio se vogliamo utilizzare solo la funzione `choice` scriveremo 
+
+```python
+from random import choice
+```
+
+### Funzioni principali di random per le liste
+
+### 1. `shuffle(lista)`
+
+Questa funzione mescola gli elementi di una lista in modo casuale.
+
+Esempio:
+
+```python
+from random import shuffle
+
+numeri = [1, 2, 3, 4, 5]
+shuffle(numeri)
+print(numeri)  # Potrebbe stampare: [3, 1, 5, 2, 4]
+```
+
+### 2. `choice(lista)`
+
+Seleziona casualmente un singolo elemento dalla lista.
+
+Esempio:
+
+```python
+from random import choice
+
+frutta = ["mela", "banana", "arancia", "pera"]
+scelta = random.choice(frutta)
+print(scelta)  # Potrebbe stampare: "banana"
+```
+
+### 3. `choices(lista, k=numero)`
+
+Seleziona più elementi dalla lista, con possibilità di ripetizioni. Il parametro `k` specifica quanti elementi selezionare.
+
+Esempio:
+
+```python
+colori = ["rosso", "blu", "verde", "giallo"]
+selezione = random.choices(colori, k=3)
+print(selezione)  # Potrebbe stampare: ["verde", "rosso", "verde"]
+```
+
+### 4. sample(lista, k=numero)
+
+Seleziona più elementi dalla lista senza ripetizioni. Il parametro `k` specifica quanti elementi selezionare.
+
+Esempio:
+
+```python
+numeri = list(range(1, 51))  # Numeri da 1 a 50
+estrazione = random.sample(numeri, k=6)
+print(estrazione)  # Potrebbe stampare: [23, 45, 17, 8, 31, 2]
+```
+
+#### Differenza tra `choices` e `sample`
+
+Se non hai ben capito la differenza tra `choices` e `sample` ricorda:
+
+- con `choices` ogni elmento della lista può essere preso a caso più volte **(possono esserci ripetizioni)**
+- con `sample` ogni elmento della lista può essere preso a caso solo una volta **(NON possono esserci ripetizioni)**
+
