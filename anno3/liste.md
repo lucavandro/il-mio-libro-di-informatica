@@ -961,7 +961,7 @@ Esempi:
    ```
 
 2. Calcolare la media di una lista di numeri:
-   
+
    ```python
    numeri = [10, 20, 30, 40, 50]
    media = sum(numeri) / len(numeri)
@@ -987,6 +987,7 @@ Esempi:
 Le liste in Python sono strutture dati molto versatili che possono contenere diversi tipi di elementi. Quando combinate con le funzioni della libreria `random`, diventano uno strumento potente per generare dati casuali e mescolare informazioni.
 
 In particolare studieremo 4 funzioni:
+
 1. `shuffle`
 2. `choice`
 3. `choices`
@@ -1000,7 +1001,7 @@ Prima di tutto, dobbiamo importare la libreria `random`:
 from random import shuffle, choice, choices, sample
 ```
 
-Non è necessario importare sempre tutte le funzioni. Ad esempio se vogliamo utilizzare solo la funzione `choice` scriveremo 
+Non è necessario importare sempre tutte le funzioni. Ad esempio se vogliamo utilizzare solo la funzione `choice` scriveremo
 
 ```python
 from random import choice
@@ -1066,4 +1067,3 @@ Se non hai ben capito la differenza tra `choices` e `sample` ricorda:
 
 - con `choices` ogni elmento della lista può essere preso a caso più volte **(possono esserci ripetizioni)**
 - con `sample` ogni elmento della lista può essere preso a caso solo una volta **(NON possono esserci ripetizioni)**
-
