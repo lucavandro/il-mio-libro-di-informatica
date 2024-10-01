@@ -997,7 +997,7 @@ from random import choice
 
 ### Funzioni principali di random per le liste
 
-### 1. `shuffle(lista)`
+### 1. shuffle(lista)
 
 Questa funzione mescola gli elementi di una lista in modo casuale.
 
@@ -1011,7 +1011,7 @@ shuffle(numeri)
 print(numeri)  # Potrebbe stampare: [3, 1, 5, 2, 4]
 ```
 
-### 2. `choice(lista)`
+### 2. choice(lista)
 
 Seleziona casualmente un singolo elemento dalla lista.
 
@@ -1025,7 +1025,7 @@ scelta = random.choice(frutta)
 print(scelta)  # Potrebbe stampare: "banana"
 ```
 
-### 3. `choices(lista, k=numero)`
+### 3. choices(lista, k=numero)
 
 Seleziona più elementi dalla lista, con possibilità di ripetizioni. Il parametro `k` specifica quanti elementi selezionare.
 
