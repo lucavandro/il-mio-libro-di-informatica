@@ -948,19 +948,7 @@ Esempi:
 
 ### Casi d'uso avanzati
 
-1. Trovare l'elemento con il valore massimo in una lista di dizionari:
-  
-  ```python
-   studenti = [
-       {"nome": "Alice", "voto": 85},
-       {"nome": "Bob", "voto": 92},
-       {"nome": "Charlie", "voto": 78}
-   ]
-   miglior_studente = max(studenti, key=lambda x: x["voto"])
-   print(f"Miglior studente: {miglior_studente['nome']}")  # Output: Miglior studente: Bob
-   ```
-
-2. Calcolare la media di una lista di numeri:
+1. Calcolare la media di una lista di numeri:
 
    ```python
    numeri = [10, 20, 30, 40, 50]
@@ -968,7 +956,7 @@ Esempi:
    print(f"Media: {media}")  # Output: Media: 30.0
    ```
 
-3. Trovare il secondo valore più grande:
+2. Trovare il secondo valore più grande:
   
    ```python
    numeri = [5, 2, 8, 1, 9, 3]
