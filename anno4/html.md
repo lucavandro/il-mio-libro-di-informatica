@@ -108,7 +108,7 @@ Dopo l'elemento `<head>`, troviamo l'elemento `<body>`. Qui è dove mettiamo tut
 </body>
 ```
 
-## Mettendo tutto insieme
+### Mettendo tutto insieme
 
 Ecco come appare una pagina HTML completa con tutti questi elementi:
 
@@ -761,3 +761,241 @@ Ricordate:
 
 - Usate sempre l'attributo `alt` per la descrizione delle immagini
 - Ottimizzate le vostre immagini per il web
+
+
+## 8. I form
+
+I form sono uno strumento fondamentale per rendere le  pagine web interattive e per raccogliere input dagli utenti. I form sono utilizzati per tutto, dalle ricerche su Google all'invio di messaggi sui social media, quindi comprendere come funzionano è essenziale per ogni web developer.
+
+### Cos'è un form?
+
+Un form è una sezione di una pagina web che permette agli utenti di inserire e inviare informazioni. Può includere vari tipi di campi di input, come caselle di testo, pulsanti di opzione, caselle di controllo e menu a discesa.
+
+### Struttura di base di un form
+
+Ecco la struttura di base di un form in HTML:
+
+```html
+<form action="/pagina-di-elaborazione" method="post">
+    <!-- Elementi del form vanno qui -->
+    <input type="submit" value="Invia">
+</form>
+```
+
+Analizziamo gli attributi principali del tag `<form>`:
+
+- `action`: Specifica dove inviare i dati del form quando viene sottomesso.
+- `method`: Specifica il metodo HTTP da usare quando si inviano i dati del form (solitamente "get" o "post").
+
+### Elementi comuni dei form
+
+#### 1. Input di testo
+
+L'elemento `<input>` è il più versatile. Può creare vari tipi di campi di input a seconda del valore dell'attributo `type`.
+
+```html
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+```
+
+#### 2. Password
+
+```html
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+```
+
+#### 3. Radio button
+
+```html
+<p>Scegli il tuo colore preferito:</p>
+<input type="radio" id="rosso" name="colore" value="rosso">
+<label for="rosso">Rosso</label><br>
+<input type="radio" id="blu" name="colore" value="blu">
+<label for="blu">Blu</label><br>
+<input type="radio" id="verde" name="colore" value="verde">
+<label for="verde">Verde</label>
+```
+
+#### 4. Checkbox
+
+```html
+<input type="checkbox" id="accetto" name="accetto" required>
+<label for="accetto">Accetto i termini e le condizioni</label>
+```
+
+#### 5. Select (menu a discesa)
+
+```html
+<label for="paese">Seleziona il tuo paese:</label>
+<select id="paese" name="paese">
+    <option value="italia">Italia</option>
+    <option value="francia">Francia</option>
+    <option value="germania">Germania</option>
+    <option value="spagna">Spagna</option>
+</select>
+```
+
+#### 6. Textarea
+
+```html
+<label for="commento">Commento:</label><br>
+<textarea id="commento" name="commento" rows="4" cols="50"></textarea>
+```
+
+#### 7. Button
+
+```html
+<button type="submit">Invia</button>
+<button type="reset">Resetta</button>
+```
+
+### Attributi comuni degli input
+
+- `required`: Rende il campo obbligatorio
+- `placeholder`: Fornisce un suggerimento all'utente su cosa inserire
+- `value`: Imposta un valore predefinito
+- `disabled`: Disabilita l'input
+- `readonly`: Rende l'input di sola lettura
+
+Esempio:
+
+```html
+<input type="text" name="email" placeholder="Inserisci la tua email" required>
+```
+
+### Raggruppare elementi del form
+
+Potete usare il tag `<fieldset>` per raggruppare elementi correlati in un form, e `<legend>` per dare un titolo al gruppo:
+
+```html
+<fieldset>
+    <legend>Informazioni personali:</legend>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br>
+    <label for="cognome">Cognome:</label>
+    <input type="text" id="cognome" name="cognome"><br>
+</fieldset>
+```
+
+### Input types in HTML5
+
+HTML5 ha introdotto molti nuovi tipi di input che possono migliorare l'esperienza utente, specialmente su dispositivi mobili:
+
+- `type="email"`: Per indirizzi email
+- `type="tel"`: Per numeri di telefono
+- `type="number"`: Per input numerici
+- `type="date"`: Per selezionare una data
+- `type="color"`: Per selezionare un colore
+- `type="range"`: Per selezionare un valore in un intervallo
+- `type="file"`: Per caricare file
+
+Esempio:
+
+```html
+<input type="email" name="email" required>
+<input type="tel" name="telefono">
+<input type="number" name="eta" min="0" max="120">
+<input type="date" name="data_nascita">
+<input type="color" name="colore_preferito">
+<input type="range" name="valutazione" min="1" max="5">
+<input type="file" name="documento">
+```
+
+### Validazione dei form
+
+HTML5 offre anche funzionalità di validazione incorporate. Oltre all'attributo `required`, potete usare:
+
+- `min` e `max`: Per specificare valori minimi e massimi
+- `pattern`: Per specificare un'espressione regolare che l'input deve soddisfare
+
+Esempio:
+
+```html
+<input type="text" name="codice_postale" pattern="[0-9]{5}" title="Inserisci un codice postale valido di 5 cifre">
+```
+
+### Accessibilità dei form
+
+Per rendere i vostri form accessibili:
+
+1. Usate sempre l'elemento `<label>` e collegatelo all'input corrispondente usando gli attributi `for` e `id`
+2. Raggruppate elementi correlati con `<fieldset>` e `<legend>`
+3. Usate l'attributo `aria-label` per fornire etichette a elementi che non possono avere un `<label>` visibile
+4. Assicuratevi che l'ordine di tabulazione sia logico
+
+### Esempio completo
+
+Ecco un esempio che mette insieme molti dei concetti che abbiamo visto:
+
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo di registrazione</title>
+</head>
+<body>
+    <h1>Registrazione</h1>
+    
+    <form action="/registra" method="post">
+        <fieldset>
+            <legend>Informazioni personali:</legend>
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required 
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                   title="La password deve contenere almeno un numero, una lettera maiuscola e una minuscola, e deve essere lunga almeno 8 caratteri"><br>
+            
+            <label for="data_nascita">Data di nascita:</label>
+            <input type="date" id="data_nascita" name="data_nascita"><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Altre informazioni:</legend>
+            
+            <label for="paese">Paese:</label>
+            <select id="paese" name="paese">
+                <option value="italia">Italia</option>
+                <option value="francia">Francia</option>
+                <option value="germania">Germania</option>
+                <option value="spagna">Spagna</option>
+            </select><br>
+            
+            <p>Genere:</p>
+            <input type="radio" id="maschio" name="genere" value="maschio">
+            <label for="maschio">Maschio</label><br>
+            <input type="radio" id="femmina" name="genere" value="femmina">
+            <label for="femmina">Femmina</label><br>
+            <input type="radio" id="altro" name="genere" value="altro">
+            <label for="altro">Altro</label><br>
+            
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="newsletter">Iscriviti alla nostra newsletter</label><br>
+            
+            <label for="commenti">Commenti:</label><br>
+            <textarea id="commenti" name="commenti" rows="4" cols="50"></textarea><br>
+        </fieldset>
+        
+        <input type="submit" value="Registrati">
+        <input type="reset" value="Resetta">
+    </form>
+</body>
+</html>
+```
+
+Ricordate:
+- Usate l'elemento `<form>` per creare un form
+- Scegliete il tipo di input appropriato per ogni campo
+- Usate etichette e raggruppate gli elementi correlati per migliorare l'usabilità
+- Sfruttate le funzionalità di validazione di HTML5 per garantire input corretti
+- Considerate sempre l'accessibilità quando create i vostri form
