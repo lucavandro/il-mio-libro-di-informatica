@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect x="50" y="50" width="300" height="200" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+  <rect x="70" y="70" width="260" height="160" fill="#d9edf7" stroke="#333" stroke-width="2"/>
+  <rect x="90" y="90" width="220" height="120" fill="#dff0d8" stroke="#333" stroke-width="2"/>
+  <rect x="110" y="110" width="180" height="80" fill="#fcf8e3" stroke="#333" stroke-width="2"/>
+  
+  <text x="200" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Content</text>
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Margin</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Margin</text>
+  <text x="40" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" transform="rotate(-90 40,150)">Margin</text>
+  <text x="360" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" transform="rotate(90 360,150)">Margin</text>
+  
+  <text x="200" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Border</text>
+  <text x="200" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Padding</text>
+</svg>
