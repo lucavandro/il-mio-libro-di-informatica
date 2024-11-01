@@ -1100,3 +1100,207 @@ CSS Grid è supportato in tutti i browser moderni, ma potrebbe richiedere fallba
 - Combina unità fisse e flessibili per layout responsivi.
 - Utilizza Grid per il layout generale della pagina e Flexbox per componenti più piccoli.
 
+# 7. Responsive Design con CSS
+
+Il responsive design è un approccio allo sviluppo web che mira a creare siti che si adattano automaticamente a diversi dispositivi e dimensioni dello schermo. In questo capitolo, esploreremo le tecniche CSS fondamentali per creare layout responsivi e flessibili.
+
+## 7.1 Introduzione al Responsive Design
+
+Il responsive design si basa su tre principi fondamentali:
+1. Layout flessibile
+2. Immagini e media flessibili
+3. Media queries
+
+L'obiettivo è creare un'esperienza utente ottimale su una vasta gamma di dispositivi, dal desktop ai telefoni mobili.
+
+## 7.2 Viewport
+
+Il viewport è l'area visibile di una pagina web su un dispositivo.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+Questa meta tag assicura che la larghezza del viewport corrisponda alla larghezza del dispositivo e che la scala iniziale sia 1:1.
+
+## 7.3 Unità Responsive
+
+### 7.3.1 Unità relative
+
+- `em`: Relativa alla dimensione del font dell'elemento genitore
+- `rem`: Relativa alla dimensione del font dell'elemento radice (html)
+- `vw`: 1% della larghezza del viewport
+- `vh`: 1% dell'altezza del viewport
+- `%`: Percentuale relativa all'elemento genitore
+
+Esempio:
+```css
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+```
+
+## 7.4 Media Queries
+
+Le media queries permettono di applicare stili CSS basati sulle caratteristiche del dispositivo, come la larghezza dello schermo.
+
+```css
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+```
+
+### 7.4.1 Breakpoints comuni
+
+- Mobile: 320px - 480px
+- Tablet: 481px - 768px
+- Desktop: 769px e oltre
+
+```css
+/* Mobile */
+@media (max-width: 480px) { ... }
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 768px) { ... }
+
+/* Desktop */
+@media (min-width: 769px) { ... }
+```
+
+## 7.5 Immagini Responsive
+
+### 7.5.1 max-width
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+### 7.5.2 Picture element
+
+```html
+<picture>
+  <source srcset="img-large.jpg" media="(min-width: 800px)">
+  <source srcset="img-medium.jpg" media="(min-width: 480px)">
+  <img src="img-small.jpg" alt="Responsive Image">
+</picture>
+```
+
+## 7.6 Flexbox per layout responsivi
+
+Flexbox è particolarmente utile per creare layout responsivi.
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 1 200px;
+}
+
+@media (max-width: 600px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
+```
+
+## 7.7 CSS Grid per layout responsivi
+
+CSS Grid offre potenti capacità per layout responsivi.
+
+```css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+```
+
+## 7.8 Typography Responsive
+
+```css
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+```
+
+## 7.9 Mobile-First vs Desktop-First
+
+### 7.9.1 Mobile-First
+
+Inizia con stili per dispositivi mobili e poi usa media queries per schermi più grandi.
+
+```css
+/* Stili di base per mobile */
+.element { ... }
+
+/* Tablet */
+@media (min-width: 768px) { ... }
+
+/* Desktop */
+@media (min-width: 1024px) { ... }
+```
+
+### 7.9.2 Desktop-First
+
+Inizia con stili per desktop e poi usa media queries per schermi più piccoli.
+
+```css
+/* Stili di base per desktop */
+.element { ... }
+
+/* Tablet */
+@media (max-width: 1023px) { ... }
+
+/* Mobile */
+@media (max-width: 767px) { ... }
+```
+
+## 7.10 Performance Considerations
+
+- Usa CSS Flexbox e Grid invece di float per layout responsivi
+- Ottimizza le immagini per diverse dimensioni dello schermo
+- Minimizza l'uso di media queries per migliorare le prestazioni
+
+## 7.11 Testing
+
+- Usa strumenti come Chrome DevTools per testare il design su diverse dimensioni dello schermo
+- Testa su dispositivi reali quando possibile
+- Considera l'uso di servizi di testing cross-browser
+
+## 7.12 Accessibilità nel Responsive Design
+
+- Assicurati che il contenuto sia leggibile su tutti i dispositivi
+- Mantieni una gerarchia di contenuti coerente
+- Usa dimensioni di font e spaziatura adeguate per la leggibilità
+
