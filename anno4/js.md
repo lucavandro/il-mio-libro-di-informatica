@@ -1194,3 +1194,855 @@ document.getElementById('formRegistrazione').addEventListener('submit', (e) => {
 - Le funzioni sono perfette per gestire eventi
 - La modularizzazione del codice rende il programma più organizzato e mantenibile
 
+# Lezione 6: Eventi - Parte 1
+
+## Introduzione agli Eventi
+Gli eventi sono azioni o occorrenze che si verificano nel browser, come il click di un utente, il movimento del mouse, il caricamento di una pagina o la pressione di un tasto. JavaScript ci permette di "ascoltare" questi eventi e reagire di conseguenza, rendendo le nostre pagine web interattive.
+
+### Struttura HTML di Base
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventi in JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <button id="btnTest">Cliccami!</button>
+        <div id="hoverArea">Passa il mouse qui sopra</div>
+        <ul id="menuItems" class="hidden">
+            <li>Opzione 1</li>
+            <li>Opzione 2</li>
+            <li>Opzione 3</li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+### CSS di Base
+```css
+.hidden {
+    display: none;
+}
+
+#hoverArea {
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#hoverArea:hover {
+    background-color: #e0e0e0;
+}
+```
+
+## 1. Eventi onClick e onMouseOver
+Gli eventi più comuni sono quelli legati al mouse. Vediamo come gestirli:
+
+```javascript
+// Metodo 1: Gestione diretta nell'HTML (sconsigliato)
+// <button onclick="saluta()">Cliccami</button>
+
+// Metodo 2: Assegnazione tramite proprietà (migliore)
+const btnTest = document.getElementById('btnTest');
+btnTest.onclick = function() {
+    alert('Hai cliccato il pulsante!');
+};
+
+const hoverArea = document.getElementById('hoverArea');
+hoverArea.onmouseover = function() {
+    this.style.backgroundColor = '#cccccc';
+};
+
+hoverArea.onmouseout = function() {
+    this.style.backgroundColor = '#f0f0f0';
+};
+```
+
+## 2. addEventListener()
+Il metodo più moderno e flessibile per gestire gli eventi è `addEventListener()`. Permette di:
+- Aggiungere più gestori per lo stesso evento
+- Rimuovere gestori quando non servono più
+- Maggior controllo sulla propagazione degli eventi
+
+```javascript
+// Sintassi base
+// elemento.addEventListener(evento, funzione, useCapture)
+
+const btn = document.getElementById('btnTest');
+
+btn.addEventListener('click', function() {
+    console.log('Click rilevato!');
+});
+
+// Con arrow function
+btn.addEventListener('click', () => {
+    alert('Altro gestore per lo stesso pulsante');
+});
+
+// Con funzione nominata
+function gestioneHover() {
+    const menu = document.getElementById('menuItems');
+    menu.classList.toggle('hidden');
+}
+
+const hoverArea = document.getElementById('hoverArea');
+hoverArea.addEventListener('mouseover', gestioneHover);
+```
+
+## 3. L'Oggetto Event
+Quando si verifica un evento, JavaScript crea un oggetto `Event` che contiene informazioni dettagliate sull'evento stesso. Quest'oggetto viene passato automaticamente alla funzione gestore.
+
+```javascript
+btnTest.addEventListener('click', function(event) {
+    // Informazioni sull'evento
+    console.log('Tipo di evento:', event.type);
+    console.log('Elemento target:', event.target);
+    console.log('Coordinate del click:', event.clientX, event.clientY);
+    
+    // Fermare la propagazione dell'evento
+    event.stopPropagation();
+});
+```
+
+## 4. Esempio Pratico: Menu Interattivo
+Creiamo un menu che si apre al click e si chiude cliccando fuori:
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('btnTest');
+    const menuItems = document.getElementById('menuItems');
+    let menuOpen = false;
+
+    // Apre/chiude il menu al click del pulsante
+    menuButton.addEventListener('click', (e) => {
+        menuItems.classList.toggle('hidden');
+        menuOpen = !menuOpen;
+        e.stopPropagation(); // Previene la chiusura immediata
+    });
+
+    // Chiude il menu cliccando fuori
+    document.addEventListener('click', (e) => {
+        if (menuOpen && !menuItems.contains(e.target) && e.target !== menuButton) {
+            menuItems.classList.add('hidden');
+            menuOpen = false;
+        }
+    });
+});
+```
+
+## Esercizi Proposti
+
+1. **Menu Dropdown**
+   Modifica l'esempio del menu per:
+   - Aggiungere una transizione di apertura/chiusura
+   - Cambiare il testo del pulsante quando il menu è aperto
+   - Aggiungere un'animazione al passaggio del mouse sulle voci
+
+2. **Galleria di Immagini**
+   Crea una galleria che:
+   - Mostri un'immagine principale
+   - Abbia miniature cliccabili
+   - Cambi l'immagine principale al click sulle miniature
+   - Aggiunga un effetto hover sulle miniature
+
+3. **Sistema di Notifiche**
+   Implementa un sistema che:
+   - Mostri notifiche in un angolo della pagina
+   - Le faccia scomparire dopo alcuni secondi
+   - Permetta di chiuderle manualmente
+
+## Punti Chiave da Ricordare
+- Preferire sempre `addEventListener()` rispetto agli attributi HTML o alle proprietà on*
+- Utilizzare la delega degli eventi per gestire elementi dinamici
+- Ricordarsi di gestire la pulizia degli event listener quando non servono più
+- Fare attenzione alla propagazione degli eventi
+- Considerare sempre l'accessibilità quando si implementano interazioni
+
+# Lezione 7: Eventi - Parte 2 e Gestione Form
+
+## Struttura HTML di Base
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestione Form con JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="registrationForm">
+            <h2>Modulo di Registrazione</h2>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <span class="error" id="usernameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="interessi">Interessi:</label>
+                <select id="interessi" name="interessi" multiple>
+                    <option value="sport">Sport</option>
+                    <option value="musica">Musica</option>
+                    <option value="tecnologia">Tecnologia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    Accetto i termini e le condizioni
+                </label>
+            </div>
+
+            <button type="submit">Registrati</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            Registrazione completata con successo!
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+### CSS di Base
+```css
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.invalid {
+    border-color: red !important;
+}
+
+.valid {
+    border-color: green !important;
+}
+```
+
+## 1. Eventi dei Form
+```javascript
+// Otteniamo riferimenti agli elementi del form
+const form = document.getElementById('registrationForm');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const privacy = document.getElementById('privacy');
+
+// Eventi principali dei form
+form.addEventListener('submit', handleSubmit);
+username.addEventListener('change', validateUsername);
+email.addEventListener('input', validateEmail);
+password.addEventListener('focus', showPasswordRequirements);
+password.addEventListener('blur', hidePasswordRequirements);
+```
+
+## 2. Validazione Base dei Form
+```javascript
+function validateUsername(e) {
+    const value = e.target.value;
+    const errorElement = document.getElementById('usernameError');
+    
+    if (value.length < 3) {
+        errorElement.textContent = 'Lo username deve contenere almeno 3 caratteri';
+        e.target.classList.add('invalid');
+        e.target.classList.remove('valid');
+        return false;
+    } else {
+        errorElement.textContent = '';
+        e.target.classList.remove('invalid');
+        e.target.classList.add('valid');
+        return true;
+    }
+}
+
+function validateEmail(e) {
+    const value = e.target.value;
+    const errorElement = document.getElementById('emailError');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailRegex.test(value)) {
+        errorElement.textContent = 'Inserisci un indirizzo email valido';
+        e.target.classList.add('invalid');
+        e.target.classList.remove('valid');
+        return false;
+    } else {
+        errorElement.textContent = '';
+        e.target.classList.remove('invalid');
+        e.target.classList.add('valid');
+        return true;
+    }
+}
+
+function validatePassword(e) {
+    const value = e.target.value;
+    const errorElement = document.getElementById('passwordError');
+    
+    const hasUpperCase = /[A-Z]/.test(value);
+    const hasLowerCase = /[a-z]/.test(value);
+    const hasNumbers = /\d/.test(value);
+    const hasMinLength = value.length >= 8;
+    
+    let errorMessage = '';
+    if (!hasMinLength) errorMessage += 'Minimo 8 caratteri. ';
+    if (!hasUpperCase) errorMessage += 'Almeno una maiuscola. ';
+    if (!hasLowerCase) errorMessage += 'Almeno una minuscola. ';
+    if (!hasNumbers) errorMessage += 'Almeno un numero. ';
+    
+    errorElement.textContent = errorMessage;
+    
+    if (errorMessage === '') {
+        e.target.classList.remove('invalid');
+        e.target.classList.add('valid');
+        return true;
+    } else {
+        e.target.classList.add('invalid');
+        e.target.classList.remove('valid');
+        return false;
+    }
+}
+```
+
+## 3. Gestione dell'Evento Submit
+```javascript
+function handleSubmit(e) {
+    e.preventDefault(); // Previene l'invio automatico del form
+    
+    // Validazione di tutti i campi
+    const isUsernameValid = validateUsername({ target: username });
+    const isEmailValid = validateEmail({ target: email });
+    const isPasswordValid = validatePassword({ target: password });
+    
+    if (!privacy.checked) {
+        alert('Devi accettare i termini e le condizioni');
+        return;
+    }
+    
+    // Se tutti i campi sono validi
+    if (isUsernameValid && isEmailValid && isPasswordValid) {
+        // Raccogliamo i dati del form
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Qui normalmente invieremo i dati al server
+        console.log('Dati del form:', data);
+        
+        // Mostriamo il messaggio di conferma
+        const confirmation = document.getElementById('confirmation');
+        confirmation.classList.remove('hidden');
+        form.classList.add('hidden');
+    }
+}
+```
+
+## 4. Validazione in Tempo Reale
+```javascript
+// Validazione mentre l'utente digita
+const inputs = form.querySelectorAll('input[required]');
+
+inputs.forEach(input => {
+    input.addEventListener('input', function(e) {
+        // Rimuoviamo eventuali messaggi di errore quando l'utente inizia a digitare
+        const errorElement = document.getElementById(`${e.target.id}Error`);
+        if (errorElement) {
+            errorElement.textContent = '';
+        }
+        
+        // Rimuoviamo le classi di validazione
+        e.target.classList.remove('valid', 'invalid');
+    });
+});
+
+// Validazione quando l'utente esce dal campo
+inputs.forEach(input => {
+    input.addEventListener('blur', function(e) {
+        switch(e.target.id) {
+            case 'username':
+                validateUsername(e);
+                break;
+            case 'email':
+                validateEmail(e);
+                break;
+            case 'password':
+                validatePassword(e);
+                break;
+        }
+    });
+});
+```
+
+## 5. Miglioramenti per l'Accessibilità
+```javascript
+// Aggiunta di ARIA attributes per l'accessibilità
+function updateAriaAttributes(input, isValid) {
+    input.setAttribute('aria-invalid', !isValid);
+    const errorId = `${input.id}Error`;
+    input.setAttribute('aria-describedby', errorId);
+}
+
+// Gestione del focus
+inputs.forEach(input => {
+    input.addEventListener('focus', function(e) {
+        // Aggiunge un outline visibile per il focus
+        e.target.style.outline = '2px solid #007bff';
+    });
+    
+    input.addEventListener('blur', function(e) {
+        // Rimuove l'outline quando si perde il focus
+        e.target.style.outline = '';
+    });
+});
+```
+
+## Esercizi Proposti
+
+1. **Form Multi-Step**
+   Crea un form di registrazione diviso in più passaggi:
+   - Dati personali
+   - Preferenze
+   - Conferma
+
+2. **Validazione Avanzata**
+   Aggiungi validazioni per:
+   - Numero di telefono (formato italiano)
+   - Codice fiscale
+   - Data di nascita (con controllo età minima)
+
+3. **Form Dinamico**
+   Implementa un form che:
+   - Aggiunge/rimuove campi dinamicamente
+   - Salva i dati in localStorage
+   - Ripristina i dati salvati al caricamento
+
+## Punti Chiave da Ricordare
+- Sempre prevenire l'invio del form con `preventDefault()`
+- Validare sia lato client che lato server
+- Fornire feedback immediato all'utente
+- Gestire tutti gli stati del form (vuoto, valido, non valido, in attesa)
+- Considerare l'accessibilità
+- Gestire correttamente gli errori
+- Salvare i dati temporaneamente in caso di errori
+
+# Lezione 8: Manipolazione avanzata del DOM e Progetto Todo List
+
+## Struttura HTML di Base
+```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>La Mia Todo List</h1>
+        
+        <!-- Form per aggiungere task -->
+        <div class="todo-input">
+            <input type="text" id="taskInput" placeholder="Aggiungi un nuovo task">
+            <button id="addTask">Aggiungi</button>
+        </div>
+
+        <!-- Filtri -->
+        <div class="filters">
+            <button class="filter active" data-filter="all">Tutti</button>
+            <button class="filter" data-filter="active">Attivi</button>
+            <button class="filter" data-filter="completed">Completati</button>
+        </div>
+
+        <!-- Lista dei task -->
+        <ul id="todoList"></ul>
+
+        <!-- Counter -->
+        <div class="todo-count">
+            Task rimanenti: <span id="taskCount">0</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+### CSS di Base
+```css
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 16px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.filter.active {
+    background: #666;
+    color: white;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.todo-item.completed {
+    background: #e0e0e0;
+    text-decoration: line-through;
+    color: #666;
+}
+
+.todo-item .delete {
+    margin-left: auto;
+    background: #ff4444;
+}
+
+.completed-checkbox {
+    margin-right: 10px;
+}
+```
+
+## 1. Creazione e Aggiunta di Elementi
+```javascript
+// Funzione per creare un nuovo elemento todo
+function createTodoElement(todoText) {
+    // Creazione degli elementi
+    const li = document.createElement('li');
+    const checkbox = document.createElement('input');
+    const span = document.createElement('span');
+    const deleteBtn = document.createElement('button');
+
+    // Configurazione checkbox
+    checkbox.type = 'checkbox';
+    checkbox.className = 'completed-checkbox';
+
+    // Configurazione span
+    span.textContent = todoText;
+    span.className = 'todo-text';
+
+    // Configurazione pulsante elimina
+    deleteBtn.textContent = '×';
+    deleteBtn.className = 'delete';
+
+    // Configurazione elemento li
+    li.className = 'todo-item';
+    
+    // Assemblaggio dell'elemento
+    li.appendChild(checkbox);
+    li.appendChild(span);
+    li.appendChild(deleteBtn);
+
+    return li;
+}
+
+// Funzione per aggiungere un todo alla lista
+function addTodoToList(todoText) {
+    const todoList = document.getElementById('todoList');
+    const todoElement = createTodoElement(todoText);
+    todoList.appendChild(todoElement);
+    updateTaskCount();
+}
+```
+
+## 2. Rimozione di Elementi
+```javascript
+// Funzione per rimuovere un todo
+function removeTodo(todoElement) {
+    // Animazione di fade out
+    todoElement.style.opacity = '0';
+    todoElement.style.transition = 'opacity 0.3s ease';
+
+    // Rimozione effettiva dopo l'animazione
+    setTimeout(() => {
+        todoElement.remove();
+        updateTaskCount();
+    }, 300);
+}
+
+// Event delegation per il pulsante elimina
+document.getElementById('todoList').addEventListener('click', (e) => {
+    if (e.target.className === 'delete') {
+        const todoItem = e.target.parentElement;
+        removeTodo(todoItem);
+    }
+});
+```
+
+## 3. Navigazione del DOM
+```javascript
+// Funzione per trovare tutti i task completati
+function getCompletedTasks() {
+    const todos = document.querySelectorAll('.todo-item');
+    return Array.from(todos).filter(todo => 
+        todo.querySelector('.completed-checkbox').checked
+    );
+}
+
+// Funzione per trovare il parent più vicino con una classe
+function closest(element, className) {
+    while (element) {
+        if (element.classList.contains(className)) {
+            return element;
+        }
+        element = element.parentElement;
+    }
+    return null;
+}
+
+// Funzione per trovare i siblings
+function getSiblings(element) {
+    return Array.from(element.parentNode.children)
+        .filter(child => child !== element);
+}
+```
+
+## 4. Gestione delle Classi CSS
+```javascript
+// Toggle dello stato completato
+function toggleTodoComplete(todoItem) {
+    const checkbox = todoItem.querySelector('.completed-checkbox');
+    
+    if (checkbox.checked) {
+        todoItem.classList.add('completed');
+    } else {
+        todoItem.classList.remove('completed');
+    }
+    
+    updateTaskCount();
+}
+
+// Event listener per i checkbox
+document.getElementById('todoList').addEventListener('change', (e) => {
+    if (e.target.className === 'completed-checkbox') {
+        const todoItem = e.target.closest('.todo-item');
+        toggleTodoComplete(todoItem);
+    }
+});
+```
+
+## 5. Implementazione dei Filtri
+```javascript
+// Funzione per filtrare i todo
+function filterTodos(filterType) {
+    const todos = document.querySelectorAll('.todo-item');
+    
+    todos.forEach(todo => {
+        const isCompleted = todo.classList.contains('completed');
+        
+        switch(filterType) {
+            case 'all':
+                todo.style.display = '';
+                break;
+            case 'active':
+                todo.style.display = !isCompleted ? '' : 'none';
+                break;
+            case 'completed':
+                todo.style.display = isCompleted ? '' : 'none';
+                break;
+        }
+    });
+}
+
+// Event listeners per i filtri
+document.querySelector('.filters').addEventListener('click', (e) => {
+    if (e.target.classList.contains('filter')) {
+        // Aggiorna classe active
+        document.querySelectorAll('.filter').forEach(btn => 
+            btn.classList.remove('active')
+        );
+        e.target.classList.add('active');
+        
+        // Applica il filtro
+        filterTodos(e.target.dataset.filter);
+    }
+});
+```
+
+## 6. Gestione dello Stato
+```javascript
+// Funzione per aggiornare il contatore
+function updateTaskCount() {
+    const totalTasks = document.querySelectorAll('.todo-item').length;
+    const completedTasks = document.querySelectorAll('.todo-item.completed').length;
+    const remainingTasks = totalTasks - completedTasks;
+    
+    document.getElementById('taskCount').textContent = remainingTasks;
+}
+
+// Salvataggio in localStorage
+function saveTodos() {
+    const todos = Array.from(document.querySelectorAll('.todo-item')).map(todo => ({
+        text: todo.querySelector('.todo-text').textContent,
+        completed: todo.classList.contains('completed')
+    }));
+    
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+// Caricamento da localStorage
+function loadTodos() {
+    const todos = JSON.parse(localStorage.getItem('todos') || '[]');
+    todos.forEach(todo => {
+        const todoElement = createTodoElement(todo.text);
+        if (todo.completed) {
+            todoElement.classList.add('completed');
+            todoElement.querySelector('.completed-checkbox').checked = true;
+        }
+        document.getElementById('todoList').appendChild(todoElement);
+    });
+    updateTaskCount();
+}
+```
+
+## 7. Inizializzazione dell'Applicazione
+```javascript
+// Funzione di inizializzazione
+function initTodoApp() {
+    const addButton = document.getElementById('addTask');
+    const taskInput = document.getElementById('taskInput');
+
+    // Event listener per aggiungere task
+    addButton.addEventListener('click', () => {
+        const todoText = taskInput.value.trim();
+        if (todoText) {
+            addTodoToList(todoText);
+            taskInput.value = '';
+            saveTodos();
+        }
+    });
+
+    // Event listener per il tasto Enter
+    taskInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            addButton.click();
+        }
+    });
+
+    // Carica i todos salvati
+    loadTodos();
+}
+
+// Avvio dell'applicazione quando il DOM è caricato
+document.addEventListener('DOMContentLoaded', initTodoApp);
+```
+
+## Esercizi Proposti
+
+1. **Estensione Todo List**
+   - Aggiungi la possibilità di modificare i task esistenti
+   - Implementa il drag and drop per riordinare i task
+   - Aggiungi categorie o tag ai task
+
+2. **Sistema di Note**
+   - Crea un sistema di note con rich text
+   - Implementa la possibilità di aggiungere immagini
+   - Aggiungi un sistema di ricerca
+
+3. **Lista della Spesa**
+   - Implementa categorie di prodotti
+   - Aggiungi quantità e prezzi
+   - Calcola il totale della spesa
+
+## Punti Chiave da Ricordare
+- Utilizzare `createElement()` per creare nuovi elementi
+- Gestire correttamente gli eventi con la delegation
+- Manipolare le classi CSS per le animazioni
+- Salvare lo stato dell'applicazione
+- Mantenere il codice organizzato e modulare
+- Considerare l'accessibilità
+- Gestire correttamente la memoria
