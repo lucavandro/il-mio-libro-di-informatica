@@ -4,3 +4,4 @@
 2. [Le tuple](anno3/tuple.md)
 3. [Gli insiemi](anno3/insiemi.md)
 4. [I dizionari](anno3/dizionari.md)
+5. [I dizionari](anno3/funzioni.md)
