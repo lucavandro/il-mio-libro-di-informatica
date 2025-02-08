@@ -442,7 +442,7 @@ def calcola():
 3. Cerca sempre di limitare la visibilità delle variabili
 4. Pensa alle variabili come a oggetti con dei "permessi" di accesso
 
-## Funzioni con Restituzione Multipla e Ricorsive in Python
+## 4. Funzioni con Restituzione Multipla e Ricorsive in Python
 
 ### Il Viaggio nel Mondo delle Funzioni Avanzate
 

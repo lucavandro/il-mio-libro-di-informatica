@@ -5,3 +5,4 @@
 3. [Gli insiemi](anno3/insiemi.md)
 4. [I dizionari](anno3/dizionari.md)
 5. [Funzioni](anno3/funzioni.md)
+6. [File](anno3/file.md)
