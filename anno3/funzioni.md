@@ -442,7 +442,7 @@ def calcola():
 3. Cerca sempre di limitare la visibilità delle variabili
 4. Pensa alle variabili come a oggetti con dei "permessi" di accesso
 
-## Dispensa: Funzioni con Restituzione Multipla e Ricorsive in Python
+## Funzioni con Restituzione Multipla e Ricorsive in Python
 
 ### Il Viaggio nel Mondo delle Funzioni Avanzate
 
@@ -620,7 +620,7 @@ def potenza_ricorsiva(base, esponente):
 - Pratica, pratica, pratica!
 
 
-## 5. Dispensa: Funzioni Lambda e Funzioni di Ordine Superiore in Python
+## 5. Funzioni Lambda e Funzioni di Ordine Superiore in Python
 
 ### Viaggio nel Mondo delle Funzioni Eleganti
 
