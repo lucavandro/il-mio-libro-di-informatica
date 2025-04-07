@@ -86,13 +86,6 @@ Nella prossima lezione vedremo come vengono organizzati i dati all'interno di qu
 
 # Lezione 2: Organizzazione dei Dati
 
-## Obiettivi della lezione
-Al termine di questa lezione sarai in grado di:
-- Comprendere cosa sono gli archivi e come funzionano
-- Riconoscere i limiti degli archivi tradizionali
-- Capire perché è importante evitare la ridondanza dei dati
-- Comprendere i vantaggi delle basi di dati rispetto agli archivi
-
 ## 2.1 Gli Archivi: Cosa Sono e Come Funzionano
 Immagina di dover gestire una videoteca. Hai bisogno di tenere traccia di:
 - I film disponibili
