@@ -891,3 +891,82 @@ Crea un programma che:
 - Fai backup prima di modificare i file
 - Valida sempre i dati in input
 
+```markdown
+# Capitolo 7: Salvare dati con la libreria Pickle in Python
+
+**Pickle** è una libreria Python che permette di salvare e caricare strutture dati (liste, dizionari, oggetti, ecc.) in file binari. È utile per conservare dati tra diverse esecuzioni di un programma.
+
+## 1. Come funziona Pickle?
+
+Pickle converte ("serializza") un oggetto Python in una sequenza di byte che può essere salvata su disco. Successamente, questi byte possono essere letti e riconvertiti ("deserializzati") nell'oggetto originale.
+
+## 2. Salvare dati con `pickle.dump()`
+
+Per salvare un oggetto in un file:
+
+```python
+import pickle
+
+dati = {"nome": "Mario", "punteggio": 85, "livello": 3}
+
+with open("salvataggio.pkl", "wb") as file:  # 'wb' = write binary
+    pickle.dump(dati, file)
+```
+
+## 3. Caricare dati con `pickle.load()`
+
+Per rileggere i dati salvati:
+
+```python
+import pickle
+
+with open("salvataggio.pkl", "rb") as file:  # 'rb' = read binary
+    dati_caricati = pickle.load(file)
+
+print(dati_caricati)  # Output: {'nome': 'Mario', 'punteggio': 85, 'livello': 3}
+```
+
+## 4. Esempio con una lista di studenti
+
+```python
+import pickle
+
+studenti = [
+    {"nome": "Anna", "voti": [7, 8, 6]},
+    {"nome": "Luigi", "voti": [6, 7, 5]}
+]
+
+# Salvataggio
+with open("studenti.pkl", "wb") as file:
+    pickle.dump(studenti, file)
+
+# Caricamento
+with open("studenti.pkl", "rb") as file:
+    studenti_caricati = pickle.load(file)
+
+for studente in studenti_caricati:
+    print(f"{studente['nome']}: {studente['voti']}")
+```
+
+## 5. Avvertenze importanti
+
+- **Sicurezza**: Non caricare file Pickle da fonti sconosciute (potrebbero contenere codice malevolo).
+- **Compatibilità**: I file Pickle sono specifici per Python e potrebbero non essere compatibili tra diverse versioni.
+
+## Esercizi
+
+1. **Salvataggio di una lista**  
+   Crea una lista di numeri preferiti (es. `[7, 3, 22]`), salvala in un file Pickle e poi ricaricala per stamparla.
+
+2. **Rubrica telefonica**  
+   Crea un dizionario `rubrica` con nomi e numeri di telefono (es. `{"Mario": "123456", "Luigi": "654321"}`), salvalo e poi caricalo per modificare un contatto.
+
+3. **Gestione di un inventario**  
+   Crea una lista di dizionari `inventario` dove ogni dizionario rappresenta un oggetto con `nome`, `quantità` e `prezzo`. Salva l'inventario e implementa un menu per aggiungere nuovi oggetti.
+
+4. **Sfida - Dati di gioco**  
+   Simula un gioco con `{"livello": 1, "punti": 0, "nome_giocatore": "..."}`. Salva lo stato del gioco, poi caricalo e aggiorna i punti prima di risalvare.
+
+5. **Errore controllato**  
+   Scrivi un programma che tenti di caricare un file Pickle inesistente gestendo l'eccezione `FileNotFoundError` con un messaggio amichevole.
+```
