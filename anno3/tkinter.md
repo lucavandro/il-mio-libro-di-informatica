@@ -25,7 +25,7 @@ Python mette a disposizione diverse librerie per creare GUI.
 
 ## Come iniziare con Tkinter
 
-Per iniziare, apri il tuo editor Python preferito (ad esempio Thonny o IDLE) e scrivi questo:
+Per iniziare, apri il tuo editor Python preferito (ad esempio Visual Studio Code o IDLE) e scrivi questo:
 
 ```python
 import tkinter
@@ -40,37 +40,25 @@ Questa funzione apre una finestra di prova. Se la vedi comparire, significa che 
 
 In Tkinter possiamo **chiedere informazioni all'utente** e **mostrare messaggi** in modo semplice, grazie a due moduli:
 
-### `tkinter.simpledialog`
-
-Questo modulo permette di chiedere qualcosa all'utente tramite una **finestra di input**.
-
-Esempio:
-
-```python
-import tkinter as tk
-from tkinter import simpledialog
-
-finestra = tk.Tk()
-finestra.withdraw()  # Nasconde la finestra principale
-
-nome = simpledialog.askstring("Domanda", "Come ti chiami?")
-```
-
 ### `tkinter.messagebox`
 
 Questo modulo serve a **mostrare messaggi** all’utente.
 
+Il modulo messagebox mette a disposizione la funzione showinfo che accetta due parametri:
+
+```python
+tkinter.messagebox.showinfo(title=None, message=None)
+```
+Dove `title` e `message` parametri opzionali per impostare il titolo della finestra e il messaggio da mostrare.
+
 Esempio:
 
 ```python
-import tkinter as tk
 from tkinter import messagebox
 
-finestra = tk.Tk()
-finestra.withdraw()
-
-messagebox.showinfo("Benvenuto", "Ciao! Questo è un messaggio di benvenuto.")
+messagebox.showinfo(title="Benvenuto", message="Ciao! Questo è un messaggio di benvenuto.")
 ```
+![alt text](img/tkinter/tk2.png)
 
 Puoi anche usare altri tipi di messaggi, ad esempio:
 - `messagebox.showwarning()` – per avvisi
@@ -78,21 +66,25 @@ Puoi anche usare altri tipi di messaggi, ad esempio:
 
 ---
 
-## Un esempio completo
+### `tkinter.simpledialog`
+
+Questo modulo permette di chiedere qualcosa all'utente tramite una **finestra di input**.
+
+Esempio:
 
 ```python
-import tkinter as tk
-from tkinter import simpledialog, messagebox
-
-finestra = tk.Tk()
-finestra.withdraw()
-
+from tkinter import simpledialog
 nome = simpledialog.askstring("Domanda", "Come ti chiami?")
 messagebox.showinfo("Risposta", f"Piacere di conoscerti, {nome}!")
 ```
 
 > In questo programma, **non usiamo `print`**: tutto avviene con finestre grafiche!
 
+Puoi anche usare altri metodo specifici per richiedere valori interi o float, ad esempio:
+- `simpledialog.askint()` – per valori interi
+- `simpledialog.askfloat()` – per valori float
+
+---
 ---
 
 ## Esercizi (tracce)
