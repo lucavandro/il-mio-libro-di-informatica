@@ -1,4 +1,4 @@
-# Capitolo 1: Introduzione alle GUI e a Tkinter
+# 1. Introduzione alle GUI e a Tkinter
 
 ## Che cosa sono le GUI?
 
@@ -310,7 +310,7 @@ Nella prossima lezione, esploreremo i widget fondamentali di Tkinter che ci perm
 3. Prova a creare una finestra con il tuo nome come titolo e una breve descrizione di te stesso nell'etichetta.
 4. Cerca online esempi di applicazioni Tkinter per farti un'idea di cosa potrai costruire al termine del corso.
 
-# Lezione 3: Widget fondamentali
+# 3. Widget fondamentali
 
 ## 3.1 Concetto di widget in Tkinter
 
@@ -536,7 +536,7 @@ Questi tre widget costituiscono la base di molte applicazioni Tkinter. Padronegg
 2. Realizza un'applicazione che converta metri in centimetri quando l'utente inserisce un valore e preme un pulsante.
 3. Progetta una schermata di login con campi per username e password e un pulsante per l'accesso.
 
-# Lezione 4: Interattività e gestione degli eventi
+# 4. Interattività e gestione degli eventi
 
 ## 4.1 Concetto di eventi e callback
 
