@@ -6,3 +6,4 @@
 4. [I dizionari](anno3/dizionari.md)
 5. [Funzioni](anno3/funzioni.md)
 6. [File](anno3/file.md)
+7. [Tkinter](anno3/tkinter.md)
