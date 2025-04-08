@@ -1,8 +1,3 @@
-# Tkinter
-Ecco il primo capitolo in formato **Markdown**, pensato per una **dispensa introduttiva su Tkinter** adatta a studenti delle scuole superiori:
-
----
-
 # Capitolo 1: Introduzione alle GUI e a Tkinter
 
 ## Che cosa sono le GUI?
@@ -11,6 +6,7 @@ GUI è l'acronimo di **Graphical User Interface**, cioè **Interfaccia Grafica p
 A differenza dei programmi che usano solo il terminale (dove si scrive e si legge testo), una GUI permette di **interagire con il programma attraverso finestre, pulsanti, caselle di testo**, e molto altro.
 
 Esempi di GUI che usi ogni giorno:
+
 - La calcolatrice del tuo computer o smartphone
 - Le finestre con cui salvi o apri file
 - I messaggi che compaiono sullo schermo per chiederti conferma
@@ -31,7 +27,9 @@ Per iniziare, apri il tuo editor Python preferito (ad esempio Visual Studio Code
 import tkinter
 tkinter._test()
 ```
+
 ![alt text](img/tkinter/tk1.png)
+
 Questa funzione apre una finestra di prova. Se la vedi comparire, significa che tutto funziona correttamente!
 
 ---
@@ -47,8 +45,9 @@ Questo modulo serve a **mostrare messaggi** all’utente.
 Il modulo messagebox mette a disposizione la funzione showinfo che accetta due parametri:
 
 ```python
-tkinter.messagebox.showinfo(title=None, message=None)
+messagebox.showinfo(title=None, message=None)
 ```
+
 Dove `title` e `message` parametri opzionali per impostare il titolo della finestra e il messaggio da mostrare.
 
 Esempio:
@@ -58,9 +57,11 @@ from tkinter import messagebox
 
 messagebox.showinfo(title="Benvenuto", message="Ciao! Questo è un messaggio di benvenuto.")
 ```
+
 ![alt text](img/tkinter/tk2.png)
 
 Puoi anche usare altri tipi di messaggi, ad esempio:
+
 - `messagebox.showwarning()` – per avvisi
 - `messagebox.showerror()` – per errori
 
@@ -69,6 +70,15 @@ Puoi anche usare altri tipi di messaggi, ad esempio:
 ### `tkinter.simpledialog`
 
 Questo modulo permette di chiedere qualcosa all'utente tramite una **finestra di input**.
+
+Per richiedere di inserire una stringa possiamo usare la funzione
+
+```python
+simpledialog.askstring(title, prompt)
+```
+
+che ritorna la stringa inserita dall'utente.
+Vediamo come utilizzarla con un esempio.
 
 Esempio:
 
@@ -81,10 +91,10 @@ messagebox.showinfo("Risposta", f"Piacere di conoscerti, {nome}!")
 > In questo programma, **non usiamo `print`**: tutto avviene con finestre grafiche!
 
 Puoi anche usare altri metodo specifici per richiedere valori interi o float, ad esempio:
+
 - `simpledialog.askint()` – per valori interi
 - `simpledialog.askfloat()` – per valori float
 
----
 ---
 
 ## Esercizi (tracce)
@@ -95,4 +105,3 @@ Puoi anche usare altri metodo specifici per richiedere valori interi o float, ad
 4. Chiedi all'utente il nome di una città e mostra un messaggio che la saluta ("Ciao, Roma!").
 
 ---
-
