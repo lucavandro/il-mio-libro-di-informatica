@@ -141,10 +141,10 @@ Puoi anche usare altri metodo specifici per richiedere valori interi o float, ad
 Iniziamo con il codice più semplice possibile per creare una finestra con Tkinter:
 
 ```python
-import tkinter as tk
+from tkinter import Tk
 
 # Creazione della finestra principale
-finestra = tk.Tk()
+finestra = Tk()
 finestra.title("La mia prima finestra")
 finestra.geometry("400x300")  # Larghezza x Altezza
 
@@ -153,8 +153,8 @@ finestra.mainloop()
 ```
 
 Analizziamo il codice:
-1. `import tkinter as tk`: Importiamo la libreria Tkinter con l'alias `tk` per comodità
-2. `finestra = tk.Tk()`: Creiamo l'oggetto finestra principale
+1. `from tkinter import Tk`: Importiamo solo la classe `Tk` necessaria
+2. `finestra = Tk()`: Creiamo l'oggetto finestra principale
 3. `finestra.title()`: Impostiamo il titolo che apparirà nella barra della finestra
 4. `finestra.geometry()`: Definiamo le dimensioni iniziali della finestra (larghezza x altezza)
 5. `finestra.mainloop()`: Avviamo il "loop degli eventi", che mantiene la finestra aperta e risponde alle interazioni dell'utente
@@ -168,13 +168,13 @@ Tutte le applicazioni Tkinter seguono una struttura di base:
 1. **Importazione della libreria**
   
   ```python
-   import tkinter as tk
+   from tkinter import Tk
    ```
 
 2. **Creazione della finestra principale**
   
    ```python
-   root = tk.Tk()
+   root = Tk()
    root.title("Nome Applicazione")
    root.geometry("larghezzaxaltezza")
    ```
@@ -182,10 +182,11 @@ Tutte le applicazioni Tkinter seguono una struttura di base:
 3. **Aggiunta di widget**
   
    ```python
-   etichetta = tk.Label(root, text="Ciao Mondo!")
+   from tkinter import Label, Button
+   etichetta = Label(root, text="Ciao Mondo!")
    etichetta.pack()
    
-   pulsante = tk.Button(root, text="Cliccami")
+   pulsante = Button(root, text="Cliccami")
    pulsante.pack()
    ```
 
@@ -195,7 +196,7 @@ Tutte le applicazioni Tkinter seguono una struttura di base:
    def azione_pulsante():
        print("Pulsante cliccato!")
    
-   pulsante = tk.Button(root, text="Cliccami", command=azione_pulsante)
+   pulsante = Button(root, text="Cliccami", command=azione_pulsante)
    pulsante.pack()
    ```
 
@@ -212,10 +213,10 @@ Il `mainloop()` è cruciale: mantiene l'applicazione in esecuzione, gestisce gli
 Possiamo personalizzare ulteriormente la nostra finestra base:
 
 ```python
-import tkinter as tk
+from tkinter import Tk
 
 # Creazione della finestra principale
-finestra = tk.Tk()
+finestra = Tk()
 finestra.title("Finestra personalizzata")
 finestra.geometry("500x400")
 
@@ -246,17 +247,17 @@ Opzioni comuni di configurazione:
 Ora proviamo a creare una finestra personalizzata con una semplice etichetta:
 
 ```python
-import tkinter as tk
+from tkinter import Tk, Label
 from tkinter import messagebox
 
 # Creazione della finestra
-finestra = tk.Tk()
+finestra = Tk()
 finestra.title("La mia applicazione")
 finestra.geometry("500x300")
 finestra.configure(bg="#f0f0f0")
 
 # Aggiunta di un'etichetta con testo
-etichetta = tk.Label(
+etichetta = Label(
     finestra, 
     text="Benvenuto in Tkinter!",
     font=("Arial", 24),
