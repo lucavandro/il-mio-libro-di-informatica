@@ -12,6 +12,7 @@ Esempi di GUI che usi ogni giorno:
 - I messaggi che compaiono sullo schermo per chiederti conferma
 
 Una GUI è composta principalmente da:
+
 - **Finestre**: Lo spazio principale dove vengono visualizzati i contenuti dell'applicazione
 - **Widget**: Elementi interattivi come pulsanti, caselle di testo, menu a tendina
 - **Controlli**: Componenti che permettono di manipolare dati o navigare nell'applicazione
@@ -38,6 +39,7 @@ Nonostante questi vantaggi, è importante sapere che le interfacce a riga di com
 Tkinter è la libreria standard di Python per la creazione di interfacce grafiche. Il nome "Tkinter" deriva da "Tk interface", poiché è basata sul toolkit Tk originariamente sviluppato per il linguaggio Tcl.
 
 **Caratteristiche principali di Tkinter:**
+
 - È inclusa nell'installazione standard di Python (non richiede installazioni aggiuntive)
 - È multipiattaforma: funziona su Windows, macOS e Linux
 - Offre un set completo di widget per costruire interfacce
