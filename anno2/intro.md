@@ -102,6 +102,14 @@ Spesso nei libri di programmazione troverai variabili chiamate `foo`, `bar` o `b
 ### 3.2 Commenti su una riga (`#`)
 
 Un commento su una riga inizia con il simbolo `#`. Tutto quello che scrivi dopo il `#` non viene eseguito.
+  
+**Come scrivere il simbolo `#` sulla tastiera italiana**
+
+Sulla tastiera italiana, il simbolo `#` non si trova direttamente tra i tasti principali. Per scriverlo, devi premere la combinazione di tasti:
+
+- <kbd>AltGr</kbd>(il tasto a destra della barra spaziatrice) **+** il tasto <kbd>ò</kbd>
+
+Quindi, tieni premuto <kbd>AltGr</kbd> e poi premi <kbd>ò</kbd>: apparirà il simbolo `#`.
 
 Esempio:
 
@@ -129,21 +137,52 @@ print("Esempio di commento multilinea")
 ### 4.1 Numeri interi (`int`)
 
 I numeri interi sono numeri senza la virgola, come 5, -3, 100.
+
 Esempio:
 
 ```python
 eta = 15
 ```
 
+Quando devi scrivere numeri molto grandi, puoi usare il carattere underscore (`_`) per separare le cifre a gruppi, rendendo il numero più facile da leggere. Ad esempio, invece di scrivere `1000000`, puoi scrivere:
+
+```python
+milione = 1_000_000
+```
+
+Python ignora gli underscore: il valore della variabile sarà comunque un milione. Questo modo di scrivere non è obbligatorio, ma aiuta molto la leggibilità, soprattutto quando lavori con numeri grandi.
+
+Altri esempi:
+
+```python
+popolazione_italia = 59_000_000
+numero_di_byte = 4_294_967_296
+```
+
+Puoi usare gli underscore dove vuoi tra le cifre, anche ogni tre cifre come nelle notazioni internazionali. È una buona abitudine per evitare errori di lettura o di scrittura nei numeri lunghi!
+
 ### 4.2 Numeri decimali (`float`)
 
-I numeri decimali (o "float") sono come un righello: puoi misurare anche le frazioni tra un numero e l’altro. In Python si usa il punto al posto della virgola!
+I numeri decimali sono quelli che noi chiamiamo _"numeri con la virgola"_.
+
+In informatica questi numeri vengono chiamati _float_ e vengono scritti utilizzando non la virgola ```,``` ma il punto ```.```.
 
 Esempio:
 
 ```python
 altezza = 1.75
 ```
+
+**Curiosità:**
+
+- **Perché si usa il punto e non la virgola?**  
+    Nei computer, il punto viene usato per separare la parte intera da quella decimale perché è lo standard internazionale (chiamato "notazione anglosassone"). Questo evita confusione tra i diversi paesi: così, in tutto il mondo, `3.14` significa sempre "tre e quattordici", mentre la virgola viene usata solo in alcune lingue come l’italiano.
+
+- **Perché si chiamano "float"?**  
+    Il nome _float_ viene da "floating point", cioè "virgola mobile". Questo significa che la posizione della virgola (o meglio, del punto) può "spostarsi" per rappresentare numeri molto grandi o molto piccoli. È come se la virgola potesse galleggiare (float) avanti e indietro per adattarsi al numero che vuoi scrivere!
+
+- **Attenzione agli errori!**  
+    Se provi a scrivere `altezza = 1,75` in Python, otterrai un errore, perché Python pensa che tu stia scrivendo due numeri separati da una virgola. Ricorda: per i decimali, usa sempre il punto!
 
 ### 4.3 Stringhe (`str`)
 
@@ -234,6 +273,35 @@ Per elevare un numero a potenza (ad esempio 2 alla terza), usa `**`.
 print(2 ** 3)   # 8
 ```
 
+Puoi usare lo stesso operatore anche per calcolare le radici. Ad esempio, la radice quadrata di un numero si ottiene elevandolo alla potenza `0.5` (cioè alla "mezzo"):
+
+```python
+print(9 ** 0.5)   # 3.0
+print(16 ** 0.5)  # 4.0
+```
+
+Allo stesso modo, la radice cubica si calcola con l’esponente `1/3`:
+
+```python
+print(27 ** (1/3))  # 3.0
+```
+
+Un altro modo per calcolare la radice quadrata è usare la funzione `sqrt` del modulo `math`. Prima devi importare il modulo:
+
+```python
+from math import sqrt
+print(sqrt(9))   # 3.0
+```
+
+**Differenze tra `**` e `math.sqrt`:**
+
+- L’operatore `**` è più generico: puoi usarlo per qualsiasi potenza o radice.
+- `sqrt` è specifico per la radice quadrata e può essere più leggibile quando vuoi solo quella.
+
+Scegli il metodo che ti sembra più chiaro per il tuo programma!
+**Curiosità:**  
+Il nome `sqrt` è l'abbreviazione di "square root", che in inglese significa "radice quadrata". In matematica, la radice quadrata di un numero è il valore che, moltiplicato per sé stesso, dà quel numero. Ad esempio, la radice quadrata di 9 è 3, perché 3 × 3 = 9. Quindi, la funzione `sqrt` serve proprio a calcolare la radice quadrata di un numero!
+
 ### 5.5 Incremento e decremento di una variabile (`x = x + 1`, `x += 1`, ecc.)
 
 Per aumentare o diminuire il valore di una variabile puoi usare queste scorciatoie:
@@ -245,7 +313,36 @@ x += 1      # x ora vale 7
 x -= 2      # x ora vale 5
 ```
 
-È come segnare i punti in una partita: ogni volta che segni, aggiungi 1 al punteggio!
+Questa tecnica non si usa solo per sommare o sottrarre, ma funziona con tutte le operazioni matematiche di base. Basta cambiare il simbolo:
+
+- **Addizione:** `x += numero` (aggiunge un valore)
+- **Sottrazione:** `x -= numero` (sottrae un valore)
+- **Moltiplicazione:** `x *= numero` (moltiplica per un valore)
+- **Divisione:** `x /= numero` (divide per un valore)
+- **Divisione intera:** `x //= numero` (divide interamente per un valore)
+- **Modulo:** `x %= numero` (assegna il resto della divisione)
+- **Potenza:** `x **= numero` (eleva a potenza)
+
+Esempi pratici:
+
+```python
+punteggio = 10
+punteggio += 5   # punteggio ora vale 15
+
+monete = 20
+monete -= 3      # monete ora vale 17
+
+distanza = 8
+distanza *= 2    # distanza ora vale 16
+
+tempo = 60
+tempo /= 4       # tempo ora vale 15.0
+
+numero = 7
+numero %= 3      # numero ora vale 1 (perché 7 diviso 3 dà resto 1)
+```
+
+Questi operatori rendono il codice più corto e facile da leggere!
 
 ### 5.6 **Uso della funzione `abs()`** per il valore assoluto
 
