@@ -3,6 +3,14 @@
 
 ## 1. **Introduzione a Python**
 
+**Esercizi:**
+
+- Scrivi una breve presentazione di te stesso usando solo commenti nel codice.
+- Prova a scrivere il programma “Hello World” e modificalo per salutare con il tuo nome.
+- Trova online una curiosità su Python e inseriscila come commento in un file `.py`.
+- Apri IDLE o un editor di testo, scrivi un programma che stampi il nome della tua scuola.
+- Salva ed esegui un programma Python che stampi la tua materia preferita.
+
 ### 1.1 Cos’è la programmazione
 
 Immagina di dover spiegare a un robot come preparare una tazza di tè: dovresti dirgli ogni singolo passaggio, dal prendere la tazza, a mettere l’acqua, fino a mescolare con il cucchiaino. La programmazione è proprio questo: scrivere una serie di istruzioni dettagliate che il computer (il nostro robot) deve seguire per svolgere un compito.
@@ -90,6 +98,14 @@ altezza = float(input("Quanto sei alto (in metri)? "))
 
 Se provi a convertire una parola in numero, otterrai un errore!
 
+### Esercizi capitolo 2
+
+- Scrivi un programma che chieda all’utente il suo colore preferito e lo stampi a schermo.
+- Chiedi all’utente il suo nome e la sua età, poi stampa un messaggio che li includa entrambi.
+- Fai inserire all’utente due numeri e stampa la loro somma.
+- Chiedi all’utente il nome di una città e stampa “Ciao, [nome città]!”.
+- Scrivi un programma che chieda all’utente un numero, lo converta in intero e stampi il doppio.
+
 ## 3. **Scrivere codice leggibile**
 
 ### 3.1 **Commenti nel codice**
@@ -131,6 +147,14 @@ su più righe
 '''
 print("Esempio di commento multilinea")
 ```
+
+### Esercizi capitolo 3
+
+- Scrivi un programma che calcoli la somma di due numeri e inserisci un commento per ogni riga.
+- Inserisci un commento multilinea all’inizio di un file che spieghi cosa fa il programma.
+- Scrivi un programma che stampi il tuo animale preferito e aggiungi un commento che spieghi perché ti piace.
+- Crea un programma con una variabile chiamata `foo` e spiega con un commento cosa contiene.
+- Scrivi un programma che usa sia commenti su una riga che commenti multilinea.
 
 ## 4. **Tipi di variabili e valori**
 
@@ -233,6 +257,14 @@ print(type(5))        # <class 'int'>
 print(type(3.14))     # <class 'float'>
 print(type("ciao"))  # <class 'str'>
 ```
+
+### Esercizi capitolo 4
+
+- Crea tre variabili: una per la tua età (int), una per la tua altezza (float) e una per il tuo nome (str). Stampale tutte.
+- Usa la funzione `type()` per stampare il tipo di ciascuna delle variabili create sopra.
+- Prova a scrivere un numero molto grande usando gli underscore per separare le cifre.
+- Cambia il valore di una variabile e stampa il nuovo valore.
+- Scrivi un programma che chiede all’utente un numero e stampa se è di tipo int o float.
 
 ## 5. **Operazioni aritmetiche fondamentali**
 
@@ -352,6 +384,14 @@ La funzione `abs()` restituisce il valore assoluto di un numero, cioè quanto è
 print(abs(-10))   # 10
 ```
 
+### Esercizi capitolo 5
+
+- Chiedi all’utente due numeri e stampa la loro somma, differenza, prodotto e quoziente.
+- Calcola e stampa il resto della divisione tra due numeri inseriti dall’utente.
+- Fai inserire all’utente un numero e stampa il suo valore assoluto.
+- Chiedi all’utente un numero e stampa il suo quadrato e la sua radice quadrata.
+- Scrivi un programma che incrementa una variabile di 1, poi la decrementa di 2 e stampa il risultato.
+
 ## 6. **Stringhe e formattazione**
 
 ### 6.1 Concatenazione di stringhe
@@ -385,6 +425,14 @@ testo = "Python"
 print(len(testo))   # 6
 ```
 
+### Esercizi capitolo 6
+
+- Chiedi all’utente il suo nome e il suo sport preferito, poi stampa una frase usando una f-string.
+- Unisci due stringhe inserite dall’utente e stampale come una sola frase.
+- Chiedi all’utente una parola e stampa quanti caratteri contiene.
+- Scrivi un programma che chiede nome e cognome e li stampa insieme, separati da uno spazio.
+- Crea una frase usando almeno due variabili e la formattazione f-string.
+
 ## 7. **Generazione di numeri casuali**
 
 ### 7.1 Importazione del modulo `random`
@@ -406,6 +454,14 @@ import random
 numero = random.randint(1, 10)
 print("Numero casuale:", numero)
 ```
+
+### Esercizi capitolo 7
+
+- Scrivi un programma che genera e stampa un numero casuale tra 1 e 10.
+- Crea un “lancio di dado” virtuale che stampa un numero casuale tra 1 e 6.
+- Chiedi all’utente di indovinare un numero casuale tra 1 e 5 e stampa se ha indovinato o no.
+- Genera due numeri casuali e stampa la loro somma.
+- Simula l’estrazione di una “lotteria” stampando tre numeri casuali tra 1 e 90.
 
 ## 8. **Strumenti di supporto e debugging**
 
@@ -434,3 +490,11 @@ help(print)
 ```
 
 Molte funzioni e oggetti hanno una "docstring", cioè una breve descrizione che puoi leggere con `help()` o passando il mouse sopra il nome della funzione nell’editor. Imparare a leggere la documentazione ti renderà sempre più autonomo!
+
+### Esercizi capitolo 8
+
+- Scrivi un programma con un errore (ad esempio, dimentica una parentesi) e prova a leggere il messaggio di errore che Python ti mostra.
+- Usa la funzione `help()` per scoprire come funziona la funzione `len()`.
+- Scrivi un programma che contiene un errore, poi correggilo e aggiungi un commento che spiega l’errore.
+- Inserisci una docstring all’inizio di un tuo programma che spieghi cosa fa.
+- Prova a scrivere un programma che stampa il tipo di una variabile e usa `help(type)` per capire meglio cosa fa.
