@@ -12,18 +12,44 @@ Esempio:
 luce_accesa = True
 luce_spenta = False
 ```
-
 ### 1.2 Operatori di confronto (`>`, `<`, `>=`, `<=`, `==`, `!=`)
 
 Gli operatori di confronto sono come le bilance: servono a confrontare due valori e rispondere con `True` o `False`.
 
-Esempi:
+#### **Attenzione speciale: `==` NON è `=`!**
+
+Molti studenti confondono `==` con `=`. Sono due cose **completamente diverse**:
+
+- `=` è l’**assegnazione**: serve per dare un valore a una variabile.
+- `==` è il **confronto**: serve per verificare se due valori sono uguali.
+
+**Esempi:**
+
+```python
+# Assegnazione
+x = 5        # Qui stai dicendo: "x diventa 5"
+
+# Confronto
+print(x == 5)  # Qui stai chiedendo: "x è uguale a 5?" (Risposta: True)
+```
+
+Se usi `=` al posto di `==` in un confronto, Python ti darà errore!
+
+**Ricorda:**  
+- `=` → assegna  
+- `==` → confronta
+
+**Trucchetto per non sbagliare:**  
+Quando vuoi fare una domanda ("sono uguali?"), usa **due uguali**: `==`.
+
+Esempi di confronto:
 
 ```python
 print(5 > 3)    # True
 print(2 == 2)   # True
 print(7 != 4)   # True
 print(10 <= 5)  # False
+```
 ```
 
 ### 1.3 Operatori logici (`and`, `or`, `not`)
@@ -40,15 +66,47 @@ print(not True)        # False
 
 ### 1.4 Altri operatori booleani (`in`, `not in`, `is`, `is not`)
 
-Questi operatori servono per controllare se qualcosa "appartiene" o "è identico" a qualcos’altro.
+Questi operatori permettono di fare controlli più avanzati su stringhe, liste e variabili.
+
+#### 1.4.1 Operatori `in` e `not in`
+
+Servono per verificare se un elemento è presente (o assente) in una sequenza (come una stringa o una lista).
 
 Esempi:
 
 ```python
 nome = "Luca"
-print("a" in nome)        # True
-print("z" not in nome)    # True
-print(nome is "Luca")     # True (in questo caso, ma attenzione: 'is' confronta l'identità, non solo il valore!)
+print("a" in nome)        # True, perché "a" è presente in "Luca"
+print("z" not in nome)    # True, perché "z" NON è presente in "Luca"
+
+frutti = ["mela", "banana", "kiwi"]
+print("banana" in frutti) # True
+print("pera" not in frutti) # True
+```
+
+#### 1.4.2 Operatori `is` e `is not`
+
+Questi confrontano **l'identità** degli oggetti, cioè verificano se due variabili puntano esattamente allo stesso oggetto in memoria. Non vanno confusi con `==`, che confronta solo il **valore**.
+
+Esempi:
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a == b)    # True, perché hanno lo stesso contenuto
+print(a is b)    # False, perché sono due oggetti diversi
+print(a is c)    # True, perché c è proprio lo stesso oggetto di a
+
+x = "ciao"
+y = "ciao"
+print(x == y)    # True, stesso valore
+print(x is y)    # True in questo caso, ma solo perché le stringhe uguali spesso condividono la memoria
+```
+
+**Attenzione:** Usa `is` solo per confrontare identità (ad esempio con `None`: `if x is None:`), mentre per confrontare valori usa sempre `==`.
+
 ```
 
 **Curiosità:**
