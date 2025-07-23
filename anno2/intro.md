@@ -243,6 +243,44 @@ nome_utente = "Anna"
 eta2 = 16
 ```
 
+### 4.6 Il valore `None`
+
+Immagina di avere una scatola vuota: non c’è dentro niente, ma la scatola esiste. In Python, il valore speciale che rappresenta “niente” si chiama `None`.
+
+`None` è usato quando vuoi dire che una variabile non ha ancora un valore, oppure che qualcosa non restituisce nulla.
+
+Esempio:
+
+```python
+scatola = None
+print(scatola)  # Stampa: None
+```
+
+Qui la variabile `scatola` non contiene nessun numero, nessuna parola, niente: solo il valore speciale `None`.
+
+Un altro esempio: puoi iniziare una variabile con `None` e poi riempirla più avanti nel programma.
+
+```python
+risposta = None
+print(risposta)  # Stampa: None
+
+# Più avanti nel programma
+risposta = "Sì"
+print(risposta)  # Stampa: Sì
+```
+
+**Curiosità:**  
+`None` non è uno zero, non è una stringa vuota, non è “falso”: è proprio “niente di niente”, come una scatola vuota pronta per essere riempita!
+
+Puoi controllare se una variabile è `None` usando l’operatore `is`:
+
+```python
+if scatola is None:
+    print("La scatola è vuota!")
+```
+
+Questo è utile per sapere se una variabile è stata “riempita” oppure no.
+
 **Curiosità:**
 Spesso nei manuali si usano nomi come `foo`, `bar` e `baz` per le variabili. Sono nomi "a caso" usati dagli informatici per esempio, un po' come "Tizio, Caio e Sempronio" nei problemi di matematica. Ma tu scegli nomi che abbiano senso per il tuo programma!
 

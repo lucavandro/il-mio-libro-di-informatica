@@ -53,8 +53,6 @@ print(7 != 4)   # True
 print(10 <= 5)  # False
 ```
 
-```
-
 ### 1.3 Operatori logici (`and`, `or`, `not`)
 
 Questi operatori permettono di combinare più condizioni, come in un quiz: "Devi avere più di 14 anni **e** essere iscritto" (`and`), oppure "Hai vinto se hai almeno 1000 punti **o** hai trovato il bonus" (`or`). `not` invece capovolge il risultato: se una condizione è vera, diventa falsa e viceversa.
@@ -81,10 +79,6 @@ Esempi:
 nome = "Luca"
 print("a" in nome)        # True, perché "a" è presente in "Luca"
 print("z" not in nome)    # True, perché "z" NON è presente in "Luca"
-
-frutti = ["mela", "banana", "kiwi"]
-print("banana" in frutti) # True
-print("pera" not in frutti) # True
 ```
 
 #### 1.4.2 Operatori `is` e `is not`
@@ -94,14 +88,6 @@ Questi confrontano **l'identità** degli oggetti, cioè verificano se due variab
 Esempi:
 
 ```python
-a = [1, 2, 3]
-b = [1, 2, 3]
-c = a
-
-print(a == b)    # True, perché hanno lo stesso contenuto
-print(a is b)    # False, perché sono due oggetti diversi
-print(a is c)    # True, perché c è proprio lo stesso oggetto di a
-
 x = "ciao"
 y = "ciao"
 print(x == y)    # True, stesso valore
@@ -109,8 +95,6 @@ print(x is y)    # True in questo caso, ma solo perché le stringhe uguali spess
 ```
 
 **Attenzione:** Usa `is` solo per confrontare identità (ad esempio con `None`: `if x is None:`), mentre per confrontare valori usa sempre `==`.
-
-```
 
 **Curiosità:**
 Il nome "booleano" viene da George Boole, un matematico che ha inventato questa logica più di 150 anni fa!
