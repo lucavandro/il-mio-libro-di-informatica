@@ -250,6 +250,8 @@ A proposito di George Boole, sai che morì in un modo...particolare? Se vuoi sco
 
 In Python, l’indentazione (gli spazi all’inizio della riga) è come la punteggiatura in una frase: senza, il significato si perde! Serve a dire al computer quali istruzioni appartengono allo stesso blocco, ad esempio dentro un if.
 
+Per indentare una riga, si usa il tasto <kbd>TAB</kbd> sulla tastiera. Sulla tastiera italiana, il tasto TAB si trova **alla sinistra della lettera Q**, sopra il tasto Bloc Maiusc.
+
 Esempio:
 
 ```python
@@ -268,6 +270,40 @@ Esempio:
 if True:
 print("Errore! Questa riga non è indentata.")
 ```
+
+### 2.3 Come cambia l'output con o senza indentazione
+
+L'indentazione determina quali istruzioni vengono eseguite all'interno del blocco `if`. Guarda la differenza:
+
+```python
+condizione = True
+if condizione:
+    print("Sono dentro l'if!")
+print("Sono fuori dall'if!")
+```
+
+**Output:**
+
+```html
+Sono dentro l'if!
+Sono fuori dall'if!
+```
+
+```python
+condizione = False
+if condizione:
+    print("Sono dentro l'if!")
+print("Sono fuori dall'if!")
+```
+
+**Output:**
+
+```html
+Sono fuori dall'if!
+```
+
+**Conclusione:**  
+Usa sempre il tasto TAB (alla sinistra della Q) per indentare correttamente il codice Python!
 
 ### Esercizi capitolo 2
 
