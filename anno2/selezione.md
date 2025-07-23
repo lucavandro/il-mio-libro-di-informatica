@@ -55,15 +55,149 @@ print(10 <= 5)  # False
 
 ### 1.3 Operatori logici (`and`, `or`, `not`)
 
-Questi operatori permettono di combinare più condizioni, come in un quiz: "Devi avere più di 14 anni **e** essere iscritto" (`and`), oppure "Hai vinto se hai almeno 1000 punti **o** hai trovato il bonus" (`or`). `not` invece capovolge il risultato: se una condizione è vera, diventa falsa e viceversa.
+Gli operatori logici permettono di combinare più condizioni, rendendo i controlli nei programmi molto più potenti. Vediamoli uno per uno, introducendo anche il concetto di **tabella di verità**, che mostra il risultato di ogni possibile combinazione.
 
-Esempi:
+#### **Operatore `and`**
+
+`and` restituisce `True` solo se **entrambe** le condizioni sono vere.
+
+**Tabella di verità per `and`:**
+
+| A     | B     | A and B |
+|-------|-------|---------|
+| True  | True  | True    |
+| True  | False | False   |
+| False | True  | False   |
+| False | False | False   |
+
+**Esempio:**
 
 ```python
-print(True and False)  # False
-print(True or False)   # True
-print(not True)        # False
+eta = 15
+iscritto = True
+print(eta > 14 and iscritto)  # True, perché entrambe le condizioni sono vere
 ```
+
+---
+
+#### **Operatore `or`**
+
+`or` restituisce `True` se **almeno una** delle condizioni è vera.
+
+**Tabella di verità per `or`:**
+
+| A     | B     | A or B  |
+|-------|-------|---------|
+| True  | True  | True    |
+| True  | False | True    |
+| False | True  | True    |
+| False | False | False   |
+
+**Esempio:**
+
+```python
+punti = 800
+bonus = True
+print(punti >= 1000 or bonus)  # True, perché almeno una condizione è vera
+```
+
+---
+
+#### **Operatore `not`**
+
+`not` capovolge il valore di una condizione: trasforma `True` in `False` e viceversa.
+
+**Tabella di verità per `not`:**
+
+| A     | not A |
+|-------|-------|
+| True  | False |
+| False | True  |
+
+**Esempio:**
+
+```python
+is_online = False
+print(not is_online)  # True, perché la condizione era False
+```
+
+---
+
+### Approfondimento: Le leggi di De Morgan
+
+Le **leggi di De Morgan** sono regole fondamentali della logica booleana che spiegano come negare combinazioni di condizioni. Sono molto utili in informatica, perché permettono di riscrivere espressioni logiche in modo più semplice e leggibile, evitando errori e facilitando la comprensione del codice.
+
+#### Cosa dicono le leggi di De Morgan?
+
+Le leggi sono due:
+
+- `not (A and B)` è equivalente a `not A or not B`
+- `not (A or B)` è equivalente a `not A and not B`
+
+In altre parole, la negazione di una combinazione di condizioni può essere trasformata in una combinazione di negazioni.
+
+#### Perché sono importanti?
+
+- **Semplificazione del codice:** Permettono di riscrivere condizioni complesse in modo più chiaro.
+- **Evita errori logici:** Aiutano a non confondersi quando si devono negare espressioni con più condizioni.
+- **Utile nei filtri e nelle query:** Spesso, quando si lavora con dati (ad esempio, filtrando una lista), è necessario invertire condizioni multiple.
+
+#### Esempi pratici
+
+Supponiamo di voler selezionare gli utenti che **non** sono maggiorenni **e** **non** sono iscritti:
+
+```python
+# Versione con not (A and B)
+if not (eta >= 18 and iscritto):
+    print("Utente non maggiorenne o non iscritto")
+```
+
+Usando la legge di De Morgan, possiamo riscrivere così:
+
+```python
+if eta < 18 or not iscritto:
+    print("Utente non maggiorenne o non iscritto")
+```
+
+Entrambe le condizioni sono equivalenti, ma la seconda è spesso più facile da leggere e da modificare.
+
+Altro esempio con una lista di accesso:
+
+```python
+# Vogliamo negare: "l'utente è admin o è moderatore"
+if not (utente == "admin" or utente == "moderatore"):
+    print("Accesso negato")
+```
+
+Con De Morgan:
+
+```python
+if utente != "admin" and utente != "moderatore":
+    print("Accesso negato")
+```
+
+#### Tabella di verità
+
+Vediamo la tabella di verità per la prima legge:
+
+| A     | B     | A and B | not (A and B) | not A | not B | not A or not B |
+|-------|-------|---------|---------------|-------|-------|----------------|
+| True  | True  | True    | False         | False | False | False          |
+| True  | False | False   | True          | False | True  | True           |
+| False | True  | False   | True          | True  | False | True           |
+| False | False | False   | True          | True  | True  | True           |
+
+Come si vede, `not (A and B)` e `not A or not B` danno sempre lo stesso risultato.
+
+#### Casi d’uso comuni
+
+- **Filtri su dati:** Negare condizioni di ricerca.
+- **Validazione input:** Quando si vuole accettare solo chi NON soddisfa certe condizioni.
+- **Controlli di sicurezza:** Negare l’accesso a chi non ha nessuno dei permessi richiesti.
+
+#### Curiosità: Chi era Augustus De Morgan?
+
+Augustus De Morgan (1806–1871) è stato un matematico e logico britannico, famoso per aver formalizzato queste leggi che portano il suo nome. De Morgan ha lavorato molto sulla logica matematica e sulla teoria degli insiemi, contribuendo a rendere la logica una disciplina rigorosa e applicabile anche all’informatica moderna. Era noto per il suo spirito critico e per la chiarezza delle sue spiegazioni. La sua influenza si vede ancora oggi: ogni volta che scrivi una condizione booleana in Python, stai usando le idee di De Morgan!
 
 ### 1.4 Altri operatori booleani (`in`, `not in`, `is`, `is not`)
 
