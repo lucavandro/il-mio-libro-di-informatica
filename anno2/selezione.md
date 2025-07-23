@@ -12,6 +12,7 @@ Esempio:
 luce_accesa = True
 luce_spenta = False
 ```
+
 ### 1.2 Operatori di confronto (`>`, `<`, `>=`, `<=`, `==`, `!=`)
 
 Gli operatori di confronto sono come le bilance: servono a confrontare due valori e rispondere con `True` o `False`.
@@ -36,6 +37,7 @@ print(x == 5)  # Qui stai chiedendo: "x è uguale a 5?" (Risposta: True)
 Se usi `=` al posto di `==` in un confronto, Python ti darà errore!
 
 **Ricorda:**  
+
 - `=` → assegna  
 - `==` → confronta
 
@@ -50,6 +52,7 @@ print(2 == 2)   # True
 print(7 != 4)   # True
 print(10 <= 5)  # False
 ```
+
 ```
 
 ### 1.3 Operatori logici (`and`, `or`, `not`)
