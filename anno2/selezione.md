@@ -238,11 +238,11 @@ A proposito di George Boole, sai che morì in un modo...particolare? Se vuoi sco
 
 ### Esercizi capitolo 1
 
-- Verifica se il numero di follower di un influencer è maggiore di 10.000.
-- Controlla se il nome di un videogioco preferito contiene la lettera "a".
-- Scrivi una condizione che sia vera solo se hai più di 13 anni **e** sei iscritto a una squadra sportiva.
-- Verifica se la parola "Python" contiene la lettera "y".
-- Controlla se due variabili che rappresentano il punteggio di due squadre sono uguali.
+- E1.1 Verifica se il numero di follower di un influencer è maggiore di 10.000.
+- E1.2 Controlla se il nome di un videogioco preferito contiene la lettera "a".
+- E1.3 Scrivi una condizione che sia vera solo se hai più di 13 anni **e** sei iscritto a una squadra sportiva.
+- E1.4 Verifica se la parola "Python" contiene la lettera "y".
+- E1.5 Controlla se due variabili che rappresentano il punteggio di due squadre sono uguali.
 
 ## 2. Indentazione in Python
 
@@ -307,10 +307,10 @@ Usa sempre il tasto TAB (alla sinistra della Q) per indentare correttamente il c
 
 ### Esercizi capitolo 2
 
-- Scrivi un if che stampi "Bravo!" se il punteggio è maggiore di 90, ricordandoti di indentare correttamente.
-- Prova a togliere l’indentazione a una riga dentro un if e osserva l’errore che compare.
-- Crea un programma che stampi un messaggio solo se una variabile è `True`.
-- Scrivi un if annidato (un if dentro un altro) e spiega con un commento dove serve l’indentazione.
+- E2.1 Scrivi un if che stampi "Bravo!" se il punteggio è maggiore di 90, ricordandoti di indentare correttamente.
+- E2.2 Prova a togliere l’indentazione a una riga dentro un if e osserva l’errore che compare.
+- E2.3 Crea un programma che stampi un messaggio solo se una variabile è `True`.
+- E2.4 Scrivi un if annidato (un if dentro un altro) e spiega con un commento dove serve l’indentazione.
 
 ## 3. Uso dell’if
 
@@ -376,11 +376,11 @@ else:
 
 ### Esercizi capitolo 3
 
-- Scrivi un programma che controlla se la temperatura è sotto zero e stampa un messaggio di allerta.
-- Crea un quiz che stampa "Risposta esatta!" se l’utente inserisce la risposta giusta, altrimenti "Ritenta".
-- Simula un controllo di età per l’accesso a un social network.
-- Scrivi un programma che assegna un giudizio ("Ottimo", "Buono", "Sufficiente", "Insufficiente") in base al voto inserito.
-- Crea un sistema di login che controlla utente e password.
+- E3.1 Scrivi un programma che controlla se la temperatura è sotto zero e stampa un messaggio di allerta.
+- E3.2 Crea un quiz che stampa "Risposta esatta!" se l’utente inserisce la risposta giusta, altrimenti "Ritenta".
+- E3.3 Simula un controllo di età per l’accesso a un social network.
+- E3.4 Scrivi un programma che assegna un giudizio ("Ottimo", "Buono", "Sufficiente", "Insufficiente") in base al voto inserito.
+- E3.5 Crea un sistema di login che controlla utente e password.
 
 ## 4. Costrutto pass
 
@@ -400,9 +400,9 @@ if True:
 
 ### Esercizi capitolo 4
 
-- Scrivi un if che controlla se un giocatore ha vinto, ma lascia il blocco vuoto usando `pass`.
-- Crea una funzione che per ora non fa nulla, usando `pass`.
-- Progetta un menu di un videogioco con le voci principali, ma lascia alcune opzioni vuote con `pass`.
+- E4.1 Scrivi un if che controlla se un giocatore ha vinto, ma lascia il blocco vuoto usando `pass`.
+- E4.2 Crea una funzione che per ora non fa nulla, usando `pass`.
+- E4.3 Progetta un menu di un videogioco con le voci principali, ma lascia alcune opzioni vuote con `pass`.
 
 ## 5. Operatore ternario
 
@@ -423,9 +423,9 @@ Si chiama "ternario" perché coinvolge tre elementi: la condizione, il valore se
 
 ### Esercizi capitolo 5
 
-- Scrivi un programma che stampa "Pari" o "Dispari" usando l’operatore ternario.
-- Crea una variabile che contiene "Promosso" o "Bocciato" in base al voto inserito.
-- Usa l’operatore ternario per scegliere tra due squadre vincitrici in una partita.
+- E5.1 Scrivi un programma che stampa "Pari" o "Dispari" usando l’operatore ternario.
+- E5.2 Crea una variabile che contiene "Promosso" o "Bocciato" in base al voto inserito.
+- E5.3 Usa l’operatore ternario per scegliere tra due squadre vincitrici in una partita.
 
 ## 6. Confronto tra valori e variabili
 
@@ -474,7 +474,7 @@ else:
 
 ### Esercizi capitolo 6
 
-- Confronta il numero di like di due post su un social e stampa quale ha più successo.
-- Scrivi un programma che controlla se due nomi di attori sono uguali.
-- Crea un quiz che chiede all’utente di indovinare se un numero segreto è maggiore o minore di un valore dato.
-- Confronta i punteggi di due squadre di calcio e stampa chi ha vinto o se c’è pareggio.
+- E6.1 Confronta il numero di like di due post su un social e stampa quale ha più successo.
+- E6.2 Scrivi un programma che controlla se due nomi di attori sono uguali.
+- E6.3 Crea un quiz che chiede all’utente di indovinare se un numero segreto è maggiore o minore di un valore dato.
+- E6.4 Confronta i punteggi di due squadre di calcio e stampa chi ha vinto o se c’è pareggio.
