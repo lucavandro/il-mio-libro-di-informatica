@@ -1,10 +1,13 @@
 # Lezione 1: Introduzione a JavaScript e prime interazioni con la pagina web
 
 ## Cos'è JavaScript?
+
 JavaScript è un linguaggio di programmazione che permette di rendere interattive le pagine web. Mentre l'HTML definisce il contenuto e il CSS definisce lo stile, JavaScript aggiunge il comportamento dinamico alle pagine web.
 
 ## Il Document Object Model (DOM)
+
 Quando un browser carica una pagina web, crea una rappresentazione ad albero di tutti gli elementi HTML. Questa struttura è chiamata DOM (Document Object Model). JavaScript può interagire con questa struttura per:
+
 - Modificare elementi HTML
 - Modificare attributi HTML
 - Modificare stili CSS
@@ -12,6 +15,7 @@ Quando un browser carica una pagina web, crea una rappresentazione ad albero di 
 - Creare e rimuovere elementi
 
 ## Come includere JavaScript in una pagina HTML
+
 È buona pratica inserire il codice JavaScript in un file separato con estensione `.js`. Ecco come collegarlo alla pagina HTML:
 
 ```html
@@ -33,6 +37,7 @@ Quando un browser carica una pagina web, crea una rappresentazione ad albero di 
 ```
 
 ## Prime interazioni con il DOM
+
 Vediamo come interagire con gli elementi della pagina utilizzando JavaScript:
 
 ```javascript
@@ -53,6 +58,7 @@ bottone.onclick = function() {
 ```
 
 ## Le variabili in JavaScript
+
 In JavaScript, le variabili sono contenitori per memorizzare dati. Esistono tre modi per dichiarare variabili:
 
 ```javascript
@@ -66,7 +72,8 @@ const piGreco = 3.14;
 var cognome = 'Rossi';  // sconsigliato nelle applicazioni moderne
 ```
 
-### Regole per i nomi delle variabili:
+### Regole per i nomi delle variabili
+
 - Devono iniziare con una lettera, $ o _
 - Sono case-sensitive (nome ≠ Nome)
 - Non possono usare parole riservate (come let, const, function)
@@ -74,20 +81,26 @@ var cognome = 'Rossi';  // sconsigliato nelle applicazioni moderne
 ## Input e Output base
 
 ### Console.log()
+
 Utile per il debug e visualizzare valori durante lo sviluppo:
+
 ```javascript
 let eta = 16;
 console.log('La tua età è:', eta);
 ```
 
 ### Alert()
+
 Mostra un popup con un messaggio:
+
 ```javascript
 alert('Benvenuto al corso!');
 ```
 
 ## Esercizio pratico
+
 Creiamo una pagina che permetta di:
+
 1. Mostrare un messaggio di benvenuto
 2. Cambiare il colore del testo al click di un bottone
 
@@ -120,11 +133,13 @@ bottone.onclick = function() {
 ```
 
 ## Esercizi proposti
+
 1. Modifica l'esercizio precedente per far sì che il colore del testo cambi tra rosso e blu ad ogni click
 2. Aggiungi un secondo bottone che, quando cliccato, cambi il testo del messaggio di benvenuto
 3. Crea una pagina con tre paragrafi e un bottone che, quando cliccato, cambi il testo di tutti i paragrafi contemporaneamente
 
 ## Punti chiave della lezione
+
 - JavaScript permette di rendere interattive le pagine web
 - Il DOM è la rappresentazione degli elementi HTML della pagina
 - `document.getElementById()` permette di selezionare elementi HTML
@@ -140,7 +155,9 @@ Nella lezione precedente abbiamo fatto una prima conoscenza con JavaScript e abb
 In JavaScript, ogni variabile che creiamo può contenere diversi tipi di dati. Immaginate questi tipi come contenitori diversi, ognuno progettato per un tipo specifico di informazione:
 
 ### 1. Numeri (Number)
+
 I numeri in JavaScript possono essere interi o decimali:
+
 ```javascript
 let eta = 16;                // numero intero
 let altezza = 1.75;          // numero decimale
@@ -148,7 +165,9 @@ let temperaturaNegativa = -5; // anche i numeri negativi sono permessi
 ```
 
 ### 2. Testo (String)
+
 Le stringhe sono sequenze di caratteri che mettiamo tra apici (singoli o doppi):
+
 ```javascript
 let nome = "Mario";
 let saluto = 'Ciao';
@@ -156,7 +175,9 @@ let frase = "L'apostrofo non è un problema se uso i doppi apici";
 ```
 
 ### 3. Valori booleani (Boolean)
+
 I booleani sono semplici: possono essere solo vero o falso:
+
 ```javascript
 let haCompiutoGliAnni = true;
 let staStudiando = false;
@@ -167,6 +188,7 @@ let staStudiando = false;
 Ora che conosciamo i tipi di dati principali, vediamo come possiamo combinarli e manipolarli!
 
 ### Operazioni con i numeri
+
 ```javascript
 let numero1 = 10;
 let numero2 = 5;
@@ -183,7 +205,9 @@ numero2--;  // diminuisce di 1
 ```
 
 ### Operazioni con le stringhe
+
 Le stringhe hanno alcune particolarità interessanti. Possiamo unirle (concatenarle) usando il simbolo +:
+
 ```javascript
 let nome = "Mario";
 let cognome = "Rossi";
@@ -321,12 +345,12 @@ bottoneVerifica.onclick = function() {
 3. **Generatore di saluti**: Crea una pagina dove l'utente inserisce il suo nome e l'ora del giorno (mattina, pomeriggio, sera) e il programma genera un saluto appropriato
 
 ## Punti chiave della lezione
+
 - I tipi di dati principali in JavaScript sono numeri, stringhe e booleani
 - Possiamo convertire tra diversi tipi di dati quando necessario
 - Le operazioni matematiche funzionano sui numeri
 - Le stringhe possono essere concatenate con + o usando i template literals
 - Possiamo leggere e modificare gli attributi degli elementi HTML
-
 
 # Lezione 3: Strutture di controllo - La selezione
 
@@ -349,6 +373,7 @@ if (colpito) {
 ```
 
 ### Sintassi dell'if-else
+
 ```javascript
 if (condizione) {
     // codice da eseguire se la condizione è vera
@@ -579,6 +604,7 @@ bottoneVerifica.onclick = function() {
 3. **Gioco di indovinare il numero**: Crea un gioco dove il computer "pensa" a un numero tra 1 e 100 e l'utente deve indovinarlo, ricevendo suggerimenti del tipo "troppo alto" o "troppo basso"
 
 ## Punti chiave della lezione
+
 - Le strutture di controllo ci permettono di far prendere decisioni al nostro codice
 - `if-else` è la struttura di base per la selezione
 - Possiamo usare operatori di confronto (`>`, `<`, `===`, ecc.) per creare condizioni
@@ -647,6 +673,7 @@ bottoneStart.onclick = function() {
 ## Il ciclo for
 
 Il ciclo `for` è probabilmente il più utilizzato. È perfetto quando sappiamo esattamente quante volte vogliamo ripetere un'operazione. Ha una sintassi particolare che include tre parti:
+
 1. Inizializzazione
 2. Condizione
 3. Incremento
@@ -846,6 +873,7 @@ for (let i = 1; i <= 5; i++) {
    - Per i numeri che sono multipli sia di 3 che di 5 stampi "FizzBuzz"
 
 ## Punti chiave della lezione
+
 - I cicli ci permettono di ripetere del codice più volte
 - `while` continua finché una condizione è vera
 - `for` è utile quando sappiamo quante iterazioni vogliamo fare
@@ -863,6 +891,7 @@ Pensate alle funzioni come a delle "ricette": invece di scrivere ogni volta tutt
 ## Cos'è una funzione?
 
 Una funzione è un blocco di codice che:
+
 1. Ha un nome (come `calcolaMedia` o `saluta`)
 2. Può ricevere dei dati in input (chiamati parametri)
 3. Può restituire un risultato
@@ -873,6 +902,7 @@ Una funzione è un blocco di codice che:
 Ci sono diversi modi per creare una funzione. Vediamoli:
 
 ### Metodo tradizionale
+
 ```javascript
 function saluta(nome) {
     return "Ciao " + nome + "!";
@@ -883,6 +913,7 @@ let messaggio = saluta("Mario");  // messaggio contiene "Ciao Mario!"
 ```
 
 ### Function expression
+
 ```javascript
 let saluta = function(nome) {
     return "Ciao " + nome + "!";
@@ -893,6 +924,7 @@ let messaggio = saluta("Mario");
 ```
 
 ### Arrow function (funzione freccia)
+
 ```javascript
 let saluta = (nome) => {
     return "Ciao " + nome + "!";
@@ -1187,6 +1219,7 @@ document.getElementById('formRegistrazione').addEventListener('submit', (e) => {
    - Data di nascita (deve essere maggiorenne)
 
 ## Punti chiave della lezione
+
 - Le funzioni sono blocchi di codice riutilizzabili
 - Possono ricevere parametri e restituire valori
 - Esistono diversi modi di scrivere funzioni (tradizionale, expression, arrow)
@@ -1197,9 +1230,11 @@ document.getElementById('formRegistrazione').addEventListener('submit', (e) => {
 # Lezione 6: Eventi - Parte 1
 
 ## Introduzione agli Eventi
+
 Gli eventi sono azioni o occorrenze che si verificano nel browser, come il click di un utente, il movimento del mouse, il caricamento di una pagina o la pressione di un tasto. JavaScript ci permette di "ascoltare" questi eventi e reagire di conseguenza, rendendo le nostre pagine web interattive.
 
 ### Struttura HTML di Base
+
 ```html
 <!DOCTYPE html>
 <html lang="it">
@@ -1225,6 +1260,7 @@ Gli eventi sono azioni o occorrenze che si verificano nel browser, come il click
 ```
 
 ### CSS di Base
+
 ```css
 .hidden {
     display: none;
@@ -1243,6 +1279,7 @@ Gli eventi sono azioni o occorrenze che si verificano nel browser, come il click
 ```
 
 ## 1. Eventi onClick e onMouseOver
+
 Gli eventi più comuni sono quelli legati al mouse. Vediamo come gestirli:
 
 ```javascript
@@ -1266,7 +1303,9 @@ hoverArea.onmouseout = function() {
 ```
 
 ## 2. addEventListener()
+
 Il metodo più moderno e flessibile per gestire gli eventi è `addEventListener()`. Permette di:
+
 - Aggiungere più gestori per lo stesso evento
 - Rimuovere gestori quando non servono più
 - Maggior controllo sulla propagazione degli eventi
@@ -1297,6 +1336,7 @@ hoverArea.addEventListener('mouseover', gestioneHover);
 ```
 
 ## 3. L'Oggetto Event
+
 Quando si verifica un evento, JavaScript crea un oggetto `Event` che contiene informazioni dettagliate sull'evento stesso. Quest'oggetto viene passato automaticamente alla funzione gestore.
 
 ```javascript
@@ -1312,6 +1352,7 @@ btnTest.addEventListener('click', function(event) {
 ```
 
 ## 4. Esempio Pratico: Menu Interattivo
+
 Creiamo un menu che si apre al click e si chiude cliccando fuori:
 
 ```javascript
@@ -1359,6 +1400,7 @@ document.addEventListener('DOMContentLoaded', () => {
    - Permetta di chiuderle manualmente
 
 ## Punti Chiave da Ricordare
+
 - Preferire sempre `addEventListener()` rispetto agli attributi HTML o alle proprietà on*
 - Utilizzare la delega degli eventi per gestire elementi dinamici
 - Ricordarsi di gestire la pulizia degli event listener quando non servono più
@@ -1368,6 +1410,7 @@ document.addEventListener('DOMContentLoaded', () => {
 # Lezione 7: Eventi - Parte 2 e Gestione Form
 
 ## Struttura HTML di Base
+
 ```html
 <!DOCTYPE html>
 <html lang="it">
@@ -1429,6 +1472,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 ### CSS di Base
+
 ```css
 .container {
     max-width: 600px;
@@ -1474,6 +1518,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 ## 1. Eventi dei Form
+
 ```javascript
 // Otteniamo riferimenti agli elementi del form
 const form = document.getElementById('registrationForm');
@@ -1491,6 +1536,7 @@ password.addEventListener('blur', hidePasswordRequirements);
 ```
 
 ## 2. Validazione Base dei Form
+
 ```javascript
 function validateUsername(e) {
     const value = e.target.value;
@@ -1557,6 +1603,7 @@ function validatePassword(e) {
 ```
 
 ## 3. Gestione dell'Evento Submit
+
 ```javascript
 function handleSubmit(e) {
     e.preventDefault(); // Previene l'invio automatico del form
@@ -1589,6 +1636,7 @@ function handleSubmit(e) {
 ```
 
 ## 4. Validazione in Tempo Reale
+
 ```javascript
 // Validazione mentre l'utente digita
 const inputs = form.querySelectorAll('input[required]');
@@ -1625,6 +1673,7 @@ inputs.forEach(input => {
 ```
 
 ## 5. Miglioramenti per l'Accessibilità
+
 ```javascript
 // Aggiunta di ARIA attributes per l'accessibilità
 function updateAriaAttributes(input, isValid) {
@@ -1668,6 +1717,7 @@ inputs.forEach(input => {
    - Ripristina i dati salvati al caricamento
 
 ## Punti Chiave da Ricordare
+
 - Sempre prevenire l'invio del form con `preventDefault()`
 - Validare sia lato client che lato server
 - Fornire feedback immediato all'utente
@@ -1679,6 +1729,7 @@ inputs.forEach(input => {
 # Lezione 8: Manipolazione avanzata del DOM e Progetto Todo List
 
 ## Struttura HTML di Base
+
 ```html
 <!DOCTYPE html>
 <html lang="it">
@@ -1719,6 +1770,7 @@ inputs.forEach(input => {
 ```
 
 ### CSS di Base
+
 ```css
 .container {
     max-width: 600px;
@@ -1798,6 +1850,7 @@ button:hover {
 ```
 
 ## 1. Creazione e Aggiunta di Elementi
+
 ```javascript
 // Funzione per creare un nuovo elemento todo
 function createTodoElement(todoText) {
@@ -1840,6 +1893,7 @@ function addTodoToList(todoText) {
 ```
 
 ## 2. Rimozione di Elementi
+
 ```javascript
 // Funzione per rimuovere un todo
 function removeTodo(todoElement) {
@@ -1864,6 +1918,7 @@ document.getElementById('todoList').addEventListener('click', (e) => {
 ```
 
 ## 3. Navigazione del DOM
+
 ```javascript
 // Funzione per trovare tutti i task completati
 function getCompletedTasks() {
@@ -1892,6 +1947,7 @@ function getSiblings(element) {
 ```
 
 ## 4. Gestione delle Classi CSS
+
 ```javascript
 // Toggle dello stato completato
 function toggleTodoComplete(todoItem) {
@@ -1916,6 +1972,7 @@ document.getElementById('todoList').addEventListener('change', (e) => {
 ```
 
 ## 5. Implementazione dei Filtri
+
 ```javascript
 // Funzione per filtrare i todo
 function filterTodos(filterType) {
@@ -1954,6 +2011,7 @@ document.querySelector('.filters').addEventListener('click', (e) => {
 ```
 
 ## 6. Gestione dello Stato
+
 ```javascript
 // Funzione per aggiornare il contatore
 function updateTaskCount() {
@@ -1990,6 +2048,7 @@ function loadTodos() {
 ```
 
 ## 7. Inizializzazione dell'Applicazione
+
 ```javascript
 // Funzione di inizializzazione
 function initTodoApp() {
@@ -2039,6 +2098,7 @@ document.addEventListener('DOMContentLoaded', initTodoApp);
    - Calcola il totale della spesa
 
 ## Punti Chiave da Ricordare
+
 - Utilizzare `createElement()` per creare nuovi elementi
 - Gestire correttamente gli eventi con la delegation
 - Manipolare le classi CSS per le animazioni

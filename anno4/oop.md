@@ -7,6 +7,7 @@
 La programmazione ad oggetti (OOP - Object-Oriented Programming) è un paradigma di programmazione basato sul concetto di "oggetti", che possono contenere dati e codice. I dati sono sotto forma di campi (spesso noti come attributi o proprietà), e il codice è sotto forma di procedure (spesso chiamate metodi).
 
 Caratteristiche principali:
+
 - Organizzazione del codice in unità chiamate oggetti
 - Combinazione di dati e comportamenti
 - Progettazione di programmi in termini di oggetti che interagiscono tra loro
@@ -28,10 +29,12 @@ Caratteristiche principali:
 #### Oggetti
 
 Un oggetto è un'istanza di una classe. Rappresenta un'entità del mondo reale e ha:
+
 - Stato (attributi o proprietà)
 - Comportamento (metodi o funzioni)
 
 Esempio in JavaScript:
+
 ```javascript
 let cane = {
     nome: "Fido",
@@ -45,10 +48,12 @@ let cane = {
 #### Classi
 
 Una classe è un "progetto" o un "modello" per creare oggetti. Definisce:
+
 - Attributi: le caratteristiche dell'oggetto
 - Metodi: le azioni che l'oggetto può compiere
 
 Esempio di classe in JavaScript (ES6+):
+
 ```javascript
 class Cane {
     constructor(nome, razza) {
@@ -65,6 +70,7 @@ class Cane {
 let mioCane = new Cane("Fido", "Labrador");
 mioCane.abbaia(); // Output: Bau bau!
 ```
+
 ## 2. Oggetti in Javascript
 
 Gli oggetti sono il cuore della programmazione in Javascript. Possiamo pensare a un oggetto come a una sorta di contenitore che raccoglie informazioni e funzionalità correlate. Immagina di avere una scatola etichettata "gatto" - all'interno di questa scatola, potresti trovare tutte le cose che descrivono e fanno parte di un gatto.
@@ -160,7 +166,7 @@ In questo esempio, abbiamo creato una classe `Gatto`. La classe ha un metodo spe
 
 ### 3.3 Il costruttore
 
-Il costruttore è come il "momento della nascita" per i nostri oggetti gatto. È una funzione speciale che viene chiamata automaticamente quando creiamo un nuovo gatto. Nel costruttore, usiamo la parola chiave `this` per riferirci al gatto che stiamo creando. 
+Il costruttore è come il "momento della nascita" per i nostri oggetti gatto. È una funzione speciale che viene chiamata automaticamente quando creiamo un nuovo gatto. Nel costruttore, usiamo la parola chiave `this` per riferirci al gatto che stiamo creando.
 
 Quando scriviamo `this.nome = nome`, stiamo dicendo "prendi il nome che mi è stato dato e assegnalo come proprietà di questo nuovo gatto".
 
@@ -200,7 +206,6 @@ whiskers.compleanno();  // Stamperà: Whiskers ora ha 4 anni!
 ```
 
 Le classi ci permettono di organizzare il nostro codice in modo più strutturato e di creare molti oggetti simili in modo efficiente. Sono un pilastro fondamentale della programmazione orientata agli oggetti in Javascript moderno.
-
 
 ## 4. Incapsulamento
 
@@ -600,7 +605,6 @@ console.log(calcolaAreaTotale([rettangolo, cerchio]));
 In questo esempio, la funzione `calcolaAreaTotale()` può lavorare con qualsiasi array di oggetti che hanno un metodo `area()`, indipendentemente dalla loro classe specifica. Questo è il polimorfismo in azione.
 
 Il polimorfismo ci permette di scrivere codice più generico e riutilizzabile. Invece di scrivere funzioni separate per ogni tipo di oggetto, possiamo scrivere una singola funzione che lavora con un'interfaccia comune. Questo rende il nostro codice più flessibile, più facile da mantenere e più facile da estendere.
-
 
 ## 8. Composizione vs Ereditarietà
 
@@ -1510,7 +1514,3 @@ gioco.mostraManoDiTutti();
 In questo progetto, abbiamo creato diverse classi (`Carta`, `Mazzo`, `Giocatore`, `GiocoCarte`) che lavorano insieme per implementare un semplice gioco di carte. Questo esempio dimostra l'uso della composizione (la classe `GiocoCarte` contiene un `Mazzo` e dei `Giocatore`), l'incapsulamento (ogni classe gestisce il proprio stato interno), e come diversi oggetti possono interagire tra loro in un sistema più complesso.
 
 Questi esercizi e progetti vi danno l'opportunità di mettere in pratica i concetti che abbiamo discusso nei capitoli precedenti. Vi incoraggiamo a sperimentare con questi esempi: provate a estenderli, aggiungere nuove funzionalità, o persino a creare i vostri progetti basati su questi concetti. Ricordate, la programmazione è una competenza che si affina con la pratica, quindi più codice scrivete, migliori diventerete!
-
-
-
-
