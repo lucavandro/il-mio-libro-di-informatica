@@ -6,6 +6,7 @@ inserendo eventuali curiosità dove lo ritieni opportuno.
 Nelle sezioni esercizi ricorda di inserire la traccia, senza lo svolgimento, 
 utilizzando esercizi interessanti, magari ispirati al mondo delle scienze, 
 delle sport, dello spettacolo, del cinema, dei social network e dei videogame. 
+Se ci sono esempi di codice commentali, spiegando cosa viene fatto.
 Dove puoi usa delle emoji per rendere più simpatico e dinamico il tutto (ma non esagerare!)
 
 

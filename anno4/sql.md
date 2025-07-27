@@ -4,23 +4,155 @@
 
 ### 1.1 Cos’è un database e a cosa serve
 
+Un **database** è come un grande armadio digitale dove puoi conservare, organizzare e ritrovare facilmente tante informazioni. Immagina di avere una collezione di figurine: invece di spargerle per la stanza, le metti in un album ordinato, così puoi cercare e trovare subito quella che ti interessa. Un database fa la stessa cosa, ma con dati come nomi, numeri, indirizzi, ecc.
+
+**Esempio pratico:**  
+Se vuoi tenere traccia dei comuni italiani e dei loro sindaci, puoi creare un database con due tabelle: una per i Comuni e una per i Sindaci. Così puoi sapere subito chi è il sindaco di un certo comune o quanti residenti ci sono in una città.
+
 ### 1.2 Caratteristiche di SQL
+
+**SQL** (Structured Query Language) è il linguaggio universale per parlare con i database relazionali. È come una lingua speciale che permette di:
+
+- **Creare** nuove tabelle (come aggiungere nuove pagine all’album)
+- **Inserire** dati (attaccare nuove figurine)
+- **Modificare** dati (correggere una figurina sbagliata)
+- **Cancellare** dati (togliere una figurina)
+- **Cercare** informazioni (trovare tutte le figurine di una certa squadra)
+
+**Esempio di comando SQL:**  
+
+```sql
+SELECT Nome, Provincia FROM Comuni WHERE Residenti > 100000;
+```
+
+Questa istruzione trova tutti i comuni con più di 100.000 residenti.
+
+**Curiosità:**  
+SQL è usato in quasi tutti i database del mondo, da quelli delle banche a quelli delle app sul tuo telefono!
 
 ### 1.3 Differenze tra SQL e SQLite
 
+**SQL** è il linguaggio, mentre **SQLite** è un programma che usa SQL per gestire i dati.  
+Pensa a SQL come alle regole del gioco e a SQLite come al tabellone e alle carte che ti permettono di giocare.
+
+- **SQL**: il linguaggio per comunicare con il database.
+- **SQLite**: un database leggero e portatile che puoi usare senza installare nulla di complicato. Tutto il database è contenuto in un unico file!
+
+**Differenze principali:**
+
+- SQLite è molto semplice da usare e non richiede un server: basta un file.
+- Altri database (come MySQL, PostgreSQL) sono più complessi e adatti a gestire grandi quantità di dati o molti utenti contemporaneamente.
+
+**Esempio:**  
+Se sviluppi una piccola app o un sito web personale, SQLite è perfetto. Se invece gestisci il database di una banca, userai qualcosa di più potente.
+
 ### 1.4 Vantaggi e limiti di SQLite
+
+**Vantaggi:**
+
+- **Facilità d’uso**: non serve installare o configurare un server.
+- **Portabilità**: tutto il database è in un file che puoi copiare dove vuoi.
+- **Velocità**: per piccoli progetti è molto veloce.
+- **Zero costi**: è gratuito e open source.
+
+**Limiti:**
+
+- **Gestione utenti**: non puoi creare utenti diversi con permessi diversi.
+- **Concorrenza**: non è adatto a molti utenti che scrivono dati contemporaneamente.
+- **Funzionalità avanzate**: alcune funzioni presenti in altri database mancano o sono limitate.
+
+**Curiosità:**  
+SQLite è usato in tantissime app famose (come WhatsApp, Chrome, Firefox) proprio perché è leggero e facile da integrare!
+
+---
 
 ## 2. Le categorie di comandi SQL
 
+SQL è diviso in diverse categorie, ognuna con uno scopo preciso. Immagina di avere diversi strumenti nella tua cassetta degli attrezzi: ognuno serve per un compito diverso!
+
 ### 2.1 DDL (Data Definition Language)
+
+I comandi **DDL** servono a **definire la struttura** del database, come progettare le pagine dell’album delle figurine.
+
+- `CREATE TABLE`: crea una nuova tabella
+- `ALTER TABLE`: modifica la struttura di una tabella
+- `DROP TABLE`: elimina una tabella
+
+**Esempio:**  
+
+```sql
+CREATE TABLE Comuni (
+    ID INTEGER PRIMARY KEY,
+    Nome TEXT NOT NULL,
+    Provincia TEXT,
+    Residenti INTEGER
+);
+```
 
 ### 2.2 DML (Data Manipulation Language)
 
+I comandi **DML** servono a **gestire i dati** dentro le tabelle, come aggiungere, cambiare o togliere figurine dall’album.
+
+- `INSERT INTO`: aggiunge nuovi dati
+- `UPDATE`: modifica dati esistenti
+- `DELETE`: elimina dati
+
+**Esempio:**  
+
+```sql
+INSERT INTO Sindaci (Nome, Cognome, ComuneID) VALUES ('Mario', 'Rossi', 1);
+UPDATE Comuni SET Residenti = 50000 WHERE Nome = 'Milano';
+DELETE FROM Sindaci WHERE Nome = 'Mario';
+```
+
 ### 2.3 QL (Query Language) / DQL (Data Query Language)
+
+I comandi **DQL** servono a **interrogare** il database, cioè a fare domande e ottenere risposte. È come chiedere: “Quanti comuni hanno più di 100.000 abitanti?”
+
+- `SELECT`: recupera dati dalle tabelle
+
+**Esempio:**  
+
+```sql
+SELECT Nome, Residenti FROM Comuni WHERE Residenti > 100000;
+```
 
 ### 2.4 DCL (Data Control Language)
 
-### 2.5 TCL (Transaction Control Language)  <!-- suggerito: importante per capire COMMIT/ROLLBACK -->
+I comandi **DCL** servono a **controllare chi può fare cosa** nel database, come dare le chiavi dell’album solo ad alcune persone.
+
+- `GRANT`: concede permessi
+- `REVOKE`: revoca permessi
+
+**Esempio:**  
+
+```sql
+GRANT SELECT ON Comuni TO utente1;
+REVOKE UPDATE ON Sindaci FROM utente2;
+```
+
+**Nota:**  
+In SQLite questi comandi non sono realmente usati, ma sono fondamentali in altri database più grandi.
+
+### 2.5 TCL (Transaction Control Language)
+
+I comandi **TCL** servono a **gestire le transazioni**, cioè gruppi di operazioni che devono andare a buon fine tutte insieme, come una partita a Monopoli: o tutte le mosse si fanno, o si annulla tutto.
+
+- `BEGIN`: inizia una transazione
+- `COMMIT`: conferma le modifiche
+- `ROLLBACK`: annulla le modifiche
+
+**Esempio:**  
+
+```sql
+BEGIN;
+UPDATE Comuni SET Residenti = Residenti - 1000 WHERE Nome = 'Roma';
+UPDATE Comuni SET Residenti = Residenti + 1000 WHERE Nome = 'Milano';
+COMMIT;
+```
+
+**Curiosità:**  
+Le transazioni sono fondamentali per evitare errori e mantenere i dati sempre corretti, anche in caso di problemi improvvisi (come un blackout!).
 
 ## 3. Creazione e gestione delle tabelle
 
@@ -104,47 +236,6 @@ DROP TABLE Sindaci;
 ```
 
 ---
-
-## 4. Inserimento, modifica e cancellazione dei dati
-
-### 4.1 INSERT INTO
-
-Per aggiungere dati in una tabella si usa `INSERT INTO`, come aggiungere una nuova scheda alla tua collezione.
-
-**Esempio:**
-
-```sql
-INSERT INTO Comuni (Nome, Provincia, Residenti) VALUES ('Roma', 'Roma', 2873000);
-```
-
-Per i Sindaci:
-
-```sql
-INSERT INTO Sindaci (Nome, Cognome, Anni, Partito, Sesso, ComuneID) VALUES ('Giovanni', 'Rossi', 54, 'Indipendente', 'M', 1);
-```
-
-### 4.2 UPDATE
-
-`UPDATE` serve a modificare dati già presenti, come correggere una scheda sbagliata.
-
-**Esempio:**
-
-```sql
-UPDATE Comuni SET Residenti = 2874000 WHERE Nome = 'Roma';
-```
-
-### 4.3 DELETE
-
-`DELETE` elimina una o più righe da una tabella. Usalo con attenzione, perché una volta cancellato... non si torna indietro! 🗑️
-
-**Esempio:**
-
-```sql
-DELETE FROM Sindaci WHERE Nome = 'Giovanni' AND Cognome = 'Rossi';
-```
-
-**Curiosità:**
-In SQLite puoi annullare una cancellazione solo se usi le transazioni (vedi più avanti)!
 
 ## 4. Inserimento, modifica e cancellazione dei dati
 
