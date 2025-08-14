@@ -2,7 +2,8 @@ Completa ora il file inserendo il testo per ogni sezione.
 Non essere troppo breve, cerca di essere approfondito.
 Utilizza un linguaggio semplice, ricco di esempi di codice, 
 utilizzando metafore per spiegare i concetti più complessi, 
-inserendo eventuali curiosità dove lo ritieni opportuno. 
+inserendo eventuali curiosità dove lo ritieni opportuno.
+Devi essere discorsivo: non usare elenchi, a meno che non sia strettamente necessario 
 Nelle sezioni esercizi ricorda di inserire la traccia, senza lo svolgimento, 
 utilizzando esercizi interessanti, magari ispirati al mondo delle scienze, 
 delle sport, dello spettacolo, del cinema, dei social network e dei videogame. 
@@ -10,18 +11,6 @@ Se ci sono esempi di codice commentali, spiegando cosa viene fatto.
 Dove puoi usa delle emoji per rendere più simpatico e dinamico il tutto (ma non esagerare!)
 
 
-Completa ora il file inserendo il testo per ogni sezione. 
-Non essere troppo breve, cerca di essere approfondito.
-Utilizza un linguaggio semplice, ricco di esempi di codice, 
-utilizzando metafore per spiegare i concetti più complessi, 
-inserendo eventuali curiosità dove lo ritieni opportuno. 
-Nelle sezioni esercizi ricorda di inserire la traccia, senza lo svolgimento.
-
-Come esempio utilizza utilizza un database in cui ci sono due tabelle con il seguente 
-schema relaionale:
-Comuni(ID,Nome,Provincia,SiglaProvincia,AreaGeografica,Residenti,Stranieri,DensitaDemografica,Superficie,Altezza,ZonaAltimetrica,TipoComune,GradoUrbanizzazione,ZonaSismica,Regione)
-Sindaci(ID,Nome,Cognome,Anni,Partito,Sesso,ComuneID)
-Relazioni
-Sindaci.ComuneID → Comuni.ID (uno-a-uno)
-
-Dove puoi usa delle emoji per rendere più simpatico e dinamico il tutto (ma non esagerare!)
+Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere approfondito.
+Utilizza un linguaggio semplice, 
+inserendo eventuali curiosità dove lo ritieni opportuno. Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. Ogni sottoparagrafo deve avere la lunghezza minima di 300 parole.
