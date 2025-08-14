@@ -2,7 +2,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GcmRkmMoKmQ?si=POvZM6y9OvTPw-vH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## 🧬 **Modulo 1: Introduzione agli Algoritmi Genetici** *(25 minuti)*
+## 🧬 **Modulo 1: Introduzione agli Algoritmi Genetici** 
 
 ### 1.1 A cosa servono gli algoritmi genetici?
 
