@@ -13,7 +13,7 @@ Dove puoi usa delle emoji per rendere più simpatico e dinamico il tutto (ma non
 
 Creami una struttura articolata in paragrafi e sottoparagrafi adatta ad un corso di 4 ore per studenti delle scuole superiori.
 
-Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere approfondito assicurandoti che ogni sottoparagrafo sia almeno di 300 parole.
+Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere approfondito assicurandoti che ogni sottoparagrafo sia almeno di 100 parole, cercando di essere discorsivo ed evitando elenchi dove non sono strettamente necessari.
 Utilizza un linguaggio semplice, 
 inserendo eventuali curiosità dove lo ritieni opportuno. 
-Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. Ogni sottoparagrafo deve avere la lunghezza minima di 300 parole.
+Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. 
