@@ -1,0 +1,100 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iaasGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E17055;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="paasGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#74B9FF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0984E3;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="saasGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#55A3FF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2D3436;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2C3E50">Tipologie di Servizi Cloud: IaaS, PaaS, SaaS</text>
+  
+  <!-- Pyramid Base: IaaS -->
+  <polygon points="200,450 600,450 550,350 250,350" fill="url(#iaasGradient)" stroke="#E17055" stroke-width="3"/>
+  <text x="425" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">IaaS</text>
+  <text x="425" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Infrastructure as a Service</text>
+  <text x="425" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Server virtuali • Storage • Rete</text>
+  
+  <!-- Pyramid Middle: PaaS -->
+  <polygon points="250,350 550,350 500,250 300,250" fill="url(#paasGradient)" stroke="#0984E3" stroke-width="3"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">PaaS</text>
+  <text x="400" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Platform as a Service</text>
+  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Ambiente di sviluppo • Database • Runtime</text>
+  
+  <!-- Pyramid Top: SaaS -->
+  <polygon points="300,250 500,250 450,150 350,150" fill="url(#saasGradient)" stroke="#2D3436" stroke-width="3"/>
+  <text x="375" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">SaaS</text>
+  <text x="375" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Software as a Service</text>
+  <text x="375" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">App complete • Gmail • Netflix</text>
+  
+  <!-- Left side: Control & Complexity -->
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2C3E50" transform="rotate(-90, 50, 120)">CONTROLLO E COMPLESSITÀ</text>
+  <polygon points="80,100 95,110 80,120" fill="#E17055"/>
+  <line x1="80" y1="110" x2="80" y2="400" stroke="#E17055" stroke-width="3"/>
+  
+  <!-- Right side: Ease of Use -->
+  <text x="750" y="300" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2C3E50" transform="rotate(90, 750, 300)">FACILITÀ D'USO</text>
+  <polygon points="720,100 720,120 705,110" fill="#55A3FF"/>
+  <line x1="720" y1="110" x2="720" y2="400" stroke="#55A3FF" stroke-width="3"/>
+  
+  <!-- Examples boxes -->
+  <!-- IaaS Examples -->
+  <rect x="620" y="380" width="150" height="80" rx="5" fill="#FFE8E8" stroke="#E17055" stroke-width="2"/>
+  <text x="695" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E17055">Esempi IaaS</text>
+  <text x="695" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Amazon EC2</text>
+  <text x="695" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Google Compute</text>
+  <text x="695" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Microsoft Azure VM</text>
+  
+  <!-- PaaS Examples -->
+  <rect x="520" y="280" width="150" height="80" rx="5" fill="#E8F4FF" stroke="#0984E3" stroke-width="2"/>
+  <text x="595" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0984E3">Esempi PaaS</text>
+  <text x="595" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Heroku</text>
+  <text x="595" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Google App Engine</text>
+  <text x="595" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Azure App Service</text>
+  
+  <!-- SaaS Examples -->
+  <rect x="470" y="180" width="150" height="80" rx="5" fill="#E8F0FF" stroke="#2D3436" stroke-width="2"/>
+  <text x="545" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2D3436">Esempi SaaS</text>
+  <text x="545" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Gmail</text>
+  <text x="545" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Google Docs</text>
+  <text x="545" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">• Netflix, Spotify</text>
+  
+  <!-- Who manages what -->
+  <rect x="50" y="480" width="700" height="100" rx="5" fill="#F1F2F6" stroke="#2C3E50" stroke-width="1"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2C3E50">Chi gestisce cosa?</text>
+  
+  <!-- IaaS Management -->
+  <text x="150" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#E17055">IaaS</text>
+  <text x="150" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Tu gestisci:</text>
+  <text x="150" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">OS, App, Dati, Runtime</text>
+  <text x="150" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Provider gestisce:</text>
+  <text x="150" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">Server, Storage, Rete</text>
+  
+  <!-- PaaS Management -->
+  <text x="400" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0984E3">PaaS</text>
+  <text x="400" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Tu gestisci:</text>
+  <text x="400" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">App e Dati</text>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Provider gestisce:</text>
+  <text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">OS, Runtime, Server</text>
+  
+  <!-- SaaS Management -->
+  <text x="650" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2D3436">SaaS</text>
+  <text x="650" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Tu gestisci:</text>
+  <text x="650" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">Solo i tuoi dati</text>
+  <text x="650" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2C3E50">Provider gestisce:</text>
+  <text x="650" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2C3E50">Tutto il resto</text>
+  
+  <!-- Restaurant analogy -->
+  <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#636E72" font-style="italic">Analogia del ristorante: IaaS = locale vuoto, PaaS = cucina attrezzata, SaaS = ristorante completo</text>
+</svg>

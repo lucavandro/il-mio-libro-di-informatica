@@ -1,10 +1,8 @@
 # ☁️ Il Cloud Computing: I tuoi dati tra le nuvole
 
-**Durata del corso:** 1 ora  
-**Destinatari:** Studenti delle scuole superiori (14-18 anni)  
-**Prerequisiti:** Conoscenze di base di informatica e reti  
+![Cloud Computing Overview](img/cloud/cloud-overview.svg "Panoramica del Cloud Computing - L'evoluzione dall'informatica locale al cloud")
 
----
+*Figura 1: L'evoluzione dell'informatica: dai computer isolati al cloud computing distribuito*
 
 ### **🏗️ Modulo 1: Cos'è il Cloud Computing** 
 
@@ -28,6 +26,10 @@ Il vero punto di svolta è arrivato nel 2006, quando Amazon ha lanciato i suoi p
 
 Da quel momento, l'evoluzione è stata rapidissima. Google ha lanciato Gmail nel 2004, permettendo di gestire la posta elettronica senza installare programmi. Dropbox, nato nel 2008, ha reso banale condividere file tra dispositivi diversi. Oggi, aziende nate completamente nel cloud come Netflix o Spotify servono milioni di utenti senza possedere praticamente nessun computer fisico: affittano tutto da Amazon, Google o Microsoft.
 
+![Timeline Cloud Computing](img/cloud/cloud-timeline.svg "Timeline dell'evoluzione del cloud computing")
+
+*Figura 2: Timeline dell'evoluzione del cloud computing: dai computer isolati ai servizi cloud moderni*
+
 #### 1.3 Analogie e metafore per capire il cloud
 
 Per spiegare il cloud a qualcuno che non è esperto di tecnologia, gli informatici hanno sviluppato diverse analogie molto efficaci. La più famosa è quella dell'elettricità: quando accendete una lampadina, non vi preoccupate di sapere dove viene prodotta l'elettricità, come arriva a casa vostra, o come funziona la centrale elettrica. Semplicemente premete l'interruttore e la luce si accende. Il cloud funziona allo stesso modo: premete un'icona e il servizio funziona, senza dover sapere dove si trovano fisicamente i computer che lo fanno funzionare.
@@ -49,6 +51,12 @@ Una terza analogia che funziona bene con i giovani è quella dei trasporti pubbl
 ---
 
 ### **🔧 Modulo 2: Tipologie di servizi cloud**
+
+Il cloud computing si divide in tre categorie principali, spesso rappresentate come una "pila" di servizi:
+
+![IaaS PaaS SaaS Diagram](img/cloud/iaas-paas-saas-pyramid.svg "Piramide dei servizi cloud: IaaS, PaaS e SaaS")
+
+*Figura 3: La piramide dei servizi cloud - dal controllo tecnico massimo (IaaS) alla semplicità d'uso massima (SaaS)*
 
 #### 2.1 Infrastructure as a Service (IaaS)
 
@@ -104,6 +112,10 @@ Curiosamente, molte aziende moderne utilizzano tutti e tre gli approcci contempo
 
 ### **🌟 Modulo 3: Vantaggi e svantaggi del cloud**
 
+![Cloud Benefits vs Risks](img/cloud/benefits-risks-comparison.svg "Confronto vantaggi e svantaggi del cloud computing")
+
+*Figura 6: Bilancia vantaggi vs. svantaggi del cloud computing - una valutazione equilibrata*
+
 #### 3.1 I benefici del cloud computing
 
 Il cloud computing ha rivoluzionato il modo in cui utilizziamo la tecnologia, portando benefici che vanno ben oltre il semplice risparmio economico. Uno dei vantaggi più evidenti è l'accessibilità universale: i vostri documenti, foto, e applicazioni sono disponibili ovunque ci sia una connessione Internet. Non dovete più preoccuparvi di aver lasciato un file importante sul computer di casa quando siete a scuola, o di non poter mostrare le foto delle vacanze perché sono su un altro dispositivo. Il cloud trasforma ogni dispositivo connesso in una finestra verso tutti i vostri contenuti digitali.
@@ -154,6 +166,10 @@ La sicurezza nel cloud è un argomento che genera molte preoccupazioni, spesso a
 
 I data center dei principali provider cloud sono vere e proprie fortezze tecnologiche. Immaginate edifici senza finestre, circondate da recinzioni multiple, con guardie armate 24 ore su 24, sistemi di riconoscimento biometrico per l'accesso, e telecamere di sorveglianza ovunque. All'interno, i server sono protetti da sistemi antincendio avanzati, alimentazione elettrica ridondante, e sistemi di raffreddamento che mantengono la temperatura perfetta. È come confrontare la sicurezza di Fort Knox con quella della vostra camera da letto.
 
+![Data Center Security](img/cloud/datacenter-security.svg "Sicurezza fisica di un data center cloud")
+
+*Figura 5: Livelli di sicurezza in un data center cloud - dalla protezione fisica ai sistemi di backup*
+
 Dal punto di vista tecnico, i dati sono protetti attraverso la crittografia, una tecnologia che trasforma le informazioni in codici incomprensibili per chi non ha la chiave corretta. I vostri dati vengono criptati quando viaggiano da casa vostra ai server (crittografia in transito) e rimangono criptati anche quando sono archiviati sui server (crittografia a riposo). È come se ogni vostro file fosse chiuso in una cassaforte digitale con una combinazione che solo voi e il provider conoscete.
 
 I sistemi di backup e ridondanza sono un altro livello di protezione spesso invisibile agli utenti. I vostri dati non esistono in una sola copia su un singolo server, ma sono automaticamente duplicati su server diversi, spesso in data center geograficamente distanti. Se un server si guasta, un data center viene colpito da un disastro naturale, o si verifica qualsiasi altro problema, i vostri dati sono comunque al sicuro in altre location. È come avere copie dei vostri documenti importanti in casseforti diverse sparse per il mondo.
@@ -161,6 +177,10 @@ I sistemi di backup e ridondanza sono un altro livello di protezione spesso invi
 #### 4.2 Responsabilità condivisa tra utente e provider
 
 La sicurezza nel cloud funziona secondo un modello di "responsabilità condivisa" che è importante capire per evitare malintesi pericolosi. Il provider cloud si occupa della sicurezza "del" cloud: protegge i data center, i server, le reti, i sistemi operativi, e l'infrastruttura fisica. Voi siete responsabili della sicurezza "nel" cloud: le password, le impostazioni di privacy, chi ha accesso ai vostri dati, e come utilizzate i servizi.
+
+![Shared Responsibility Model](img/cloud/shared-responsibility-model.svg "Modello di responsabilità condivisa nel cloud")
+
+*Figura 4: Modello di responsabilità condivisa - cosa gestisce il provider cloud vs. cosa gestite voi*
 
 Questa divisione di responsabilità è simile a quella tra voi e l'hotel quando viaggiate. L'hotel è responsabile della sicurezza generale dell'edificio: guardie, telecamere, sistemi di allarme, serrature sicure alle porte. Voi siete responsabili di chiudere la porta della vostra camera, non lasciare oggetti di valore in vista, e non dare la chiave a sconosciuti. Se lasciate la porta aperta e vi rubano il portafoglio, non è colpa dell'hotel, anche se i loro sistemi di sicurezza generali funzionano perfettamente.
 
