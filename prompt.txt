@@ -15,6 +15,5 @@ Creami una struttura articolata in paragrafi e sottoparagrafi adatta ad un corso
 
 Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere approfondito assicurandoti che ogni sottoparagrafo sia almeno di 100 parole, 
 cercando di essere discorsivo ed evitando elenchi dove non sono strettamente necessari.
-Utilizza un linguaggio semplice, 
-inserendo eventuali curiosità dove lo ritieni opportuno. 
+Utilizza un linguaggio semplice, inserendo eventuali curiosità dove lo ritieni opportuno. 
 Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. 
