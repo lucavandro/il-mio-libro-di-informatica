@@ -26,7 +26,9 @@ Inoltre, i linguaggi di programmazione stessi sono intrinsecamente legati all'in
 
 ## 1.3 Breve storia dell'informatica
 
-La storia dell'informatica è come una serie TV avvincente piena di colpi di scena, personaggi geniali e invenzioni che hanno cambiato il mondo. Tutto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi! Ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
+utto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi, ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j25rNQq6ZIo?si=2UtqJspysMuFUnmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Ada lavorava con Charles Babbage, un matematico inglese che aveva progettato una macchina chiamata "Macchina Analitica" - praticamente il primo computer meccanico della storia. Questa macchina, grande come una stanza, doveva essere costruita interamente con ingranaggi di ottone e non fu mai completata per mancanza di fondi. Ma Ada capì qualcosa di rivoluzionario: quella macchina non poteva solo fare calcoli, ma poteva elaborare qualsiasi tipo di informazione, persino comporre musica! Aveva immaginato il futuro dell'informatica 150 anni prima che accadesse davvero.
 
