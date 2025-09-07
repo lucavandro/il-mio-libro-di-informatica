@@ -1,0 +1,41 @@
+{
+"name": "Il mio libro di informatica",
+"short_name": "Libro",
+"start_url": "https://lucavandro.github.io/il-mio-libro-di-informatica/",
+"display": "standalone",
+"description": "Il mio libro di informatica è un'opera open source dedicata all'insegnamento dell'informatica nelle scuole superiori.",
+"lang": "it",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "any",
+"icons": [
+    {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "Il mio libro di informatica è un'opera open source dedicata all'insegnamento dell'informatica nelle scuole superiori."
+    }
+],
+"related_applications": [
+    {
+        "platform":"windows",
+        "url": " The URL to your app in that app store"
+    }
+],
+"prefer_related_applications": false
+}
