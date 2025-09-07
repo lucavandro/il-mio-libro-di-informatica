@@ -26,7 +26,9 @@ Inoltre, i linguaggi di programmazione stessi sono intrinsecamente legati all'in
 
 ## 1.3 Breve storia dell'informatica
 
-La storia dell'informatica è come una serie TV avvincente piena di colpi di scena, personaggi geniali e invenzioni che hanno cambiato il mondo. Tutto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi! Ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
+Tutto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi, ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
+
+<iframe width="100%" height="auto" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/j25rNQq6ZIo?si=2UtqJspysMuFUnmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Ada lavorava con Charles Babbage, un matematico inglese che aveva progettato una macchina chiamata "Macchina Analitica" - praticamente il primo computer meccanico della storia. Questa macchina, grande come una stanza, doveva essere costruita interamente con ingranaggi di ottone e non fu mai completata per mancanza di fondi. Ma Ada capì qualcosa di rivoluzionario: quella macchina non poteva solo fare calcoli, ma poteva elaborare qualsiasi tipo di informazione, persino comporre musica! Aveva immaginato il futuro dell'informatica 150 anni prima che accadesse davvero.
 
@@ -34,11 +36,16 @@ Il grande salto avvenne durante la Seconda Guerra Mondiale. I governi avevano di
 
 Gli anni '60 e '70 sono stati l'epoca eroica dell'informatica. È nato Internet (inizialmente chiamato ARPANET), sono stati inventati i primi linguaggi di programmazione moderni, e soprattutto è nato il microprocessore - il "cervello" di tutti i computer moderni. Intel nel 1971 creò il primo microprocessore commerciale, grande quanto un francobollo ma potente quanto computer che prima occupavano intere stanze. Era l'inizio della rivoluzione digitale!
 
+![Bill Gates](/anno1/img/intro/BillGates.jpg "Bill Gates, CEO di Microsoft, sdraiato sulla scrivania nel suo ufficio subito dopo il rilascio di Windows 1.0. 1985 Bellevue, Washington, USA. Foto di Andreas Pizsa con licenza CC BY 2.0")
+
+*Bill Gates, CEO di Microsoft, sdraiato sulla scrivania nel suo ufficio subito dopo il rilascio di Windows 1.0. 
+1985 Bellevue, Washington, USA. 
+Foto di Andreas Pizsa con licenza CC BY 2.0*
+
 Poi arrivarono gli anni '80 con la nascita dei personal computer. Steve Jobs e Steve Wozniak nel loro garage crearono Apple, Bill Gates fondò Microsoft, e per la prima volta nella storia i computer entrarono nelle case normali. Non erano più macchine per scienziati e ingegneri, ma strumenti che tutti potevano usare. È stata probabilmente la decade più importante dell'informatica moderna.
 
 Gli anni '90 hanno portato il World Wide Web (inventato da Tim Berners-Lee nel 1989), trasformando Internet da una rete per università e militari in quello spazio globale che oggi conoscete. È nato anche il primo telefono "smart" (IBM Simon nel 1994), l'antenato del vostro smartphone attuale.
 
-Una curiosità che vi farà sorridere: il primo computer bug della storia non fu solo una metafora! Nel 1947, Grace Hopper (la stessa che ha dato il nome ai bug) trovò davvero una falena morta incastrata nei circuiti del computer Mark II di Harvard. La fotografò e la incollò nel registro con la nota "First actual case of bug being found" (primo caso reale di bug trovato). Quella falena è ora esposta al National Museum of American History!
 
 ## 1.4 Informatica contemporanea
 
