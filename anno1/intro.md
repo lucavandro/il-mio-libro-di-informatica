@@ -26,7 +26,7 @@ Inoltre, i linguaggi di programmazione stessi sono intrinsecamente legati all'in
 
 ## 1.3 Breve storia dell'informatica
 
-utto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi, ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
+Tutto inizia molto prima di quanto potreste immaginare: già nell'antica Babilonia, 4000 anni fa, usavano l'abaco per fare calcoli complessi, ma la vera storia inizia nel 1800 con Ada Lovelace, considerata la prima programmatrice della storia. Sì, avete letto bene: la prima persona a scrivere un algoritmo per computer era una donna, e questo nel 1843!
 
 <iframe width="100%" height="auto" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/j25rNQq6ZIo?si=2UtqJspysMuFUnmu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
