@@ -1,0 +1,125 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">
+    Multipli del Byte: Binario vs Decimale
+  </text>
+  
+  <!-- Binary System (Left Side) -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="350" height="380" fill="#e8f4f8" stroke="#3498db" stroke-width="2" rx="10"/>
+    
+    <text x="175" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#3498db">
+      Sistema Binario (Base 2)
+    </text>
+    <text x="175" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">
+      Come funzionano realmente i computer
+    </text>
+    
+    <!-- KB Binary -->
+    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="310" height="50" fill="#3498db" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">KiB (Kibibyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 KiB = 2^10 = 1.024 byte</text>
+      <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.024</text>
+    </g>
+    
+    <!-- MB Binary -->
+    <g transform="translate(20, 140)">
+      <rect x="0" y="0" width="310" height="50" fill="#2980b9" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MiB (Mebibyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 MiB = 2^20 = 1.048.576 byte</text>
+      <text x="220" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.048.576</text>
+    </g>
+    
+    <!-- GB Binary -->
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="310" height="50" fill="#1f5f99" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">GiB (Gibibyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 GiB = 2^30 = 1.073.741.824 byte</text>
+      <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.073.741.824</text>
+    </g>
+    
+    <!-- TB Binary -->
+    <g transform="translate(20, 260)">
+      <rect x="0" y="0" width="310" height="50" fill="#174a7e" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">TiB (Tebibyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 TiB = 2^40 byte</text>
+      <text x="180" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.099.511.627.776</text>
+    </g>
+    
+    <text x="175" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">
+      ✓ Usato da: RAM, Sistema Operativo
+    </text>
+    <text x="175" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+      Potenze di 2 (multipli di 1024)
+    </text>
+  </g>
+  
+  <!-- Decimal System (Right Side) -->
+  <g transform="translate(500, 60)">
+    <rect x="0" y="0" width="350" height="380" fill="#fef3e7" stroke="#e67e22" stroke-width="2" rx="10"/>
+    
+    <text x="175" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e67e22">
+      Sistema Decimale (Base 10)
+    </text>
+    <text x="175" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#2c3e50">
+      Come lo pubblicizzano i produttori
+    </text>
+    
+    <!-- KB Decimal -->
+    <g transform="translate(20, 80)">
+      <rect x="0" y="0" width="310" height="50" fill="#e67e22" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">KB (Kilobyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 KB = 10^3 = 1.000 byte</text>
+      <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.000</text>
+    </g>
+    
+    <!-- MB Decimal -->
+    <g transform="translate(20, 140)">
+      <rect x="0" y="0" width="310" height="50" fill="#d35400" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MB (Megabyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 MB = 10^6 = 1.000.000 byte</text>
+      <text x="220" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.000.000</text>
+    </g>
+    
+    <!-- GB Decimal -->
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="310" height="50" fill="#ba4a00" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">GB (Gigabyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 GB = 10^9 = 1.000.000.000 byte</text>
+      <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.000.000.000</text>
+    </g>
+    
+    <!-- TB Decimal -->
+    <g transform="translate(20, 260)">
+      <rect x="0" y="0" width="310" height="50" fill="#a04000" rx="5"/>
+      <text x="15" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">TB (Terabyte)</text>
+      <text x="15" y="35" font-family="Arial, sans-serif" font-size="12" fill="white">1 TB = 10^12 byte</text>
+      <text x="180" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">1.000.000.000.000</text>
+    </g>
+    
+    <text x="175" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">
+      ✓ Usato da: Hard Disk, SSD, Pubblicità
+    </text>
+    <text x="175" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+      Potenze di 10 (multipli di 1000)
+    </text>
+  </g>
+  
+  <!-- Comparison Example -->
+  <g transform="translate(50, 460)">
+    <rect x="0" y="0" width="800" height="35" fill="#f39c12" rx="5"/>
+    <text x="20" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+      Esempio pratico:
+    </text>
+    <text x="20" y="28" font-family="Arial, sans-serif" font-size="12" fill="white">
+      Un HD pubblicizzato come "500 GB" contiene realmente solo 465 GiB utilizzabili dal sistema operativo
+    </text>
+    <text x="600" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      500 GB ≈ 465 GiB
+    </text>
+  </g>
+</svg>

@@ -1,8 +1,14 @@
 # Come è fatto un computer
 
+![Evoluzione del Computer](img/computer/computer-evolution.svg)
+*Figura 1: L'evoluzione del computer dai mainframe degli anni '40 ai dispositivi mobili moderni*
+
 ## 🔍 **Modulo 1: Il mondo dei computer** 
 
 ### 1.1 Diverse tipologie di computer 🖥️📱⌚
+
+![Tipi di Computer](img/computer/computer-types.svg)
+*Figura 2: I principali tipi di computer e le loro caratteristiche distintive*
 
 #### 1.1.1 Computer desktop: le workstation di casa e ufficio
 
@@ -64,7 +70,10 @@ Una delle meraviglie dell'informatica moderna è che gli stessi principi fondame
 
 ---
 
-## 🧠 **Modulo 2: L'architettura del computer** 
+## 🧠 **Modulo 2: L'architettura del computer**
+
+![Architettura del Computer](img/computer/computer-architecture.svg)
+*Figura 3: L'architettura di Von Neumann con i componenti principali e i flussi di dati*
 
 ### 2.1 L'architettura di von Neumann 🏗️
 
@@ -87,6 +96,9 @@ Il funzionamento armonioso di CPU, memoria e dispositivi di input/output rappres
 ### 2.2 Come "pensano" i computer 💭
 
 #### 2.2.1 Il ciclo fetch-decode-execute
+
+![Ciclo Fetch-Decode-Execute](img/computer/fetch-decode-execute.svg)
+*Figura 7: Il ciclo fondamentale del processore che si ripete miliardi di volte al secondo*
 
 Il ciclo fetch-decode-execute è il battito cardiaco di ogni computer, un processo che si ripete miliardi di volte al secondo con una precisione cronometrica assoluta. Come il cuore umano che pompa sangue in tutto il corpo, questo ciclo pompa informazioni attraverso il computer in un ritmo incessante. La prima fase, **fetch** (recupera), è come quando andate in biblioteca e prendete un libro specifico dallo scaffale: la CPU va nella memoria, trova l'istruzione successiva da eseguire e la porta nel processore. È un'operazione apparentemente semplice, ma richiede una coordinazione perfetta: la CPU deve sapere esattamente dove cercare, la memoria deve rispondere rapidamente, e l'informazione deve viaggiare attraverso circuiti microscopici alla velocità della luce. La seconda fase, **decode** (decodifica), è come aprire il libro e leggere le istruzioni: la CPU esamina l'istruzione appena recuperata e capisce cosa deve fare - se deve sommare due numeri, spostare un dato, confrontare valori, o fare qualcos'altro. Infine, la fase **execute** (esegui) è quando la CPU fa effettivamente quello che l'istruzione richiede, come quando seguite la ricetta che avete letto. Questo ciclo è talmente fondamentale che viene chiamato "ciclo macchina" ed è la base di tutto quello che un computer può fare.
 
@@ -118,6 +130,9 @@ La memoria è molto di più di un semplice magazzino per i dati: è il partner s
 
 ## ⚡ **Modulo 3: Il cuore del computer - Il processore**
 
+![Dettaglio del Processore](img/computer/cpu-detail.svg)
+*Figura 4: Struttura interna del processore con le unità funzionali principali*
+
 ### 3.1 Il processore (CPU): il cervello elettronico 🧠
 
 #### 3.1.1 Cosa fa realmente un processore
@@ -137,6 +152,9 @@ Quando guardate le specifiche di un computer, vi imbattete in numeri che sembran
 Scegliere il processore giusto è come scegliere l'auto giusta: non esiste una risposta universale, ma dipende da cosa dovete farci e quanto volete spendere. Se usate il computer principalmente per navigare su internet, scrivere documenti e guardare video, un processore di fascia media sarà più che sufficiente, proprio come una citycar è perfetta per andare al lavoro in città. Se invece siete gamer appassionati, editor video, o studenti di ingegneria che devono far girare simulazioni complesse, avrete bisogno di un processore più potente, come chi ha bisogno di un'auto sportiva per correre in pista. La scelta tra più core o frequenza più alta dipende dal tipo di software che utilizzate: i videogame spesso preferiscono processori con core singoli molto veloci, mentre il video editing trae beneficio da molti core che possono elaborare frame diversi in parallelo. Un consiglio pratico: non fatevi abbagliare solo dai numeri più alti! Un processore recente a 2.5 GHz potrebbe essere molto più veloce di uno vecchio a 3.5 GHz, grazie ai miglioramenti nell'architettura e nell'efficienza. È come confrontare un'auto moderna da 150 cavalli con una vecchia muscle car da 300 cavalli: quella moderna sarà probabilmente più veloce, più efficiente e più affidabile.
 
 ### 3.2 La battaglia dei processori: ARM vs x86/64 ⚔️
+
+![ARM vs x86](img/computer/arm-vs-x86.svg)
+*Figura 8: Confronto tra le filosofie ARM (RISC) e x86 (CISC) con vantaggi e applicazioni*
 
 #### 3.2.1 Intel e AMD: l'impero x86/64 (CISC)
 
@@ -178,15 +196,27 @@ Apple ha rivoluzionato il settore con i suoi chip M1 e M2, dimostrando che la gu
 
 ---
 
-## 💾 **Modulo 4: La memoria del computer** 
+## 💾 **Modulo 4: La memoria del computer**
+
+![Gerarchia della Memoria](img/computer/memory-hierarchy.svg)
+*Figura 5: La gerarchia della memoria con velocità, capacità e costi relativi*
 
 ### 4.1 I diversi tipi di memoria 🗄️
 
 #### 4.1.1 RAM: la memoria veloce e volatile
 
+![RAM vs Storage](img/computer/ram-vs-storage.svg)
+*Figura 9: Differenze tra RAM (memoria volatile) e Storage (memoria permanente)*
+
 La RAM (Random Access Memory) è il palcoscenico dove si svolge tutto lo spettacolo del vostro computer, uno spazio di lavoro temporaneo dove programmi e dati danzano insieme in un balletto elettronico frenetico. Immaginate la RAM come la scrivania di uno studente durante un esame: sopra ci sono tutti i libri aperti, i fogli di lavoro, le calcolatrici e tutto quello che serve per completare il compito. Quando spegnete il computer, è come se qualcuno spazzasse via tutto dalla scrivania: niente rimane, tutto svanisce nel nulla. Questa caratteristica "volatile" della RAM può sembrare uno svantaggio, ma è in realtà la sua forza: può essere riscritta miliardi di volte senza deteriorarsi, e ogni volta riparte fresca come se fosse nuova. La velocità della RAM è incredibile: può fornire dati al processore migliaia di volte più velocemente di un disco rigido tradizionale. Quando aprite un programma, questo viene copiato dal disco alla RAM perché il processore possa accedervi rapidamente. Più RAM avete, più programmi potete tenere aperti contemporaneamente senza che il computer rallenti. È per questo che 16GB di RAM sono diventati quasi standard nei computer moderni: permettono di far girare browser con decine di tab, editor di video, giochi e software di produttività tutti insieme senza problemi.
 
 #### 5.2.1 USB: l'evoluzione da USB 1.0 a USB-C
+
+![Connettori USB e HDMI](img/computer/usb-hdmi-connectors.svg)
+*Figura 10: Evoluzione dei connettori USB e caratteristiche di HDMI per la connettività moderna*
+
+![Dispositivi di Input e Output](img/computer/input-output-devices.svg)
+*Figura 6: Principali dispositivi di input e output con il flusso dei dati attraverso la CPU*
 
 La storia dell'USB (Universal Serial Bus) è una delle più grandi storie di successo della standardizzazione tecnologica. Prima dell'USB, collegare dispositivi al computer era un incubo: ogni dispositivo aveva il suo connettore specifico, i suoi driver speciali, e spesso richiedeva di spegnere e riaccendere il computer per essere riconosciuto. L'USB ha rivoluzionato tutto questo con una filosofia semplice ma geniale: "Plug and Play" - collega e usa. L'evoluzione dell'USB negli ultimi 25 anni racconta la storia dell'innovazione tecnologica accelerata. L'USB 1.0 del 1996 trasferiva dati a 1.5 Mbps, sufficiente per mouse e tastiere; l'USB 2.0 del 2000 raggiunse 480 Mbps, perfetto per chiavette e dischi esterni; l'USB 3.0 del 2008 fece un salto quantico a 5 Gbps, permettendo il trasferimento di file video in tempi ragionevoli. Ma la vera rivoluzione è arrivata con l'USB-C: un connettore reversibile (finalmente non dovete più provare tre volte per infilarlo nel verso giusto!), che può trasferire dati fino a 40 Gbps, alimentare dispositivi fino a 100W, e persino trasmettere video 4K. USB-C sta diventando il connettore universale che l'industria sognava da decenni: lo stesso cavo può caricare il vostro laptop, trasferire file al disco esterno, e collegare il monitor esterno.
 

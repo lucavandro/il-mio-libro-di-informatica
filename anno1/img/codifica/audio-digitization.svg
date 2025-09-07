@@ -1,0 +1,281 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">
+    Digitalizzazione dell'Audio: Dal Suono Analogico ai Bit
+  </text>
+  
+  <!-- Analog to Digital Process -->
+  <g transform="translate(50, 60)">
+    <!-- Analog wave -->
+    <g>
+      <text x="150" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e74c3c">
+        Onda Sonora Analogica
+      </text>
+      <text x="150" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        Continua e liscia
+      </text>
+      
+      <!-- Smooth sine wave -->
+      <g transform="translate(50, 50)">
+        <path d="M 0 50 Q 25 20 50 50 Q 75 80 100 50 Q 125 20 150 50 Q 175 80 200 50" 
+              stroke="#e74c3c" stroke-width="3" fill="none"/>
+        
+        <!-- Axes -->
+        <line x1="0" y1="100" x2="200" y2="100" stroke="#7f8c8d" stroke-width="1"/>
+        <line x1="0" y1="20" x2="0" y2="100" stroke="#7f8c8d" stroke-width="1"/>
+        
+        <text x="100" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+          Tempo
+        </text>
+        <text x="-15" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" 
+              transform="rotate(-90, -15, 60)">
+          Ampiezza
+        </text>
+      </g>
+    </g>
+    
+    <!-- Arrow 1 -->
+    <path d="M 270 120 L 310 120" stroke="#3498db" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="290" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3498db">
+      Campionamento
+    </text>
+    
+    <!-- Sampling process -->
+    <g transform="translate(330, 50)">
+      <text x="100" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f39c12">
+        Campionamento Digitale
+      </text>
+      <text x="100" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        Misure a intervalli regolari
+      </text>
+      
+      <!-- Sampled wave -->
+      <g>
+        <!-- Background wave (faded) -->
+        <path d="M 0 50 Q 25 20 50 50 Q 75 80 100 50 Q 125 20 150 50 Q 175 80 200 50" 
+              stroke="#e74c3c" stroke-width="1" fill="none" opacity="0.3"/>
+        
+        <!-- Sample points -->
+        <circle cx="0" cy="50" r="3" fill="#f39c12"/>
+        <circle cx="20" cy="35" r="3" fill="#f39c12"/>
+        <circle cx="40" cy="25" r="3" fill="#f39c12"/>
+        <circle cx="60" cy="45" r="3" fill="#f39c12"/>
+        <circle cx="80" cy="65" r="3" fill="#f39c12"/>
+        <circle cx="100" cy="50" r="3" fill="#f39c12"/>
+        <circle cx="120" cy="35" r="3" fill="#f39c12"/>
+        <circle cx="140" cy="25" r="3" fill="#f39c12"/>
+        <circle cx="160" cy="45" r="3" fill="#f39c12"/>
+        <circle cx="180" cy="65" r="3" fill="#f39c12"/>
+        <circle cx="200" cy="50" r="3" fill="#f39c12"/>
+        
+        <!-- Sample lines -->
+        <line x1="0" y1="50" x2="0" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="20" y1="35" x2="20" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="40" y1="25" x2="40" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="60" y1="45" x2="60" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="80" y1="65" x2="80" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="100" y1="50" x2="100" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="120" y1="35" x2="120" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="140" y1="25" x2="140" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="160" y1="45" x2="160" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="180" y1="65" x2="180" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        <line x1="200" y1="50" x2="200" y2="100" stroke="#f39c12" stroke-width="1" stroke-dasharray="2,2"/>
+        
+        <!-- Axes -->
+        <line x1="0" y1="100" x2="200" y2="100" stroke="#7f8c8d" stroke-width="1"/>
+        <line x1="0" y1="20" x2="0" y2="100" stroke="#7f8c8d" stroke-width="1"/>
+      </g>
+    </g>
+    
+    <!-- Arrow 2 -->
+    <path d="M 550 120 L 590 120" stroke="#3498db" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="570" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3498db">
+      Quantizzazione
+    </text>
+    
+    <!-- Digital representation -->
+    <g transform="translate(610, 50)">
+      <text x="100" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#27ae60">
+        Valori Digitali
+      </text>
+      <text x="100" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        Sequenza di numeri
+      </text>
+      
+      <!-- Digital values -->
+      <g transform="translate(0, 30)">
+        <rect x="0" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="12.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">128</text>
+        
+        <rect x="30" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="42.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">96</text>
+        
+        <rect x="60" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="72.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">64</text>
+        
+        <rect x="90" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="102.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">112</text>
+        
+        <rect x="120" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="132.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">160</text>
+        
+        <rect x="150" y="0" width="25" height="20" fill="#27ae60" rx="2"/>
+        <text x="162.5" y="14" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">128</text>
+        
+        <text x="100" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+          Valori da 0 a 255 (8 bit)
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Sample Rate comparison -->
+  <g transform="translate(50, 240)">
+    <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#8e44ad">
+      Frequenza di Campionamento: Più campioni = Migliore qualità
+    </text>
+    
+    <!-- Low sample rate -->
+    <g transform="translate(0, 40)">
+      <text x="200" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e67e22">
+        Bassa Frequenza (8 kHz)
+      </text>
+      <text x="200" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        8.000 campioni al secondo - Qualità telefonica
+      </text>
+      
+      <!-- Wave with few samples -->
+      <g transform="translate(50, 30)">
+        <path d="M 0 40 Q 50 10 100 40 Q 150 70 200 40 Q 250 10 300 40" 
+              stroke="#e67e22" stroke-width="2" fill="none" opacity="0.5"/>
+        
+        <!-- Few sample points -->
+        <circle cx="0" cy="40" r="3" fill="#e67e22"/>
+        <circle cx="75" cy="30" r="3" fill="#e67e22"/>
+        <circle cx="150" cy="50" r="3" fill="#e67e22"/>
+        <circle cx="225" cy="30" r="3" fill="#e67e22"/>
+        <circle cx="300" cy="40" r="3" fill="#e67e22"/>
+        
+        <!-- Digital reconstruction -->
+        <path d="M 0 40 L 75 30 L 150 50 L 225 30 L 300 40" 
+              stroke="#e67e22" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+    
+    <!-- High sample rate -->
+    <g transform="translate(450, 40)">
+      <text x="200" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">
+        Alta Frequenza (44.1 kHz)
+      </text>
+      <text x="200" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#7f8c8d">
+        44.100 campioni al secondo - Qualità CD
+      </text>
+      
+      <!-- Wave with many samples -->
+      <g transform="translate(50, 30)">
+        <path d="M 0 40 Q 50 10 100 40 Q 150 70 200 40 Q 250 10 300 40" 
+              stroke="#27ae60" stroke-width="2" fill="none" opacity="0.5"/>
+        
+        <!-- Many sample points -->
+        <circle cx="0" cy="40" r="2" fill="#27ae60"/>
+        <circle cx="15" cy="35" r="2" fill="#27ae60"/>
+        <circle cx="30" cy="25" r="2" fill="#27ae60"/>
+        <circle cx="45" cy="18" r="2" fill="#27ae60"/>
+        <circle cx="60" cy="20" r="2" fill="#27ae60"/>
+        <circle cx="75" cy="30" r="2" fill="#27ae60"/>
+        <circle cx="90" cy="35" r="2" fill="#27ae60"/>
+        <circle cx="105" cy="42" r="2" fill="#27ae60"/>
+        <circle cx="120" cy="50" r="2" fill="#27ae60"/>
+        <circle cx="135" cy="58" r="2" fill="#27ae60"/>
+        <circle cx="150" cy="60" r="2" fill="#27ae60"/>
+        <circle cx="165" cy="58" r="2" fill="#27ae60"/>
+        <circle cx="180" cy="50" r="2" fill="#27ae60"/>
+        <circle cx="195" cy="42" r="2" fill="#27ae60"/>
+        <circle cx="210" cy="35" r="2" fill="#27ae60"/>
+        <circle cx="225" cy="30" r="2" fill="#27ae60"/>
+        <circle cx="240" cy="20" r="2" fill="#27ae60"/>
+        <circle cx="255" cy="18" r="2" fill="#27ae60"/>
+        <circle cx="270" cy="25" r="2" fill="#27ae60"/>
+        <circle cx="285" cy="35" r="2" fill="#27ae60"/>
+        <circle cx="300" cy="40" r="2" fill="#27ae60"/>
+        
+        <!-- Smooth digital reconstruction -->
+        <path d="M 0 40 L 15 35 L 30 25 L 45 18 L 60 20 L 75 30 L 90 35 L 105 42 L 120 50 L 135 58 L 150 60 L 165 58 L 180 50 L 195 42 L 210 35 L 225 30 L 240 20 L 255 18 L 270 25 L 285 35 L 300 40" 
+              stroke="#27ae60" stroke-width="2" fill="none"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bit Depth explanation -->
+  <g transform="translate(50, 380)">
+    <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#9b59b6">
+      Profondità in Bit: Precisione dei Valori
+    </text>
+    
+    <!-- 8-bit -->
+    <g transform="translate(100, 50)">
+      <rect x="0" y="0" width="150" height="60" fill="#e74c3c" rx="5"/>
+      <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        8 bit
+      </text>
+      <text x="75" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        256 livelli (0-255)
+      </text>
+      <text x="75" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        Qualità bassa
+      </text>
+    </g>
+    
+    <!-- 16-bit -->
+    <g transform="translate(300, 50)">
+      <rect x="0" y="0" width="150" height="60" fill="#f39c12" rx="5"/>
+      <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        16 bit
+      </text>
+      <text x="75" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        65.536 livelli
+      </text>
+      <text x="75" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        Qualità CD
+      </text>
+    </g>
+    
+    <!-- 24-bit -->
+    <g transform="translate(500, 50)">
+      <rect x="0" y="0" width="150" height="60" fill="#27ae60" rx="5"/>
+      <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+        24 bit
+      </text>
+      <text x="75" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        16.777.216 livelli
+      </text>
+      <text x="75" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        Qualità professionale
+      </text>
+    </g>
+  </g>
+  
+  <!-- File size calculation -->
+  <g transform="translate(50, 500)">
+    <rect x="0" y="0" width="800" height="80" fill="#3498db" rx="10"/>
+    <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Calcolo Dimensione File Audio
+    </text>
+    <text x="400" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+      Dimensione = Frequenza × Profondità bit × Canali × Durata
+    </text>
+    <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+      Esempio CD: 44.100 Hz × 16 bit × 2 canali × 240 secondi ÷ 8 = 42,3 MB per canzone di 4 minuti
+    </text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+  </defs>
+</svg>

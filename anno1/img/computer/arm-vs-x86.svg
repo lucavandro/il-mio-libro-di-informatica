@@ -1,0 +1,101 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">ARM vs x86: Filosofie a Confronto</text>
+  
+  <!-- ARM Section (Left) -->
+  <rect x="50" y="60" width="320" height="480" fill="#27ae60" stroke="#2c3e50" stroke-width="3" rx="10"/>
+  <text x="210" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">ARM (RISC)</text>
+  <text x="210" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Reduced Instruction Set Computer</text>
+  
+  <!-- ARM Philosophy -->
+  <rect x="70" y="130" width="280" height="60" fill="#229954" stroke="white" stroke-width="2" rx="5"/>
+  <text x="210" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">FILOSOFIA: "Fai Una Cosa Bene"</text>
+  <text x="210" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Poche istruzioni semplici</text>
+  <text x="210" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Massima efficienza energetica</text>
+  
+  <!-- ARM Tools analogy -->
+  <rect x="70" y="210" width="280" height="80" fill="#1e8449" stroke="white" stroke-width="1"/>
+  <text x="210" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">METAFORA: Set di Attrezzi Minimalista</text>
+  <!-- Simple tools -->
+  <rect x="90" y="245" width="40" height="8" fill="#ecf0f1"/>
+  <text x="110" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Martello</text>
+  <rect x="140" y="245" width="40" height="8" fill="#ecf0f1"/>
+  <text x="160" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Cacciavite</text>
+  <rect x="190" y="245" width="40" height="8" fill="#ecf0f1"/>
+  <text x="210" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Chiave</text>
+  <rect x="240" y="245" width="40" height="8" fill="#ecf0f1"/>
+  <text x="260" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Pinze</text>
+  <text x="210" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Ogni strumento fa UNA cosa perfettamente</text>
+  
+  <!-- ARM Advantages -->
+  <rect x="70" y="310" width="280" height="100" fill="#196f3d" stroke="white" stroke-width="1"/>
+  <text x="210" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">VANTAGGI</text>
+  <text x="210" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">⚡ Consumo energetico bassissimo</text>
+  <text x="210" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🔇 Funzionamento silenzioso</text>
+  <text x="210" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">📱 Perfetto per dispositivi mobili</text>
+  <text x="210" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">💰 Costo ridotto</text>
+  <text x="210" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🌱 Ecologico</text>
+  
+  <!-- ARM Devices -->
+  <rect x="70" y="430" width="280" height="90" fill="#145a32" stroke="white" stroke-width="1"/>
+  <text x="210" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">DOVE LO TROVI</text>
+  <text x="210" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">📱 Smartphone (iPhone, Android)</text>
+  <text x="210" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">💻 MacBook Air/Pro (Apple M1/M2)</text>
+  <text x="210" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🎮 Nintendo Switch</text>
+  <text x="210" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🏠 Dispositivi IoT</text>
+  
+  <!-- x86 Section (Right) -->
+  <rect x="430" y="60" width="320" height="480" fill="#3498db" stroke="#2c3e50" stroke-width="3" rx="10"/>
+  <text x="590" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">x86 (CISC)</text>
+  <text x="590" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Complex Instruction Set Computer</text>
+  
+  <!-- x86 Philosophy -->
+  <rect x="450" y="130" width="280" height="60" fill="#2980b9" stroke="white" stroke-width="2" rx="5"/>
+  <text x="590" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">FILOSOFIA: "Tutto in Uno"</text>
+  <text x="590" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Centinaia di istruzioni complesse</text>
+  <text x="590" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Massima potenza di calcolo</text>
+  
+  <!-- x86 Tools analogy -->
+  <rect x="450" y="210" width="280" height="80" fill="#1f618d" stroke="white" stroke-width="1"/>
+  <text x="590" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">METAFORA: Coltellino Svizzero</text>
+  <!-- Swiss knife representation -->
+  <rect x="550" y="245" width="80" height="25" fill="#e74c3c" rx="12"/>
+  <rect x="555" y="250" width="10" height="15" fill="#ecf0f1"/>
+  <rect x="570" y="250" width="10" height="15" fill="#ecf0f1"/>
+  <rect x="585" y="250" width="10" height="15" fill="#ecf0f1"/>
+  <rect x="600" y="250" width="10" height="15" fill="#ecf0f1"/>
+  <rect x="615" y="250" width="10" height="15" fill="#ecf0f1"/>
+  <text x="590" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Centinaia di strumenti specializzati</text>
+  
+  <!-- x86 Advantages -->
+  <rect x="450" y="310" width="280" height="100" fill="#1a5490" stroke="white" stroke-width="1"/>
+  <text x="590" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">VANTAGGI</text>
+  <text x="590" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🚀 Potenza di calcolo estrema</text>
+  <text x="590" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🔄 Compatibilità con software legacy</text>
+  <text x="590" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🎮 Perfetto per gaming e workstation</text>
+  <text x="590" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🏢 Standard per software professionale</text>
+  <text x="590" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">⚙️ Multitasking pesante</text>
+  
+  <!-- x86 Devices -->
+  <rect x="450" y="430" width="280" height="90" fill="#154360" stroke="white" stroke-width="1"/>
+  <text x="590" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">DOVE LO TROVI</text>
+  <text x="590" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🖥️ PC Desktop (Intel/AMD)</text>
+  <text x="590" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">💻 Laptop Windows</text>
+  <text x="590" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🖲️ Workstation professionali</text>
+  <text x="590" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">🌐 Server aziendali</text>
+  
+  <!-- VS in the middle -->
+  <circle cx="400" cy="300" r="30" fill="#e74c3c"/>
+  <text x="400" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">VS</text>
+  
+  <!-- Comparison arrows -->
+  <path d="M 370 280 L 370 320" stroke="#34495e" stroke-width="3" fill="none"/>
+  <path d="M 430 280 L 430 320" stroke="#34495e" stroke-width="3" fill="none"/>
+  
+  <!-- Bottom comparison -->
+  <rect x="50" y="560" width="700" height="30" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+  <text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Il Futuro: Convergenza con Apple Silicon (ARM) che raggiunge prestazioni x86</text>
+</svg>

@@ -1,0 +1,193 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">
+    Velocità di Trasferimento: Bit vs Byte
+  </text>
+  
+  <!-- Bandwidth vs Throughput -->
+  <g transform="translate(50, 60)">
+    <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#8e44ad">
+      Bandwidth vs Throughput
+    </text>
+    
+    <!-- Highway analogy -->
+    <g transform="translate(0, 40)">
+      <!-- Road -->
+      <rect x="50" y="50" width="600" height="80" fill="#7f8c8d" rx="5"/>
+      
+      <!-- Lane dividers -->
+      <line x1="50" y1="70" x2="650" y2="70" stroke="#ecf0f1" stroke-width="2" stroke-dasharray="10,5"/>
+      <line x1="50" y1="90" x2="650" y2="90" stroke="#ecf0f1" stroke-width="2" stroke-dasharray="10,5"/>
+      <line x1="50" y1="110" x2="650" y2="110" stroke="#ecf0f1" stroke-width="2" stroke-dasharray="10,5"/>
+      
+      <!-- Cars (representing data) -->
+      <rect x="100" y="55" width="20" height="12" fill="#e74c3c" rx="2"/>
+      <rect x="150" y="75" width="20" height="12" fill="#3498db" rx="2"/>
+      <rect x="200" y="95" width="20" height="12" fill="#f39c12" rx="2"/>
+      <rect x="300" y="55" width="20" height="12" fill="#27ae60" rx="2"/>
+      <rect x="400" y="115" width="20" height="12" fill="#9b59b6" rx="2"/>
+      
+      <!-- Labels -->
+      <text x="350" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+        Analogia dell'Autostrada
+      </text>
+      
+      <text x="350" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+        Bandwidth = Numero di corsie (capacità massima)
+      </text>
+      <text x="350" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+        Throughput = Traffico effettivo in un momento specifico
+      </text>
+    </g>
+  </g>
+  
+  <!-- Bit vs Byte speeds -->
+  <g transform="translate(50, 280)">
+    <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e67e22">
+      Conversione Velocità: Bit per secondo ↔ Byte per secondo
+    </text>
+    
+    <!-- Conversion formula -->
+    <g transform="translate(200, 40)">
+      <rect x="0" y="0" width="400" height="50" fill="#3498db" rx="5"/>
+      <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+        1 Byte = 8 bit
+      </text>
+      <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+        Per convertire: Mbps ÷ 8 = MB/s
+      </text>
+    </g>
+    
+    <!-- Examples -->
+    <g transform="translate(0, 110)">
+      <!-- 100 Mbps example -->
+      <g>
+        <rect x="0" y="0" width="180" height="70" fill="#e74c3c" rx="5"/>
+        <text x="90" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          Connessione Internet
+        </text>
+        <text x="90" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          100 Mbps
+        </text>
+        <text x="90" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (pubblicizzata)
+        </text>
+        
+        <path d="M 190 35 L 230 35" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+        
+        <rect x="240" y="0" width="180" height="70" fill="#27ae60" rx="5"/>
+        <text x="330" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          Velocità Reale
+        </text>
+        <text x="330" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          12,5 MB/s
+        </text>
+        <text x="330" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (download effettivo)
+        </text>
+      </g>
+      
+      <!-- Wi-Fi example -->
+      <g transform="translate(0, 90)">
+        <rect x="0" y="0" width="180" height="70" fill="#9b59b6" rx="5"/>
+        <text x="90" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          Wi-Fi 802.11ac
+        </text>
+        <text x="90" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          300 Mbps
+        </text>
+        <text x="90" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (teorica)
+        </text>
+        
+        <path d="M 190 35 L 230 35" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+        
+        <rect x="240" y="0" width="180" height="70" fill="#f39c12" rx="5"/>
+        <text x="330" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          Velocità Pratica
+        </text>
+        <text x="330" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          ~20 MB/s
+        </text>
+        <text x="330" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (condizioni reali)
+        </text>
+      </g>
+      
+      <!-- 4G example -->
+      <g transform="translate(480, 90)">
+        <rect x="0" y="0" width="180" height="70" fill="#1abc9c" rx="5"/>
+        <text x="90" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          4G LTE
+        </text>
+        <text x="90" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          50 Mbps
+        </text>
+        <text x="90" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (picco)
+        </text>
+        
+        <path d="M 190 35 L 230 35" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+        
+        <rect x="240" y="0" width="180" height="70" fill="#e67e22" rx="5"/>
+        <text x="330" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+          Download Reale
+        </text>
+        <text x="330" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          6,25 MB/s
+        </text>
+        <text x="330" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+          (condizioni ottimali)
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Speed comparison chart -->
+  <g transform="translate(50, 480)">
+    <text x="400" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      Tempi di Download per File da 1 GB
+    </text>
+    
+    <!-- Speed bars -->
+    <g transform="translate(50, 40)">
+      <!-- ADSL -->
+      <g>
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">ADSL 20 Mbps:</text>
+        <rect x="120" y="5" width="400" height="15" fill="#e74c3c" rx="3"/>
+        <text x="530" y="15" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">6 min 40 sec</text>
+      </g>
+      
+      <!-- Fiber 100 -->
+      <g transform="translate(0, 25)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Fibra 100 Mbps:</text>
+        <rect x="120" y="5" width="80" height="15" fill="#f39c12" rx="3"/>
+        <text x="210" y="15" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">1 min 20 sec</text>
+      </g>
+      
+      <!-- Fiber 1000 -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Fibra 1 Gbps:</text>
+        <rect x="120" y="5" width="8" height="15" fill="#27ae60" rx="3"/>
+        <text x="138" y="15" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">8 secondi</text>
+      </g>
+      
+      <!-- USB 3.0 -->
+      <g transform="translate(0, 75)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">USB 3.0:</text>
+        <rect x="120" y="5" width="2" height="15" fill="#8e44ad" rx="3"/>
+        <text x="132" y="15" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">2,5 secondi</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+</svg>

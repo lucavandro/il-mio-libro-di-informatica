@@ -1,0 +1,94 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Ciclo Fetch-Decode-Execute</text>
+  
+  <!-- Memory representation -->
+  <rect x="50" y="80" width="150" height="300" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="125" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MEMORIA</text>
+  
+  <!-- Memory cells -->
+  <rect x="70" y="120" width="110" height="20" fill="#2980b9" stroke="white" stroke-width="1"/>
+  <text x="125" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">MOV AX, 5</text>
+  <rect x="70" y="145" width="110" height="20" fill="#2980b9" stroke="white" stroke-width="1"/>
+  <text x="125" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">ADD AX, 3</text>
+  <rect x="70" y="170" width="110" height="20" fill="#e74c3c" stroke="white" stroke-width="1"/>
+  <text x="125" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">MUL AX, 2</text>
+  <rect x="70" y="195" width="110" height="20" fill="#2980b9" stroke="white" stroke-width="1"/>
+  <text x="125" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">STORE AX</text>
+  
+  <!-- Fetch arrow -->
+  <path d="M 200 180 L 280 180" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="240" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#e74c3c">1. FETCH</text>
+  
+  <!-- CPU -->
+  <rect x="300" y="80" width="200" height="300" fill="#27ae60" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">CPU</text>
+  
+  <!-- Instruction Register -->
+  <rect x="320" y="130" width="160" height="40" fill="#229954" stroke="white" stroke-width="1"/>
+  <text x="400" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">INSTRUCTION REGISTER</text>
+  <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">MUL AX, 2</text>
+  
+  <!-- Decode Unit -->
+  <rect x="320" y="190" width="160" height="60" fill="#229954" stroke="white" stroke-width="1"/>
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">DECODE UNIT</text>
+  <text x="400" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">2. DECODE</text>
+  <text x="400" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Decodifica: Moltiplicazione</text>
+  
+  <!-- ALU -->
+  <rect x="320" y="270" width="160" height="60" fill="#229954" stroke="white" stroke-width="1"/>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">ALU</text>
+  <text x="400" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">3. EXECUTE</text>
+  <text x="400" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">8 × 2 = 16</text>
+  
+  <!-- Result arrow -->
+  <path d="M 500 300 L 580 300" stroke="#f39c12" stroke-width="3" fill="none" marker-end="url(#arrowhead2)"/>
+  <text x="540" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#f39c12">RISULTATO</text>
+  
+  <!-- Registers -->
+  <rect x="600" y="250" width="120" height="100" fill="#9b59b6" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="660" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">REGISTRI</text>
+  <rect x="620" y="280" width="80" height="20" fill="#8e44ad" stroke="white" stroke-width="1"/>
+  <text x="660" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">AX = 16</text>
+  <rect x="620" y="305" width="80" height="20" fill="#8e44ad" stroke="white" stroke-width="1"/>
+  <text x="660" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">BX = 0</text>
+  
+  <!-- Clock signal -->
+  <rect x="50" y="420" width="700" height="40" fill="#34495e" stroke="#2c3e50" stroke-width="2" rx="5"/>
+  <text x="400" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">CLOCK SIGNAL</text>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Sincronizza il ciclo: Fetch → Decode → Execute → Fetch → ...</text>
+  
+  <!-- Clock waves -->
+  <g stroke="#f39c12" stroke-width="2" fill="none">
+    <path d="M 100 435 L 110 435 L 110 425 L 120 425 L 120 435 L 130 435 L 130 425 L 140 425"/>
+    <path d="M 200 435 L 210 435 L 210 425 L 220 425 L 220 435 L 230 435 L 230 425 L 240 425"/>
+    <path d="M 300 435 L 310 435 L 310 425 L 320 425 L 320 435 L 330 435 L 330 425 L 340 425"/>
+    <path d="M 400 435 L 410 435 L 410 425 L 420 425 L 420 435 L 430 435 L 430 425 L 440 425"/>
+    <path d="M 500 435 L 510 435 L 510 425 L 520 425 L 520 435 L 530 435 L 530 425 L 540 425"/>
+    <path d="M 600 435 L 610 435 L 610 425 L 620 425 L 620 435 L 630 435 L 630 425 L 640 425"/>
+    <path d="M 700 435 L 710 435 L 710 425 L 720 425 L 720 435 L 730 435 L 730 425 L 740 425"/>
+  </g>
+  
+  <!-- Step numbers -->
+  <circle cx="240" cy="200" r="15" fill="#e74c3c"/>
+  <text x="240" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">1</text>
+  
+  <circle cx="400" cy="220" r="15" fill="#27ae60"/>
+  <text x="400" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">2</text>
+  
+  <circle cx="400" cy="300" r="15" fill="#27ae60"/>
+  <text x="400" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">3</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+  </defs>
+</svg>

@@ -57,6 +57,9 @@ Infine, c'è l'**informazione di controllo**, invisibile ma fondamentale: i coma
 
 ### 2.1 Il bit: l'unità fondamentale
 
+![Concetti di Bit e Byte](img/codifica/bit-byte-concept.svg)
+*Figura 1: Il bit è l'unità fondamentale dell'informazione digitale. Combinando più bit insieme si ottengono più possibilità di rappresentazione.*
+
 Il **bit** (binary digit) è l'unità più piccola di informazione in un sistema digitale. Può assumere solo due valori:
 
 - **0** (zero, falso, spento)
@@ -131,6 +134,9 @@ H  e  l  l  o     W  o  r  l  d  !
 ---
 
 ## 3. Multipli del bit e del byte
+
+![Confronto tra sistemi binario e decimale](img/codifica/binary-decimal-units.svg)
+*Figura 2: Differenza tra sistema binario (usato dai computer) e decimale (usato dai produttori) per i multipli del byte.*
 
 ### 3.1 Multipli del byte: sistema binario vs decimale
 
@@ -271,6 +277,9 @@ Un caso particolare è quando misuriamo il **throughput effettivo**, cioè la ve
 
 ## 5. Misurazione delle velocità di trasferimento
 
+![Confronto velocità di trasferimento](img/codifica/speed-comparison.svg)
+*Figura 3: Differenza tra bit per secondo (usati per velocità di rete) e byte per secondo (velocità effettiva di download). La conversione fondamentale è: Mbps ÷ 8 = MB/s.*
+
 ### 5.1 Concetti fondamentali
 
 Per capire veramente le velocità di trasferimento dati, dobbiamo prima distinguere tra due concetti che spesso vengono confusi ma che sono molto diversi tra loro.
@@ -361,6 +370,9 @@ Dividere i Mbps per 8 per ottenere MB/s approssimativi
 
 ## 6. Codifica delle immagini
 
+![Digitalizzazione delle immagini](img/codifica/image-digitization.svg)
+*Figura 4: Il processo di digitalizzazione delle immagini: da un'immagine analogica continua si passa al campionamento su una griglia di pixel, poi alla quantizzazione dei colori con il modello RGB.*
+
 ### 6.1 Da analogico a digitale
 
 **Come l'occhio vede le immagini:**
@@ -437,6 +449,9 @@ Ogni pixel contiene tre valori per i colori primari della luce:
 
 ### 6.5 Compressione delle immagini
 
+![Confronto tra compressione lossless e lossy](img/codifica/compression-comparison.svg)
+*Figura 5: Differenze tra compressione lossless (senza perdite) e lossy (con perdite). La compressione lossless mantiene la qualità originale ma riduce meno le dimensioni, mentre quella lossy sacrifica qualità per ottenere file molto più piccoli.*
+
 Ora arriviamo a uno dei problemi più grandi dell'era digitale: le immagini non compresse sono enormi! Per capire quanto, facciamo un calcolo concreto: una foto scattata con uno smartphone moderno da 12 megapixel, se fosse memorizzata senza alcuna compressione, occuperebbe circa 36 MB di spazio. Questo significa che in una memoria da 32 GB potreste salvare solo circa 900 foto - e stiamo parlando di una memoria abbastanza capiente! Ma il problema diventa gigantesco quando parliamo di video: un filmato in 4K non compresso occuperebbe circa 6 GB per ogni minuto di registrazione. Un film di due ore richiederebbe 720 GB di spazio, più di quanto può contenere un disco fisso di molti computer!
 
 Per risolvere questo problema, gli informatici hanno sviluppato tecniche di compressione, che si dividono in due grandi categorie con filosofie completamente diverse.
@@ -492,6 +507,9 @@ La **compressione lossy** (con perdite) è molto più aggressiva: butta via deli
 ---
 
 ## 7. Codifica dei suoni
+
+![Digitalizzazione dell'audio](img/codifica/audio-digitization.svg)
+*Figura 6: Il processo di digitalizzazione dell'audio: da un'onda sonora analogica continua si passa al campionamento a intervalli regolari, poi alla quantizzazione dei valori in numeri digitali. Maggiore è la frequenza di campionamento e la profondità in bit, migliore è la qualità.*
 
 ### 7.1 Da analogico a digitale
 

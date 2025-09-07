@@ -5,4 +5,4 @@ cercando di essere discorsivo ed evitando elenchi dove non sono strettamente nec
 Utilizza un linguaggio semplice, inserendo eventuali curiosità dove lo ritieni opportuno. 
 Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. 
 
-Mi piacerebbe aggiungere delle immagini relative agli argomenti trattati. Cerca nel web delle immagini, che abbiano scopo illustrativo ed esplicativo degli argomenti trattati e inseriscile nel documento.
+Mi piacerebbe aggiungere delle immagini relative agli argomenti trattati. Crea delle immagini che abbiano scopo illustrativo ed esplicativo degli argomenti trattati e inseriscile nel documento.

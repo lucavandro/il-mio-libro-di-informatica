@@ -1,0 +1,108 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Connettori Moderni: USB-C e HDMI</text>
+  
+  <!-- USB Evolution Timeline -->
+  <rect x="50" y="60" width="700" height="200" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="10"/>
+  <text x="400" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Evoluzione USB: Verso la Connettività Universale</text>
+  
+  <!-- Timeline line -->
+  <line x1="100" y1="150" x2="700" y2="150" stroke="white" stroke-width="3"/>
+  
+  <!-- USB 1.0 -->
+  <circle cx="150" cy="150" r="8" fill="#e74c3c"/>
+  <rect x="120" y="110" width="60" height="25" fill="#2c3e50" stroke="white" stroke-width="1" rx="3"/>
+  <rect x="125" y="115" width="50" height="15" fill="#ecf0f1"/>
+  <text x="150" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">USB 1.0</text>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">1996</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">1.5 Mbps</text>
+  
+  <!-- USB 2.0 -->
+  <circle cx="250" cy="150" r="8" fill="#e74c3c"/>
+  <rect x="220" y="110" width="60" height="25" fill="#2c3e50" stroke="white" stroke-width="1" rx="3"/>
+  <rect x="225" y="115" width="50" height="15" fill="#ecf0f1"/>
+  <text x="250" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">USB 2.0</text>
+  <text x="250" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">2000</text>
+  <text x="250" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">480 Mbps</text>
+  
+  <!-- USB 3.0 -->
+  <circle cx="350" cy="150" r="8" fill="#e74c3c"/>
+  <rect x="320" y="110" width="60" height="25" fill="#3498db" stroke="white" stroke-width="1" rx="3"/>
+  <rect x="325" y="115" width="50" height="15" fill="#ecf0f1"/>
+  <text x="350" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">USB 3.0</text>
+  <text x="350" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">2008</text>
+  <text x="350" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">5 Gbps</text>
+  
+  <!-- USB-C -->
+  <circle cx="500" cy="150" r="12" fill="#27ae60"/>
+  <ellipse cx="500" cy="118" rx="35" ry="18" fill="#27ae60" stroke="white" stroke-width="2"/>
+  <rect x="480" y="110" width="40" height="16" fill="#2c3e50" rx="8"/>
+  <text x="500" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">USB-C</text>
+  <text x="500" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">2014+</text>
+  <text x="500" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">40 Gbps</text>
+  <text x="500" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Reversibile!</text>
+  
+  <!-- Progress arrows -->
+  <path d="M 190 130 L 210 130" stroke="#f39c12" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 290 130 L 310 130" stroke="#f39c12" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 390 130 L 450 130" stroke="#f39c12" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- USB-C Features -->
+  <rect x="50" y="280" width="330" height="280" fill="#27ae60" stroke="#2c3e50" stroke-width="2" rx="10"/>
+  <text x="215" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">USB-C: Il Connettore del Futuro</text>
+  
+  <!-- USB-C connector detailed -->
+  <ellipse cx="215" cy="340" rx="60" ry="25" fill="#229954" stroke="white" stroke-width="2"/>
+  <rect x="185" y="330" width="60" height="20" fill="#2c3e50" rx="10"/>
+  <text x="215" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Connettore Reversibile</text>
+  
+  <!-- Features list -->
+  <rect x="70" y="380" width="290" height="160" fill="#1e8449" stroke="white" stroke-width="1"/>
+  <text x="215" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">CAPACITÀ MULTIPLE</text>
+  
+  <text x="80" y="420" font-family="Arial, sans-serif" font-size="10" fill="white">⚡ Alimentazione: fino a 100W</text>
+  <text x="80" y="435" font-family="Arial, sans-serif" font-size="10" fill="white">📊 Dati: fino a 40 Gbps</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="10" fill="white">🖥️ Video: 4K/8K</text>
+  <text x="80" y="465" font-family="Arial, sans-serif" font-size="10" fill="white">🔄 Reversibile: non c'è verso giusto</text>
+  <text x="80" y="480" font-family="Arial, sans-serif" font-size="10" fill="white">🌍 Universale: stesso cavo per tutto</text>
+  <text x="80" y="495" font-family="Arial, sans-serif" font-size="10" fill="white">🎧 Audio: sostituisce jack 3.5mm</text>
+  <text x="80" y="510" font-family="Arial, sans-serif" font-size="10" fill="white">💻 Un cavo per laptop, mouse, monitor</text>
+  <text x="80" y="525" font-family="Arial, sans-serif" font-size="10" fill="white">📱 Standard su smartphone moderni</text>
+  
+  <!-- HDMI Section -->
+  <rect x="420" y="280" width="330" height="280" fill="#e74c3c" stroke="#2c3e50" stroke-width="2" rx="10"/>
+  <text x="585" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">HDMI: Audio e Video Perfetti</text>
+  
+  <!-- HDMI connector -->
+  <rect x="545" y="325" width="80" height="30" fill="#c0392b" stroke="white" stroke-width="2" rx="5"/>
+  <rect x="550" y="330" width="70" height="20" fill="#2c3e50"/>
+  <rect x="555" y="335" width="60" height="10" fill="#ecf0f1"/>
+  <text x="585" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">Connettore HDMI</text>
+  
+  <!-- HDMI Evolution -->
+  <rect x="440" y="380" width="290" height="160" fill="#a93226" stroke="white" stroke-width="1"/>
+  <text x="585" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">EVOLUZIONE HDMI</text>
+  
+  <text x="450" y="420" font-family="Arial, sans-serif" font-size="10" fill="white">📺 HDMI 1.4: 4K a 30fps</text>
+  <text x="450" y="435" font-family="Arial, sans-serif" font-size="10" fill="white">🚀 HDMI 2.0: 4K a 60fps</text>
+  <text x="450" y="450" font-family="Arial, sans-serif" font-size="10" fill="white">⚡ HDMI 2.1: 8K a 120fps</text>
+  <text x="450" y="465" font-family="Arial, sans-serif" font-size="10" fill="white">🎮 VRR: gaming fluido</text>
+  <text x="450" y="480" font-family="Arial, sans-serif" font-size="10" fill="white">🔊 Audio: fino a 32 canali</text>
+  <text x="450" y="495" font-family="Arial, sans-serif" font-size="10" fill="white">🌈 HDR: colori brillanti</text>
+  <text x="450" y="510" font-family="Arial, sans-serif" font-size="10" fill="white">📲 CEC: controllo unificato</text>
+  <text x="450" y="525" font-family="Arial, sans-serif" font-size="10" fill="white">💻 Standard per TV e monitor</text>
+  
+  <!-- Connection demo -->
+  <rect x="200" y="570" width="400" height="25" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+  <text x="400" y="587" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Futuro: USB-C può trasportare anche segnali HDMI!</text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+  </defs>
+</svg>
