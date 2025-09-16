@@ -26,115 +26,128 @@ Un altro vantaggio cruciale è la manutenibilità. Nel mondo reale del software,
 
 Infine, l'OOP facilita enormemente il lavoro di squadra. In progetti grandi, dove decine di programmatori lavorano insieme, ognuno può concentrarsi su un insieme specifico di classi senza interferire con il lavoro degli altri. È come un'orchestra dove ogni musicista suona il suo strumento: il violinista non deve preoccuparsi di come il pianista produca i suoi suoni, deve solo assicurarsi di suonare al momento giusto e in armonia con gli altri.
 
-### 1.2 I Quattro Pilastri dell'OOP
 
-#### 1.2.1 Incapsulamento (Encapsulation)
+### 1.2 OOP vs Programmazione Procedurale
 
-L'incapsulamento è probabilmente il concetto più fondamentale della programmazione orientata agli oggetti, eppure spesso è quello che viene frainteso di più. Immaginate il vostro smartphone: quando volete inviare un messaggio, premete semplicemente sull'icona dei messaggi, scrivete il testo e premete invia. Non dovete preoccuparvi di come il telefono si connette alla rete, di quali protocolli usa per inviare i dati, o di come questi vengono elaborati dalle antenne di trasmissione. Tutto questo è "incapsulato" dentro il sistema del telefono.
+### 1.2 OOP vs Programmazione Procedurale
 
-L'incapsulamento in programmazione funziona esattamente allo stesso modo: raggruppiamo insieme i dati (attributi) e le funzioni che lavorano su quei dati (metodi) all'interno di una singola unità chiamata classe, e nascondiamo i dettagli interni di come funziona. Dall'esterno, possiamo interagire con l'oggetto solo attraverso un'interfaccia ben definita, proprio come con il nostro smartphone.
+La programmazione procedurale organizza il codice come sequenza di funzioni che operano su dati separati. L'OOP raggruppa dati e funzioni in oggetti che interagiscono, facilitando comprensione e manutenzione del codice.
 
-Questo concetto ha radici profonde nella ingegneria. Pensate a come è costruita un'automobile: il guidatore non ha bisogno di sapere esattamente come funziona il motore a combustione interna per guidare la macchina. Ha a disposizione un'interfaccia semplice: volante, pedali, cambio. Il produttore può migliorare il motore, cambiare i componenti interni, rendere tutto più efficiente, ma finché l'interfaccia rimane la stessa, il guidatore può continuare a guidare normalmente.
+#### Esempio: Triangolo Rettangolo
 
-In Python, l'incapsulamento ci permette di proteggere i dati da modifiche accidentali o inappropriate. Possiamo rendere certi attributi "privati" (usando la convenzione dell'underscore) in modo che possano essere modificati solo attraverso metodi specifici che controlliamo noi. Questo non solo previene errori, ma rende anche il nostro codice più robusto e affidabile nel tempo.
+**Approccio Procedurale:**
+```python
+import math
 
-#### 1.2.2 Ereditarietà (Inheritance)
+def calcola_ipotenusa(cateto1, cateto2):
+    return math.sqrt(cateto1**2 + cateto2**2)
 
-L'ereditarietà è il meccanismo che permette di creare nuove classi basandosi su classi esistenti, ereditando tutte le loro caratteristiche e comportamenti. È come il rapporto tra genitori e figli nel mondo biologico: i figli ereditano certe caratteristiche dai genitori, ma possono anche sviluppare tratti unici e distintivi.
+def calcola_perimetro(cateto1, cateto2, ipotenusa):
+    return cateto1 + cateto2 + ipotenusa
 
-Pensate alla classificazione degli animali che avete studiato in biologia: tutti i mammiferi hanno certe caratteristiche comuni (sono a sangue caldo, allattano i piccoli, hanno i peli), ma poi ogni specie specifica ha le sue peculiarità. Un cane e un gatto sono entrambi mammiferi, quindi condividono le caratteristiche di base, ma il cane abbaia e scodinzola, mentre il gatto miagola e fa le fusa.
+def calcola_area(cateto1, cateto2):
+    return (cateto1 * cateto2) / 2
 
-In programmazione, questo si traduce nella possibilità di creare una classe "Animale" con le caratteristiche comuni, e poi classi specifiche come "Cane" e "Gatto" che ereditano da "Animale" ma aggiungono i loro comportamenti specifici. Questo è incredibilmente potente perché ci evita di riscrivere lo stesso codice più volte.
+# Utilizzo
+cateto_a = 3
+cateto_b = 4
+ipotenusa = calcola_ipotenusa(cateto_a, cateto_b)
+perimetro = calcola_perimetro(cateto_a, cateto_b, ipotenusa)
+area = calcola_area(cateto_a, cateto_b)
 
-L'ereditarietà non è solo un modo per risparmiare tempo nella scrittura del codice, ma riflette anche le relazioni naturali che esistono nel mondo reale. Quando creiamo gerarchie di classi che ereditano l'una dall'altra, stiamo essenzialmente modellando nel nostro software le stesse relazioni di specializzazione che vediamo nella vita quotidiana. Un'automobile elettrica è pur sempre un'automobile, quindi eredita tutte le caratteristiche base (ruote, volante, freni), ma aggiunge le sue specificità (batteria, motore elettrico, ricarica).
+print(f"Ipotenusa: {ipotenusa}, Perimetro: {perimetro}, Area: {area}")
+```
 
-Una curiosità interessante è che l'ereditarietà in programmazione può essere multipla: una classe può ereditare da più classi contemporaneamente. È come se una persona potesse ereditare i tratti fisici da entrambi i genitori, ma anche le abilità musicali da un nonno e le capacità atletiche da una zia. Tuttavia, questo meccanismo va usato con prudenza perché può rendere il codice molto complesso da capire.
+**Approccio Orientato agli Oggetti:**
+```python
+import math
 
-#### 1.2.3 Polimorfismo (Polymorphism)
+class TriangoloRettangolo:
+    def __init__(self, cateto1, cateto2):
+        self.cateto1 = cateto1
+        self.cateto2 = cateto2
+    
+    def calcola_ipotenusa(self):
+        return math.sqrt(self.cateto1**2 + self.cateto2**2)
+    
+    def calcola_perimetro(self):
+        ipotenusa = self.calcola_ipotenusa()
+        return self.cateto1 + self.cateto2 + ipotenusa
+    
+    def calcola_area(self):
+        return (self.cateto1 * self.cateto2) / 2
+    
+    def __str__(self):
+        return f"Triangolo({self.cateto1}, {self.cateto2}) - Ipotenusa: {self.calcola_ipotenusa():.2f}"
 
-Il polimorfismo è forse il concetto più elegante e potente dell'OOP, anche se il nome può sembrare intimidatorio. La parola deriva dal greco e significa "avere molte forme". Nel mondo della programmazione, il polimorfismo significa che oggetti di classi diverse possono rispondere allo stesso messaggio o chiamata di metodo, ma ognuno a modo suo.
+# Utilizzo
+triangolo = TriangoloRettangolo(3, 4)
+print(f"Ipotenusa: {triangolo.calcola_ipotenusa()}")
+print(f"Perimetro: {triangolo.calcola_perimetro()}")
+print(f"Area: {triangolo.calcola_area()}")
+print(triangolo)
+```
 
-Immaginate di essere un direttore d'orchestra davanti a musicisti che suonano strumenti diversi. Quando alzate la bacchetta e date il segnale di "suonare", ogni musicista risponde a modo suo: il violinista muove l'archetto sulle corde, il pianista preme i tasti, il trombettista soffia nel bocchino. Stesso comando, risposte diverse ma appropriate per ogni strumento.
+**Differenze principali:**
+- **Procedurale**: Dati e funzioni separati, passaggio manuale di parametri
+- **OOP**: Dati e comportamenti unificati nell'oggetto, maggiore chiarezza e riusabilità
 
-In programmazione succede la stessa cosa. Possiamo avere una lista che contiene oggetti di classi diverse (cani, gatti, uccelli), e quando chiamiamo il metodo "fai_verso()" su ognuno di loro, otterremo risultati diversi: "bau bau" per il cane, "miao" per il gatto, "cip cip" per l'uccello. Il bello è che noi, come programmatori, non dobbiamo sapere in anticipo che tipo di animale stiamo gestendo: il polimorfismo si occupa automaticamente di chiamare il metodo giusto.
 
-Questo concetto è rivoluzionario perché ci permette di scrivere codice molto più flessibile e estendibile. Possiamo scrivere una funzione che lavora con "animali generici", e poi questa funzione continuerà a funzionare anche se in futuro aggiungiamo nuovi tipi di animali al nostro programma. È come avere un telecomando universale che funziona con qualsiasi dispositivo, presente o futuro, purché supporti i comandi di base.
+### 1.3 Classi, oggetti e istanze
 
-Python ha una forma particolare di polimorfismo chiamata "duck typing": se un oggetto cammina come un'anatra e fa "quack" come un'anatra, allora per tutti gli scopi pratici è un'anatra. Questo significa che non importa da quale classe deriva un oggetto: se ha i metodi che ci servono, possiamo usarlo come se fosse del tipo che ci aspettiamo.
+#### 1.3.1 La differenza tra classe e oggetto
 
-#### 1.2.4 Astrazione (Abstraction)
+Per capire la differenza tra classe e oggetto, immaginate di essere in una fabbrica di automobili. Prima di produrre un'auto, i progettisti creano un **progetto dettagliato** che specifica tutto: dove vanno le ruote, la forma della carrozzeria, la posizione del motore, i colori disponibili. Questo progetto è come una **classe** in programmazione.
 
-L'astrazione è l'arte di nascondere la complessità dietro un'interfaccia semplice, concentrandosi su quello che un oggetto fa piuttosto che su come lo fa. È il principio che usiamo costantemente nella vita quotidiana senza accorgercene. Quando accendete la luce, non pensate al percorso che l'elettricità fa dalla centrale elettrica fino alla lampadina nella vostra stanza: vi concentrate solo sul risultato (avere luce) e sull'interfaccia semplice (l'interruttore).
+Una **classe** è essenzialmente un "progetto" o un "modello" che descrive come dovranno essere fatti gli oggetti. È come il disegno tecnico dell'automobile: definisce le caratteristiche che avrà (colore, numero di porte, cilindrata) e le azioni che potrà compiere (accelerare, frenare, accendere le luci), ma non è ancora un'automobile vera e propria.
 
-L'astrazione è ciò che rende possibile gestire sistemi di enorme complessità. Il vostro computer ha milioni di componenti e linee di codice, ma voi interagite con esso attraverso icone, menu e finestre. Ogni livello di astrazione nasconde la complessità di quello sottostante. Il sistema operativo nasconde i dettagli dell'hardware, le applicazioni nascondono i dettagli del sistema operativo, e così via.
+Un **oggetto**, invece, è come l'automobile fisica che esce dalla catena di montaggio: è una realizzazione concreta del progetto. Dall'stesso progetto di automobile, la fabbrica può produrre migliaia di auto diverse: una rossa con interni in pelle, una blu con interni in tessuto, una bianca con tetto apribile. Ogni automobile è un oggetto diverso, ma tutte seguono lo stesso progetto (la classe).
 
-In programmazione, l'astrazione ci permette di definire cosa deve fare una classe senza specificare esattamente come deve farlo. Possiamo creare classi "astratte" che definiscono un contratto: "ogni classe che eredita da me deve avere questi metodi". È come dire "tutti i veicoli devono poter accelerare e frenare", senza specificare se si tratta di una bicicletta, un'auto o un aereo.
+Una cosa importante da capire è che la classe esiste solo nel codice, come un'idea o un progetto. Gli oggetti, invece, esistono quando il programma viene eseguito e occupano spazio nella memoria del computer.
 
-Questo è particolarmente utile quando lavoriamo in team o quando creiamo librerie che altri programmatori useranno. L'astrazione ci permette di separare il "cosa" dal "come", rendendo possibile cambiare l'implementazione interna senza influenzare il codice che usa la nostra classe. È la differenza tra dire "dammi il risultato di 5 + 3" e dover specificare "prendi il numero 5, mettilo nel registro A del processore, prendi il numero 3, mettilo nel registro B, esegui l'operazione di addizione, memorizza il risultato nel registro C".
+#### 1.3.2 Il concetto di istanza
 
-Un aspetto affascinante dell'astrazione è che opera a livelli multipli simultaneamente. Un programmatore può astrarre i dettagli di come funziona un database, un altro può astrarre i dettagli di come funziona la rete, e un terzo può astrarre i dettagli di come funziona l'interfaccia utente. Ognuno si concentra sul proprio livello di astrazione, e il risultato finale è un sistema complesso che nessuno deve comprendere completamente per usarlo efficacemente.
+Quando creiamo un oggetto da una classe, diciamo che stiamo **istanziando** la classe, e l'oggetto risultante si chiama **istanza** della classe. È un po' come quando ordinate una pizza: il menu (la classe) descrive tutti i tipi di pizza disponibili, ma quando ne ordinate una, ricevete un'istanza specifica di quella pizza.
 
-### 1.3 OOP vs Programmazione Procedurale
+Ogni istanza è completamente indipendente dalle altre. Se Mario accelera la sua auto, questo non influenza la velocità dell'auto di Sara. È come avere due radio sintonizzate sullo stesso programma: se alzate il volume di una, l'altra rimane al volume precedente.
 
-#### 1.3.1 Programmazione Procedurale
+Pensate a una classe "Studente": può descrivere che tutti gli studenti hanno un nome, un'età, una classe di appartenenza e possono studiare o riposare. Ma quando create specifiche istanze come Alice, Bob e Clara, ognuno di loro avrà i propri valori per nome ed età, e se Alice studia e si stanca, questo non influenza l'energia di Bob o Clara.
 
-La programmazione procedurale è stata per molti anni il paradigma dominante nella programmazione, e ancora oggi molti programmatori iniziano imparando questo approccio. È un modo di pensare ai programmi come a una ricetta di cucina: una serie di istruzioni che vengono eseguite una dopo l'altra, dall'inizio alla fine. Quando volete preparare una torta, seguite i passaggi in ordine: prendete gli ingredienti, mescolate la farina con le uova, aggiungete lo zucchero, infornate, e così via.
+#### 1.3.3 Attributi e metodi di istanza
 
-In questo paradigma, il programma è essenzialmente una collezione di funzioni, ognuna delle quali prende alcuni dati in input, li elabora, e restituisce un risultato. I dati e le funzioni che li manipolano sono separati: i dati sono come gli ingredienti in dispensa, e le funzioni sono come gli attrezzi da cucina che usate per lavorarli. Questo approccio funziona benissimo per problemi relativamente semplici e lineari.
+Ogni istanza ha le sue **variabili di istanza** (chiamate anche attributi) che memorizzano informazioni specifiche per quell'oggetto. Nel nostro esempio degli studenti, ogni studente ha il suo nome, la sua età, i suoi voti. Queste informazioni sono personali per ogni istanza.
 
-L'analogia con la ricetta di cucina è particolarmente calzante perché evidenzia sia i punti di forza che le limitazioni della programmazione procedurale. Quando seguite una ricetta semplice, tutto procede liscio: ogni passo è chiaro, l'ordine è logico, il risultato è prevedibile. Ma cosa succede se volete cucinare un banchetto per cento persone con venti portate diverse? Improvvisamente avete bisogno di coordinare tempi diversi, tenere traccia di molti ingredienti, gestire più fornelli contemporaneamente. La ricetta lineare diventa inadeguata.
+I **metodi** sono le azioni che ogni istanza può compiere. Tutti gli studenti possono studiare e riposare, ma quando Alice studia, influenza solo la sua energia, non quella di Bob o Clara.
 
-Lo stesso problema si verifica nella programmazione procedurale quando i progetti crescono in dimensione e complessità. I dati vengono passati da una funzione all'altra, modificati in vari punti del programma, e diventa sempre più difficile tenere traccia di cosa sta succedendo. È come avere una cucina dove chiunque può prendere qualsiasi ingrediente da qualsiasi posto e modificarlo a piacimento: il caos è garantito.
+Pensate agli attributi come ai "dati personali" di ogni oggetto, e ai metodi come alle "abilità" che ogni oggetto possiede. È come se ogni studente avesse un diario personale (gli attributi) e sapesse fare certe cose (i metodi), ma il contenuto del diario e le azioni sono specifiche per ognuno.
 
-Un altro limite significativo della programmazione procedurale emerge quando si tratta di modellare concetti del mondo reale che hanno sia caratteristiche che comportamenti. Se volete rappresentare un'automobile, dovete creare variabili separate per colore, marca, modello, velocità, e funzioni separate per accelerare, frenare, accendere. Non c'è un collegamento esplicito e immediato tra questi elementi che li identifichi come parti di un'unica entità coerente.
+Immaginate uno zaino: ogni zaino ha il suo colore, la sua capacità massima e il suo peso attuale (attributi), e tutti gli zaini possono fare le stesse azioni come aggiungere oggetti, rimuovere oggetti o mostrare il contenuto (metodi). Ma ogni zaino mantiene i suoi oggetti separatamente: aggiungere un libro allo zaino della scuola non influenza il contenuto dello zaino dello sport.
 
-#### 1.3.2 Approccio Orientato agli Oggetti
+#### 1.3.4 Analogia finale: La ricetta e i dolci
 
-L'approccio orientato agli oggetti nasce proprio per superare le limitazioni della programmazione procedurale quando si ha a che fare con sistemi complessi. Invece di pensare al programma come a una sequenza di operazioni sui dati, nell'OOP pensiamo al programma come a una collezione di oggetti che interagiscono tra loro. È come passare dalla metafora della ricetta di cucina a quella di un ristorante organizzato.
+Per riassumere tutti questi concetti, immaginate di avere una **ricetta per i biscotti**. La ricetta è come la **classe**: descrive gli ingredienti necessari (attributi) e i passaggi da seguire (metodi), ma non è un biscotto vero.
 
-In un ristorante ben gestito, ogni reparto ha le sue responsabilità specifiche: la cucina si occupa di preparare i piatti, il servizio in sala gestisce i clienti, la cassa si occupa dei pagamenti. Ogni reparto ha i suoi dati (la cucina ha gli ingredienti, il servizio ha i menu, la cassa ha i prezzi) e i suoi metodi per lavorare su quei dati. Ma la cosa più importante è che ogni reparto comunica con gli altri attraverso interfacce ben definite, senza bisogno di conoscere i dettagli interni di come funzionano.
+Ogni volta che seguite la ricetta e fate una infornata, create dei **biscotti concreti** (oggetti o istanze). Ogni biscotto ha le sue caratteristiche specifiche: uno potrebbe essere leggermente più scuro, un altro più rotondo, ma tutti seguono la stessa ricetta base.
 
-Questo approccio risolve elegantemente molti dei problemi della programmazione procedurale. I dati e le funzioni che li manipolano sono raggruppati insieme negli oggetti, rendendo molto più chiaro cosa appartiene a cosa. Non c'è più il rischio che una funzione in una parte del programma modifichi accidentalmente dati che dovrebbero essere gestiti da un'altra parte.
+Se fate tre infornade diverse in momenti diversi, avrete tre gruppi di biscotti completamente indipendenti. Mangiare un biscotto della prima infornata non influenza quelli della seconda infornata.
 
-L'OOP facilita anche enormemente la comprensione del codice, perché rispecchia il modo naturale in cui il nostro cervello organizza le informazioni. Quando leggete "auto.accelera()", capite immediatamente che state dicendo a un'automobile di accelerare. È molto più intuitivo di una funzione procedurale chiamata "aumenta_velocita_veicolo(automobile, incremento)".
-
-Un vantaggio meno ovvio ma estremamente importante dell'OOP è la sua capacità di gestire il cambiamento. Nel mondo reale del software, i requisiti cambiano costantemente: quello che sembrava perfetto oggi potrebbe dover essere completamente rivisto domani. Con l'OOP, quando dovete aggiungere nuove funzionalità o modificare quelle esistenti, spesso potete farlo creando nuove classi o modificando classi esistenti senza dover toccare il resto del sistema. È come aggiungere un nuovo reparto al ristorante senza dover riorganizzare tutta la struttura esistente.
-
-Naturalmente, l'OOP non è una bacchetta magica che risolve tutti i problemi. Per progetti molto semplici, può addirittura sembrare eccessivamente complicato. È come usare l'organizzazione di un ristorante a cinque stelle per preparare un panino a casa: funziona, ma probabilmente è troppo. La chiave è capire quando ogni approccio è più appropriato e saper scegliere lo strumento giusto per il problema giusto.
+Questa è esattamente la relazione tra classi e oggetti in programmazione: una classe è il modello, gli oggetti sono le realizzazioni concrete di quel modello, e ogni oggetto vive la sua vita indipendente dagli altri. La classe definisce cosa può fare un biscotto (cuocere, essere mangiato) e quali caratteristiche ha (forma, gusto, livello di cottura), ma ogni biscotto specifico mantiene il suo stato personale indipendentemente dagli altri.
 
 **🤔 Domande di Verifica - Modulo 1**
 
-1. Spiegate con le vostre parole cosa significa "incapsulamento" e fate un esempio pratico di come lo usate nella vita quotidiana, anche senza saperlo.
+1. Immaginatevi di dover modellare un sistema per gestire una scuola. Identificate almeno tre classi che potreste creare e spiegate come potrebbero essere collegate attraverso l'ereditarietà.
 
-2. Immaginatevi di dover modellare un sistema per gestire una scuola. Identificate almeno tre classi che potreste creare e spiegate come potrebbero essere collegate attraverso l'ereditarietà.
+2. Confrontate i vantaggi e gli svantaggi della programmazione procedurale rispetto a quella orientata agli oggetti. In quali situazioni preferireste l'una o l'altra?
 
-3. Descrivete una situazione in cui il polimorfismo potrebbe essere utile, spiegando come oggetti diversi potrebbero rispondere allo stesso comando in modi diversi.
-
-4. Confrontate i vantaggi e gli svantaggi della programmazione procedurale rispetto a quella orientata agli oggetti. In quali situazioni preferireste l'una o l'altra?
-
-5. L'astrazione è ovunque intorno a noi. Identificate tre esempi di astrazione nella vostra vita quotidiana e spiegate come nascondono la complessità sottostante.
-
-6. Pensate a un'applicazione che usate spesso (come WhatsApp, Instagram, o un videogioco). Come pensate che sia organizzata internamente usando i principi dell'OOP? Quali potrebbero essere alcune delle classi principali?
+3. Pensate a un'applicazione che usate spesso (come WhatsApp, Instagram, o un videogioco). Come pensate che sia organizzata internamente? Quali potrebbero essere alcune delle classi principali?
 
 ## 🏗️ **Modulo 2: Classi e Oggetti in Python**
 
 ### 2.1 Creazione di Classi
 
-#### 2.1.1 Sintassi base di una classe
+#### 2.1.1 Sintassi e esempio pratico
 
-Creare una classe in Python è come disegnare il progetto di una casa prima di costruirla. Il progetto definisce dove andranno le stanze, quante finestre ci saranno, dove sarà posizionata la cucina, ma non è ancora una casa vera e propria: è solo il modello che useremo per costruire tante case simili. Allo stesso modo, una classe è il modello che definisce come saranno fatti gli oggetti che creeremo da essa.
-
-La sintassi per definire una classe in Python è sorprendentemente semplice, ma dietro questa semplicità si nasconde una potenza incredibile. Iniziamo sempre con la parola chiave `class`, seguita dal nome della classe che vogliamo creare. Per convenzione, i nomi delle classi in Python iniziano sempre con una lettera maiuscola e usano il PascalCase, dove ogni parola inizia con la maiuscola: `MiaClasse`, `StudenteLiceo`, `ContoBancario`.
-
-Il cuore di ogni classe è il metodo `__init__`, che viene chiamato costruttore. Questo metodo speciale viene eseguito automaticamente ogni volta che creiamo un nuovo oggetto da quella classe. È come l'operaio che segue il progetto della casa per costruirla: prende i materiali necessari (i parametri che passiamo) e costruisce l'oggetto secondo le specifiche della classe. Il parametro `self` che vedete sempre come primo parametro di tutti i metodi di classe è il riferimento all'oggetto stesso che stiamo creando o con cui stiamo lavorando.
-
-Una cosa interessante da notare è che in Python, a differenza di molti altri linguaggi di programmazione, non dobbiamo dichiarare esplicitamente gli attributi di una classe. Possiamo semplicemente crearli al volo nel costruttore assegnando valori a `self.nome_attributo`. Questa flessibilità rende Python molto espressivo e facile da usare, ma richiede anche più disciplina da parte del programmatore per mantenere il codice ordinato e comprensibile.
-
-I metodi di una classe sono semplicemente funzioni definite all'interno della classe che operano sugli oggetti di quella classe. Ogni metodo ha sempre `self` come primo parametro, che rappresenta l'istanza specifica dell'oggetto su cui il metodo viene chiamato. Questo meccanismo permette allo stesso metodo di essere chiamato su oggetti diversi, ognuno con i suoi dati specifici, e di comportarsi appropriatamente per ciascuno di essi.
-
-#### 2.1.2 Esempio pratico: Classe Studente
-
-Per capire davvero come funzionano le classi, costruiamo insieme un esempio concreto: una classe per rappresentare uno studente. Immaginate di dover creare un sistema per gestire gli studenti di una scuola. Ogni studente ha caratteristiche comuni: un nome, un'età, una classe di appartenenza, e una lista di voti. Inoltre, ogni studente può fare certe azioni: ricevere un nuovo voto, calcolare la propria media, presentarsi.
+Creare una classe in Python è come disegnare il progetto di una casa: definiamo la struttura che useremo per costruire oggetti simili. La sintassi inizia con `class` seguito dal nome (in PascalCase), e il metodo `__init__` funge da costruttore. Il parametro `self` rappresenta l'istanza dell'oggetto su cui operiamo. Possiamo avere attributi di classe (condivisi) e attributi di istanza (specifici per ogni oggetto), mentre i metodi definiscono le azioni che l'oggetto può compiere.
 
 ```python
 class Studente:
@@ -146,7 +159,7 @@ class Studente:
         self.nome = nome
         self.eta = eta
         self.classe = classe
-        self.voti = []  # Lista vuota che conterrà i voti
+        self.voti = []
     
     def aggiungi_voto(self, voto):
         if 0 <= voto <= 10:
@@ -166,11 +179,7 @@ class Studente:
         return f"Ciao, sono {self.nome}, ho {self.eta} anni, frequento la {self.classe} e la mia media è {media:.2f}"
 ```
 
-Questo esempio illustra molti concetti importanti. Prima di tutto, notate la differenza tra attributi di classe e attributi di istanza. `scuola` è un attributo di classe: è condiviso da tutti gli studenti e ha lo stesso valore per ognuno di loro. È come dire che tutti gli studenti frequentano la stessa scuola. Gli attributi di istanza come `nome`, `eta`, `classe` e `voti` sono invece specifici per ogni singolo studente.
-
-Il metodo `aggiungi_voto` mostra come possiamo implementare della logica di validazione. Non accettiamo qualsiasi voto: controlliamo che sia nel range valido tra 0 e 10. Questo è un esempio di come l'incapsulamento ci permette di proteggere i nostri dati da valori non validi. Invece di permettere a chiunque di modificare direttamente la lista dei voti, forniamo un metodo controllato per farlo.
-
-Il metodo `calcola_media` illustra un pattern molto comune: un metodo che esegue calcoli sui dati dell'oggetto. Notate come gestiamo il caso particolare di uno studente che non ha ancora voti: invece di causare un errore di divisione per zero, restituiamo 0. Questo tipo di gestione degli edge case (casi limite) è fondamentale per scrivere codice robusto.
+L'esempio mostra come l'incapsulamento protegga i dati (validazione del voto), come i metodi operino sui dati dell'oggetto (calcolo della media), e come gestiamo casi limite per rendere il codice robusto.
 
 ### 2.2 Creazione e Utilizzo di Oggetti
 
@@ -223,68 +232,6 @@ Una caratteristica interessante di Python è che possiamo aggiungere attributi a
 
 Gli attributi di classe meritano un'attenzione speciale. Quando accediamo a `marco.scuola`, Python prima controlla se `marco` ha un attributo di istanza chiamato `scuola`. Se non lo trova, risale alla classe e cerca un attributo di classe con quel nome. Questo meccanismo ci permette di avere valori condivisi tra tutti gli oggetti di una classe, ma anche di permettere a singoli oggetti di avere valori diversi se necessario.
 
-### 2.3 Metodi Speciali (Magic Methods)
-
-#### 2.3.1 Il metodo `__str__`
-
-Il metodo `__str__` è il primo di una serie di metodi "magici" che rendono gli oggetti Python così potenti e naturali da usare. Questi metodi hanno nomi che iniziano e finiscono con due underscore e vengono chiamati automaticamente da Python in situazioni specifiche. Il `__str__` viene chiamato ogni volta che Python ha bisogno di convertire il nostro oggetto in una stringa, per esempio quando usiamo `print()` o `str()`.
-
-Per capire l'importanza di questo metodo, proviamo a stampare un oggetto `Studente` senza aver definito `__str__`:
-
-```python
-marco = Studente("Marco", 17, "4A")
-print(marco)  # Output: <__main__.Studente object at 0x7f8b8c0b5f40>
-```
-
-Non è molto utile, vero? Python non sa come descrivere il nostro studente in modo umano, quindi ci mostra solo che è un oggetto di tipo `Studente` e il suo indirizzo in memoria. È come se qualcuno vi chiedesse di descrivere un amico e voi rispondeste "è un essere umano che vive in via tale numero tale".
-
-Definendo il metodo `__str__`, possiamo insegnare a Python come descrivere i nostri oggetti in modo significativo:
-
-```python
-def __str__(self):
-    return f"Studente: {self.nome} ({self.eta} anni) - Classe {self.classe}"
-```
-
-Ora quando stampiamo `marco`, otteniamo: "Studente: Marco (17 anni) - Classe 4A". È immediatamente più chiaro e utile! Questo metodo è particolarmente importante quando stiamo debuggando il nostro codice: vedere una descrizione chiara degli oggetti ci aiuta enormemente a capire cosa sta succedendo.
-
-Una buona implementazione di `__str__` dovrebbe essere concisa ma informativa, mostrando le informazioni più importanti dell'oggetto in un formato che sia facile da leggere per un essere umano. Pensateci come al modo in cui vi presentereste a qualcuno: direste le cose più importanti su di voi in poche parole chiare.
-
-#### 2.3.2 Altri metodi speciali utili
-
-Il mondo dei metodi speciali in Python è vasto e affascinante. Ognuno di questi metodi ci permette di definire come i nostri oggetti si comportano in situazioni specifiche, rendendo possibile creare oggetti che si integrano perfettamente con il resto del linguaggio Python.
-
-Il metodo `__len__` viene chiamato quando usiamo la funzione `len()` sul nostro oggetto. Per la nostra classe `Studente`, potremmo implementarlo per restituire il numero di voti:
-
-```python
-def __len__(self):
-    return len(self.voti)
-
-# Ora possiamo fare:
-print(len(marco))  # Restituisce il numero di voti di Marco
-```
-
-Il metodo `__getitem__` ci permette di usare la sintassi delle parentesi quadre per accedere ai dati del nostro oggetto, come se fosse una lista o un dizionario:
-
-```python
-def __getitem__(self, index):
-    return self.voti[index]
-
-# Ora possiamo fare:
-print(marco[0])  # Restituisce il primo voto di Marco
-```
-
-Il metodo `__contains__` viene chiamato quando usiamo l'operatore `in`:
-
-```python
-def __contains__(self, voto):
-    return voto in self.voti
-
-# Ora possiamo fare:
-if 8 in marco:
-    print("Marco ha preso 8!")
-```
-
-Questi metodi speciali sono quello che rende Python così espressivo e naturale. Invece di dover ricordare nomi di metodi specifici per ogni classe, possiamo usare sintassi familiari (`len()`, `[]`, `in`) che funzionano su qualsiasi oggetto che implementa i metodi appropriati. È come avere un linguaggio universale che tutti gli oggetti capiscono.
 
 ### 2.4 Esercitazione Pratica: Classe ContoBancario
 
@@ -363,7 +310,7 @@ L'uso del modulo `datetime` mostra come le classi Python possono facilmente inte
 
 2. Perché il parametro `self` è necessario in tutti i metodi di una classe? Cosa rappresenta esattamente?
 
-3. Implementate un metodo `__str__` per una classe `Libro` che abbia attributi titolo, autore e anno di pubblicazione. Come fareste a renderlo informativo ma conciso?
+3. Implementate una classe `Libro` che abbia attributi titolo, autore e anno di pubblicazione.
 
 4. Nel nostro esempio del `ContoBancario`, perché abbiamo scelto di fare controlli sui parametri nei metodi `deposita` e `preleva` invece di permettere qualsiasi operazione?
 
