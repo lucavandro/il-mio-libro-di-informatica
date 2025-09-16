@@ -143,6 +143,8 @@ Questa è esattamente la relazione tra classi e oggetti in programmazione: una c
 
 ## 🏗️ **Modulo 2: Classi e Oggetti in Python**
 
+<iframe width="100%" height="auto" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/nmoJf-Ei4TA?si=-KM7RkzJMOs8R7C4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### 2.1 Creazione di Classi
 
 #### 2.1.1 Sintassi e esempio pratico
