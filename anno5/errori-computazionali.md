@@ -76,7 +76,6 @@ for vero, approx in esempi:
 ```
 
 ### 1.4 Importanza dell'analisi degli errori
-
 Perché dovremmo preoccuparci di questi errori? Immagina se:
 
 - Il GPS della tua auto avesse un errore di qualche metro ad ogni calcolo 🗺️
@@ -89,6 +88,27 @@ L'analisi degli errori è fondamentale per:
 - **Progettare sistemi sicuri** (automobili, aerei, impianti nucleari)
 - **Validare modelli matematici** usati nelle previsioni del tempo
 - **Ottimizzare algoritmi** per ridurre al minimo gli errori
+
+**Esempi concreti dell'importanza dell'analisi degli errori:**
+
+🏥 **Medicina**: Nei macchinari per radioterapia, anche un errore di posizionamento di pochi millimetri può significare la differenza tra colpire un tumore o danneggiare tessuti sani. I sistemi di calcolo devono garantire precisione assoluta.
+
+💰 **Finanza**: Le banche elaborano milioni di transazioni al giorno. Un piccolo errore di arrotondamento, moltiplicato per milioni di operazioni, potrebbe causare perdite o guadagni di migliaia di euro. Nel 1996, una banca giapponese perse 1,4 miliardi di dollari a causa di un errore in un algoritmo di trading.
+
+🌡️ **Meteorologia**: Le previsioni del tempo dipendono da modelli complessi che elaborano enormi quantità di dati. Piccoli errori nei calcoli iniziali possono portare a previsioni completamente sbagliate dopo alcuni giorni (effetto farfalla).
+
+🔬 **Ricerca scientifica**: Nel 2006, un errore computazionale in un modello climatico portò a conclusioni errate sui cambiamenti climatici, influenzando politiche ambientali per anni prima che l'errore fosse scoperto.
+
+🎯 **Ingegneria strutturale**: Il calcolo della resistenza di ponti, grattacieli e altre strutture deve essere estremamente preciso. Un errore nei calcoli potrebbe compromettere la sicurezza pubblica.
+
+**Quando gli errori diventano critici:**
+
+- **Sistemi real-time**: Dove decisioni immediate dipendono da calcoli precisi
+- **Sistemi di sicurezza**: Dove vite umane dipendono dall'accuratezza
+- **Calcoli a lungo termine**: Dove piccoli errori si accumulano nel tempo
+- **Sistemi ad alto volume**: Dove errori piccoli moltiplicati diventano significativi
+
+La comprensione e il controllo degli errori computazionali non è quindi solo una questione teorica, ma una necessità pratica per vivere in un mondo sempre più dipendente dai computer! 🌐
 
 ### 1.5 Esempi storici di errori computazionali
 
