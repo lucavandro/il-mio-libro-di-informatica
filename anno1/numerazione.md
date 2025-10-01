@@ -62,6 +62,8 @@ Prendiamo il numero binario 1101:
 
 ### 2.3 Perché il binario è perfetto per i computer
 
+![Concetti di Bit e Byte](img/numerazione/0.png)
+
 I computer utilizzano circuiti elettronici che riconoscono due stati:
 
 - **0**: Assenza di tensione elettrica (spento)
