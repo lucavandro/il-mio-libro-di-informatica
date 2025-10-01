@@ -338,6 +338,80 @@ Lo standard IEEE 754 definisce alcuni valori speciali per gestire situazioni mat
 
 **+∞ e -∞ (Infinito)** ♾️ - **NaN (Not a Number)** 🤔 - **Zero positivo e negativo** ±0
 
+
+### 3.4 Conversione di un numero da base 10 a IEEE754 a 32bit
+
+La rappresentazione IEEE 754 a 32 bit (singola precisione) utilizza 1 bit per il segno, 8 bit per l'esponente e 23 bit per la mantissa. Seguiamo i passi per convertire i numeri 10.5, -11.25 e 11.6.
+
+#### Passaggi generali:
+1. **Determina il segno (S)**: 0 per numeri positivi, 1 per numeri negativi.
+2. **Converti il numero in binario**: Dividi la parte intera e la parte decimale, convertendole separatamente.
+3. **Normalizza il numero**: Porta il numero in forma scientifica binaria, del tipo \(1.m \times 2^E\), dove \(1.m\) è la mantissa.
+4. **Calcola l'esponente (E)**: Aggiungi il bias (127 per IEEE 754 a 32 bit) all'esponente della forma scientifica.
+5. **Costruisci la mantissa (M)**: Prendi i bit significativi dopo il punto binario della parte normalizzata, riempiendo fino a 23 bit.
+6. **Combina i campi**: Unisci segno, esponente e mantissa per ottenere il numero finale.
+
+---
+
+#### Esempio 1: 10.5
+
+1. **Segno (S)**: 10.5 è positivo, quindi \(S = 0\).
+2. **Binario**:  
+    - Parte intera: \(10_{10} = 1010_2\).  
+    - Parte decimale: \(0.5_{10} = 0.1_2\).  
+    - Risultato: \(10.5_{10} = 1010.1_2\).
+3. **Normalizzazione**: \(1010.1_2 = 1.0101_2 \times 2^3\).
+4. **Esponente (E)**: \(3 + 127 = 130\). In binario: \(130_{10} = 10000010_2\).
+5. **Mantissa (M)**: Prendi i bit dopo il punto: \(01010000000000000000000\) (23 bit).
+6. **Risultato finale**:  
+    - Segno: \(0\).  
+    - Esponente: \(10000010\).  
+    - Mantissa: \(01010000000000000000000\).  
+    - IEEE 754: \(0 10000010 01010000000000000000000\).
+
+---
+
+#### Esempio 2: -11.25
+
+1. **Segno (S)**: -11.25 è negativo, quindi \(S = 1\).
+2. **Binario**:  
+    - Parte intera: \(11_{10} = 1011_2\).  
+    - Parte decimale: \(0.25_{10} = 0.01_2\).  
+    - Risultato: \(-11.25_{10} = -1011.01_2\).
+3. **Normalizzazione**: \(-1011.01_2 = -1.01101_2 \times 2^3\).
+4. **Esponente (E)**: \(3 + 127 = 130\). In binario: \(130_{10} = 10000010_2\).
+5. **Mantissa (M)**: Prendi i bit dopo il punto: \(01101000000000000000000\) (23 bit).
+6. **Risultato finale**:  
+    - Segno: \(1\).  
+    - Esponente: \(10000010\).  
+    - Mantissa: \(01101000000000000000000\).  
+    - IEEE 754: \(1 10000010 01101000000000000000000\).
+
+---
+
+#### Esempio 3: 11.6
+
+1. **Segno (S)**: 11.6 è positivo, quindi \(S = 0\).
+2. **Binario**:  
+    - Parte intera: \(11_{10} = 1011_2\).  
+    - Parte decimale: \(0.6_{10} \approx 0.100110011001..._2\) (periodico).  
+    - Risultato: \(11.6_{10} \approx 1011.100110011001..._2\).
+3. **Normalizzazione**: \(1011.100110011001..._2 = 1.011100110011001..._2 \times 2^3\).
+4. **Esponente (E)**: \(3 + 127 = 130\). In binario: \(130_{10} = 10000010_2\).
+5. **Mantissa (M)**: Prendi i bit dopo il punto: \(01110011001100110011001\) (23 bit, troncando il periodico).
+6. **Risultato finale**:  
+    - Segno: \(0\).  
+    - Esponente: \(10000010\).  
+    - Mantissa: \(01110011001100110011001\).  
+    - IEEE 754: \(0 10000010 01110011001100110011001\).
+
+---
+
+Questi sono i risultati finali in formato IEEE 754 a 32 bit per i tre numeri:
+- **10.5**: \(0 10000010 01010000000000000000000\)
+- **-11.25**: \(1 10000010 01101000000000000000000\)
+- **11.6**: \(0 10000010 01110011001100110011001\)
+
 ## 4. Propagazione degli errori
 
 ### 4.1 Come si propagano gli errori nei calcoli
