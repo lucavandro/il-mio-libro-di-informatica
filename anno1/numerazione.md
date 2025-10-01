@@ -62,7 +62,7 @@ Prendiamo il numero binario 1101:
 
 ### 2.3 Perché il binario è perfetto per i computer
 
-![Concetti di Bit e Byte](img/numerazione/0.png)
+![Concetti di Bit e Byte](img/numerazione/0.png) 
 
 I computer utilizzano circuiti elettronici che riconoscono due stati:
 
@@ -521,3 +521,11 @@ A: Assolutamente sì! Programmatori, amministratori di rete, e tecnici li usano 
 A: Sì, è completamente normale. Con la pratica diventeranno automatiche.
 
 ---
+
+
+<style>
+   img{
+      max-height: 400px;
+      width: auto;
+   }
+</style>
