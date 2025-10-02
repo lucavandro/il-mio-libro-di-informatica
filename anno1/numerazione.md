@@ -628,3 +628,11 @@ A: Assolutamente sì! Programmatori, amministratori di rete, e tecnici li usano 
 A: Sì, è completamente normale. Con la pratica diventeranno automatiche.
 
 ---
+
+
+<style>
+   img{
+      max-height: 300px;
+      width: auto;
+   }
+</style>
