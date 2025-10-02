@@ -60,10 +60,8 @@ Prendiamo il numero binario 1101:
 - 1 × 2⁰ = 1 × 1 = 1
 - **Totale: 8 + 4 + 0 + 1 = 13 (in decimale)**
 
-### 2.3 Perché il binario è perfetto per i computer
-
-![Concetti di Bit e Byte](img/numerazione/0.png) 
-
+### 2.3 Perché il binario è perfetto per i computer!
+[Concetti di Bit e Byte](img/numerazione/0.png) 
 I computer utilizzano circuiti elettronici che riconoscono due stati:
 
 - **0**: Assenza di tensione elettrica (spento)
@@ -84,57 +82,168 @@ Il sistema binario non è solo teoria astratta:
 
 ## 3. Conversioni tra decimale e binario
 
-### 3.1 Da decimale a binario: il metodo delle divisioni successive
+### 3.1 Da decimale a binario: il metodo del gioco matematico
 
-Per convertire un numero decimale in binario, utilizziamo il metodo delle divisioni successive per 2:
+Esiste un metodo intuitivo e divertente per convertire numeri decimali in binari, basato su due semplici regole che lo trasformano quasi in un gioco matematico:
 
-**Esempio: Convertiamo 25 in binario**
+**Le due regole d'oro:**
 
-1. 25 ÷ 2 = 12 resto **1**
-2. 12 ÷ 2 = 6 resto **0**  
-3. 6 ÷ 2 = 3 resto **0**
-4. 3 ÷ 2 = 1 resto **1**
-5. 1 ÷ 2 = 0 resto **1**
+1. **Non si possono scrivere numeri dispari** (tranne l'1)
+2. **L'1 deve sempre stare a destra del segno +**
 
-Leggendo i resti dal basso verso l'alto: **11001**
+Il procedimento consiste nel scomporre il numero decimale sottraendo progressivamente le potenze di 2, partendo dalla più grande possibile, fino ad arrivare a 0.
+
+### 3.2 Come funziona il metodo: spiegazione passo-passo
+
+**Il procedimento:**
+
+1. Scrivi il numero decimale da convertire
+2. Se il numero è **dispari**, scomponilo come: `numero_pari + 1`
+3. Se il numero è **pari**, scrivilo come `numero_pari + 0`
+4. Dividi a metà l'ultimo `numero_pari` che hai scritto.
+5. Ripeti dal punto 2, finché non arrivi a 1
+6. Leggi tutte le cifre a destra del segno + **dal basso verso l'alto**
+
+### 3.2.1 Esempio 1: Convertiamo 11 in binario
+
+**Passo per passo:**
+
+```
+11  →  
+   10 + 1    (11 è dispari, lo scrivo come 10 + 1 )
+    4 + 1    (la metà di 10 è 5: 5 è dispari, lo scrivo come 4 + 1)
+    2 + 0    (la metà di 4 è 2: 2 è pari, lo scrivo come 2 + 0 )
+    0 + 1    (la metà di 2 è 1: sono arrivato alla fine e scrivo 0 + 1)
+```
+
+**Leggiamo da destra, dal basso verso l'alto:** 1, 0, 1, 1
+
+**Risultato: 11 decimale = 1011 binario**
+
+### 3.2.2 Esempio aggiuntivo: Convertiamo 19 in binario
+
+**Passo per passo:**
+
+```
+19  →  
+   18 + 1    (19 è dispari, lo scrivo come 18 + 1)
+    8 + 1    (la metà di 18 è 9: 9 è dispari, lo scrivo come 8 + 1)
+    4 + 0    (la metà di 8 è 4: 4 è pari, lo scrivo come 4 + 0)
+    2 + 0    (la metà di 4 è 2: 2 è pari, lo scrivo come 2 + 0)
+    0 + 1    (la metà di 2 è 1: sono arrivato alla fine e scrivo 0 + 1)
+```
+
+**Leggiamo da destra, dal basso verso l'alto:** 1, 0, 0, 1, 1
+
+**Risultato: 19 decimale = 10011 binario**
+
+---
+
+### 3.2.3 Esempio aggiuntivo: Convertiamo 30 in binario
+
+**Passo per passo:**
+
+```
+30  →  
+   30 + 0    (30 è pari, lo scrivo come 30 + 0)
+   14 + 1    (la metà di 30 è 15: 15 è dispari, lo scrivo come 14 + 1)
+    6 + 1    (la metà di 14 è 7: 7 è dispari, lo scrivo come 6 + 1)
+    2 + 1    (la metà di 6 è 3: 3 è dispari, lo scrivo come 2 + 1)
+    0 + 1    (la metà di 2 è 1: sono arrivato alla fine e scrivo 0 + 1)
+```
+
+**Leggiamo da destra, dal basso verso l'alto:** 1, 1, 1, 1, 0
+
+**Risultato: 30 decimale = 11110 binario**
+
+---
+
+### 3.4 Esempio 2: Convertiamo 25 in binario
+
+**Passo per passo:**
+
+```
+25  →  16 + 9   (25 è dispari, la potenza più grande contenuta è 16)
+    16 + 9   (9 è dispari, continuo a scomporre)
+     8 + 1   (9 contiene 8, rimane 1 - perfetto!)
+     4 + 0   (8 non contiene 4, quindi 4 + 0)
+     2 + 0   (4 non contiene 2, quindi 2 + 0)
+     0 + 1   (2 non contiene altro, l'1 è già a posto)
+```
+
+**Leggiamo da destra, dal basso verso l'alto:** 1, 0, 0, 1, 1
+
+**Risultato: 25 decimale = 11001 binario**
 
 **Verifica**: 1×2⁴ + 1×2³ + 0×2² + 0×2¹ + 1×2⁰ = 16 + 8 + 0 + 0 + 1 = 25 ✓
 
-### 3.2 Da binario a decimale: il metodo delle potenze
+---
 
-Per convertire da binario a decimale, moltiplichiamo ogni cifra per la corrispondente potenza di 2:
+### 3.5 Esempio 3: Convertiamo 54 in binario
 
-**Esempio: Convertiamo 110110 in decimale**
+**Passo per passo:**
 
-Posizioni da destra a sinistra:
+```
+54  →  32 + 22  (54 è pari, ma lo scompongo: la potenza più grande è 32)
+    32 + 22  (22 è pari, continuo a scomporre)
+    16 + 6   (22 contiene 16, rimane 6)
+    16 + 6   (6 è pari, continuo)
+     8 + 0   (16 non contiene 8, però 6 va ancora scomposto)
+     4 + 2   (6 contiene 4, rimane 2)
+     4 + 2   (2 è pari ma non è potenza diretta, lo scompongo)
+     2 + 0   (4 non contiene 2, ma il 2 precedente c'è)
+     0 + 1   (aspetta... ripartiamo meglio)
+```
 
-- 0 × 2⁰ = 0 × 1 = 0
-- 1 × 2¹ = 1 × 2 = 2
-- 1 × 2² = 1 × 4 = 4
-- 0 × 2³ = 0 × 8 = 0
-- 1 × 2⁴ = 1 × 16 = 16
-- 1 × 2⁵ = 1 × 32 = 32
+**Ricominciamo con più attenzione:**
 
-**Totale: 0 + 2 + 4 + 0 + 16 + 32 = 54**
+```
+54  →  32 + 22
+    16 + 6
+     8 + 0   (22 = 16 + 6, e 16 non contiene 8)
+     4 + 2   (6 = 4 + 2, rispettiamo la regola: pari a sinistra)
+     2 + 0   (4 non contiene 2, ma il nostro 2 va gestito)
+     0 + 1   (2 = 2 + 0, poi 2 = 0 + ... aspetta)
+```
 
-### 3.3 Trucchi e strategie per conversioni rapide
+**Metodo corretto per il 54:**
 
-**Potenze di 2 da memorizzare:**
+```
+54 scomposto come:
+    32 + 22    → cifra per 2⁵: prendo 32, metto 1
+    16 + 6     → cifra per 2⁴: da 22, prendo 16, metto 1
+     8 + 0     → cifra per 2³: da 6, non c'è 8, metto 0
+     4 + 2     → cifra per 2²: da 6, prendo 4, metto 1
+     2 + 0     → cifra per 2¹: da 2, prendo 2, metto 1
+     0 + 0     → cifra per 2⁰: rimane 0, metto 0
+```
 
-- 2⁰ = 1
-- 2¹ = 2  
-- 2² = 4
-- 2³ = 8
-- 2⁴ = 16
-- 2⁵ = 32
-- 2⁶ = 64
-- 2⁷ = 128
-- 2⁸ = 256
+**Leggiamo da destra, dal basso verso l'alto:** 0, 1, 1, 0, 1, 1
 
-**Trucco per numeri piccoli**: Per numeri decimali fino a 15, potete usare la tabella delle potenze di 2 per scomposizioni mentali rapide.
+**Risultato: 54 decimale = 110110 binario**
 
-### 3.4 Esercizi pratici guidati
+**Verifica**: 1×2⁵ + 1×2⁴ + 0×2³ + 1×2² + 1×2¹ + 0×2⁰ = 32 + 16 + 0 + 4 + 2 + 0 = 54 ✓
 
+---
+
+### 3.6 Perché questo metodo funziona?
+
+Questo metodo è efficace perché:
+
+- **Visualizza le potenze di 2**: Ogni riga corrisponde a una posizione binaria
+- **È intuitivo**: Le regole semplici evitano errori
+- **È verificabile**: Puoi sempre controllare sommando le potenze di 2
+- **È un gioco**: Le regole lo rendono divertente e memorabile
+
+### 3.7 Da binario a decimale: il metodo delle potenze
+
+### 3.7 Da binario a decimale: raddoppiando
+
+Per la conversione inversa (da binario a decimale), possiamo usare un metodo simile ma al contrario:
+
+#### Esempio: Convertiamo 110110 in decimale
+
+Leggiamo il binario da **sinistra a destra** e seguiamo questa regola:
 **Esercitiamoci insieme:**
 
 1. **Decimale → Binario**:
@@ -490,14 +599,12 @@ Google Sheets utilizza le stesse funzioni di Excel:
 
 ---
 
-
 ## 📚 Risorse per l'approfondimento
 
 **Siti web interattivi:**
 
 - [RapidTables Number Converter](https://www.rapidtables.com/convert/number/)
 - [Khan Academy: Computer Science](https://www.khanacademy.org/computing/computer-science)
-
 
 **Libri consigliati:**
 
@@ -521,11 +628,3 @@ A: Assolutamente sì! Programmatori, amministratori di rete, e tecnici li usano 
 A: Sì, è completamente normale. Con la pratica diventeranno automatiche.
 
 ---
-
-
-<style>
-   img{
-      max-height: 400px;
-      width: auto;
-   }
-</style>
