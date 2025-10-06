@@ -40,36 +40,44 @@ Potreste chiedervi: "Se il decimale funziona così bene, perché usare altri sis
 
 ## 2. Il sistema binario: il linguaggio dei computer
 
-### 2.1 Introduzione al sistema binario
+### 2.1 Perché il binario è perfetto per i computer!
 
-Il sistema binario è il fondamento di tutta l'informatica moderna. Utilizza solo due cifre (0 e 1) e ogni posizione rappresenta una potenza di 2.
-
-**Caratteristiche del sistema binario:**
-
-- **Base**: 2
-- **Cifre disponibili**: 0, 1
-- **Valore delle posizioni**: ...2³, 2², 2¹, 2⁰
-
-### 2.2 Come leggere i numeri binari
-
-Prendiamo il numero binario 1101:
-
-- 1 × 2³ = 1 × 8 = 8
-- 1 × 2² = 1 × 4 = 4
-- 0 × 2¹ = 0 × 2 = 0
-- 1 × 2⁰ = 1 × 1 = 1
-- **Totale: 8 + 4 + 0 + 1 = 13 (in decimale)**
-
-### 2.3 Perché il binario è perfetto per i computer!
-[Concetti di Bit e Byte](img/numerazione/0.png) 
 I computer utilizzano circuiti elettronici che riconoscono due stati:
 
 - **0**: Assenza di tensione elettrica (spento)
 - **1**: Presenza di tensione elettrica (acceso)
 
+Possiamo immaginare questi circuiti come una serie di piccoli interruttori. Hai mai notato che su molti interruttori presenti sugli elettromestici, sono presenti due simboli uan  **O** e una **I**: si tratta in realtà di uno zero (stato spento), e di un 1 (stato acceso).
+
+![Concetti di Bit e Byte](img/numerazione/0.png)
+
 Questa semplicità rende il sistema binario incredibilmente affidabile e veloce per i calcoli elettronici.
 
-### 2.4 Applicazioni pratiche del binario
+Con un solo interruttore, possiamo rappresentare solo 0 e 1. Ma se usiamo due interrutori possiamo rappresentare il doppio: guarda l'immagine sottostante.
+
+![Concetti di Bit e Byte](img/numerazione/1.png)
+
+Se usiamo 3 interuttori possiamo rappresentarne ancora di più, come mostrato nell'immagine qui sotto.
+
+![Concetti di Bit e Byte](img/numerazione/2.png)
+
+Ovviamente, rappresentare tutte le combinazioni possibili di interruttori, non è un metodo comodo per capire come un computer rappresenta i numeri. Vedremo un metodo più pratico nel [capitolo 3](#3-conversioni-tra-decimale-e-binario). Ma prima di andare avanti, ancora un dettaglio: d'ora in avanti non parleremo più di interruttori ma useremo un termine più tecnico: **bit**. 
+
+### 2.2 Il bit
+
+La parola **bit** è l'abbreviazione di "**binary digit**" (cifra binaria). È l'unità più piccola di informazione in un computer: può valere solo 0 oppure 1, come un interruttore che può essere solo spento o acceso.
+
+Il bit è una vera e propria unità di misura (come il metro, il grammo o il litro) e quindi ha anche dei multipli.
+
+- **1 Kilobit (Kb)** = 1000 bit (circa mille bit)
+- **1 Megabit (Mb)** = 1000 Kb (circa un milione di bit)
+- **1 Gigabit (Gb)** = 1000 Mb (circa un miliardo di bit)
+- **1 Terabit (Tb)** = 1000 Gb (circa mille miliardi di bit)
+
+Da notare che non esistono sottomultipli proprio perchè il bit è la più piccola unità di informazione, quindi non esiste nulla che sia più piccolo di un bit.
+
+
+### 2.3 Applicazioni pratiche del binario
 
 Il sistema binario non è solo teoria astratta:
 
