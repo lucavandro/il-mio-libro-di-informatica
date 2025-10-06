@@ -183,7 +183,7 @@ Il procedimento consiste nel scomporre il numero decimale sottraendo progressiva
 
 **Risultato: 25 decimale = 11001 binario**
 
-**Verifica**: 1×2⁴ + 1×2³ + 0×2² + 0×2¹ + 1×2⁰ = 16 + 8 + 0 + 0 + 1 = 25 ✓
+
 
 ---
 
