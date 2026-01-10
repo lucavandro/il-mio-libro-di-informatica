@@ -201,14 +201,36 @@ Apple ha rivoluzionato il settore con i suoi chip M1 e M2, dimostrando che la gu
 ![Gerarchia della Memoria](img/computer/memory-hierarchy.svg)
 *Figura 5: La gerarchia della memoria con velocità, capacità e costi relativi*
 
-### 4.1 I diversi tipi di memoria 🗄️
+### 4.1 I diversi tipi di memoria: memoria centrale vs memoria di massa
 
-#### 4.1.1 RAM: la memoria veloce e volatile
+#### 4.1.1 Memoria centrale: la RAM 
+
+La memoria centrale di un computer si divide in due categorie fondamentali, ciascuna con un ruolo specifico e insostituibile nel funzionamento del sistema. La **RAM (Random Access Memory)** è la memoria di lavoro principale, dove risiedono temporaneamente tutti i programmi in esecuzione e i dati che state elaborando in quel momento. È come la superficie di una scrivania: più è grande, più documenti potete tenere a portata di mano contemporaneamente senza dover continuamente cercare nell'archivio. La RAM è **volatile**, significa che quando spegnete il computer tutto il suo contenuto scompare istantaneamente, come se qualcuno spazzasse via la scrivania.
+
+#### 4.1.2 Memoria di massa: conservare i dati permanentemente
+
+Le memorie di massa sono i magazzini digitali dove conserviamo tutto ciò che vogliamo mantenere a lungo termine: documenti, foto, video, programmi, sistema operativo. A differenza della RAM, le memorie di massa sono permanenti (non-volatili) e conservano i dati anche quando il computer è spento. I **dischi rigidi tradizionali (HDD)** funzionano come vecchi giradischi: contengono piatti magnetici che girano velocissimamente (5400-7200 giri al minuto) mentre testine di lettura/scrittura fluttuano a distanza microscopica dalla superficie, leggendo e scrivendo dati attraverso campi magnetici. Sono economici e capienti, ma relativamente lenti e delicati agli urti. Gli **SSD (Solid State Drive)**, invece, non hanno parti mobili e utilizzano chip di memoria flash, gli stessi che trovate nelle chiavette USB. Sono molto più veloci (fino a 100 volte rispetto agli HDD), completamente silenziosi, resistenti agli urti e consumano meno energia, ma costano di più per gigabyte. La differenza nelle prestazioni quotidiane è enorme: un computer con SSD si avvia in 10-15 secondi, mentre uno con HDD può impiegare minuti. Per questo, sempre più computer moderni montano SSD come memoria principale, riservando eventuali HDD solo come archivio secondario per grandi quantità di dati poco utilizzati.
+
+
 
 ![RAM vs Storage](img/computer/ram-vs-storage.svg)
 *Figura 9: Differenze tra RAM (memoria volatile) e Storage (memoria permanente)*
 
-La RAM (Random Access Memory) è il palcoscenico dove si svolge tutto lo spettacolo del vostro computer, uno spazio di lavoro temporaneo dove programmi e dati danzano insieme in un balletto elettronico frenetico. Immaginate la RAM come la scrivania di uno studente durante un esame: sopra ci sono tutti i libri aperti, i fogli di lavoro, le calcolatrici e tutto quello che serve per completare il compito. Quando spegnete il computer, è come se qualcuno spazzasse via tutto dalla scrivania: niente rimane, tutto svanisce nel nulla. Questa caratteristica "volatile" della RAM può sembrare uno svantaggio, ma è in realtà la sua forza: può essere riscritta miliardi di volte senza deteriorarsi, e ogni volta riparte fresca come se fosse nuova. La velocità della RAM è incredibile: può fornire dati al processore migliaia di volte più velocemente di un disco rigido tradizionale. Quando aprite un programma, questo viene copiato dal disco alla RAM perché il processore possa accedervi rapidamente. Più RAM avete, più programmi potete tenere aperti contemporaneamente senza che il computer rallenti. È per questo che 16GB di RAM sono diventati quasi standard nei computer moderni: permettono di far girare browser con decine di tab, editor di video, giochi e software di produttività tutti insieme senza problemi.
+
+### 4.1.3 Memorie ad accesso casuale vs memorie ad accesso sequenziale
+
+#### 4.1.3 Memorie ad accesso casuale vs memorie ad accesso sequenziale
+
+La differenza tra accesso casuale e sequenziale è come confrontare un libro con un nastro VHS. Nelle **memorie ad accesso casuale** (come RAM e SSD), potete raggiungere qualsiasi dato istantaneamente, proprio come aprire un libro direttamente alla pagina 157 senza dover sfogliare tutte le pagine precedenti. La CPU può dire "voglio il dato che si trova all'indirizzo 45.387.612" e la memoria lo fornisce in nanosecondi, indipendentemente da quale dato era stato letto prima. Questo accesso istantaneo è fondamentale per le prestazioni: se la RAM fosse sequenziale, il computer si trasformerebbe in una lumaca digitale! Le **memorie ad accesso sequenziale** (come i vecchi nastri magnetici o i CD che si leggono dall'inizio), invece, devono scorrere fisicamente attraverso i dati per trovare quello cercato, come riavvolgere o avanzare una videocassetta per trovare la scena desiderata. Oggi le memorie sequenziali sono quasi scomparse dai computer comuni, sostituite da tecnologie ad accesso casuale molto più veloci. Tuttavia, i nastri magnetici sopravvivono ancora nei data center per backup a lungo termine, dove la velocità di accesso non è critica ma conta l'economicità e l'affidabilità nel tempo.
+
+
+### 4.1.4 Memorie di sola lettura: ROM
+
+Le **memorie di sola lettura (ROM - Read-Only Memory)** sono componenti fondamentali ma spesso invisibili all'utente, che contengono informazioni scritte in modo permanente durante la fabbricazione e che non possono essere modificate o cancellate, nemmeno quando il computer viene spento. La ROM è come un libro stampato di istruzioni che il computer consulta all'avvio: contiene il firmware essenziale che permette al sistema di "svegliarsi" quando premete il pulsante di accensione. La più importante di queste istruzioni è il **BIOS (Basic Input/Output System)** o il più moderno **UEFI (Unified Extensible Firmware Interface)**, che rappresentano il primo software che entra in azione quando accendete il computer. Queste istruzioni fondamentali controllano che tutti i componenti hardware siano presenti e funzionanti (monitor, tastiera, memoria, dischi), inizializzano i dispositivi di base, e poi passano il controllo al sistema operativo vero e proprio. Senza la ROM, il vostro computer sarebbe come un neonato senza istinti: non saprebbe nemmeno come iniziare a funzionare! Le ROM moderne sono in realtà tecnicamente riscrivibili (vengono chiamate Flash ROM o EEPROM), permettendo aggiornamenti del firmware per correggere bug o aggiungere funzionalità, ma mantengono la caratteristica fondamentale di conservare le informazioni in modo permanente anche senza alimentazione elettrica.
+
+
+
+
 
 #### 5.2.1 USB: l'evoluzione da USB 1.0 a USB-C
 
