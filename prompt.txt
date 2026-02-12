@@ -1,8 +1,13 @@
 Creami una struttura articolata in paragrafi e sottoparagrafi adatta ad un corso di 4 ore per studenti delle scuole superiori.
 
-Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere approfondito assicurandoti che ogni sottoparagrafo sia almeno di 100 parole, 
+Completa le sezioni del documento che sono senza testo. Non essere troppo breve, cerca di essere 
+approfondito assicurandoti che ogni sottoparagrafo sia almeno di 100 parole, 
 cercando di essere discorsivo ed evitando elenchi dove non sono strettamente necessari.
 Utilizza un linguaggio semplice, inserendo eventuali curiosità dove lo ritieni opportuno. 
 Alla fine di ogni capitolo aggiungi delle domande che aiutino gli studenti a verificare la propria comprensione degli argomeni trattati. 
 
 Mi piacerebbe aggiungere delle immagini relative agli argomenti trattati. Crea delle immagini che abbiano scopo illustrativo ed esplicativo degli argomenti trattati e inseriscile nel documento.
+
+
+Completa la seguente sezione, seguendo la descrizione dle titolo con un testo di almeno 100 parole.
+Usa un linguaggio semplice, ma allo stesso tempo preciso dal punto di vista tecnico.
