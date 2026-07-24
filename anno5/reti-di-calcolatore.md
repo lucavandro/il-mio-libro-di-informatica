@@ -805,8 +805,10 @@ Email: "Ciao!"
 
 ```
 [TCP Header][Email: "Ciao!"]
-TCP Header contiene: Porta 25 (SMTP), numero sequenza, ack...
+TCP Header contiene: porta 25 (SMTP), numero di sequenza, acknowledgment e altri campi di controllo.
 ```
+
+Questi campi permettono al destinatario di ricostruire il messaggio correttamente e verificare che nessun segmento sia andato perso durante il viaggio.
 
 **Livello 3 (Network - IP):**
 

@@ -166,7 +166,7 @@ Il procedimento consiste nel scomporre il numero decimale sottraendo progressiva
 
 ---
 
-### 3.4 Esempio 2: Convertiamo 25 in binario
+### 3.3 Esempio 2: Convertiamo 25 in binario
 
 **Passo per passo:**
 
@@ -183,11 +183,9 @@ Il procedimento consiste nel scomporre il numero decimale sottraendo progressiva
 
 **Risultato: 25 decimale = 11001 binario**
 
-
-
 ---
 
-### 3.5 Esempio 3: Convertiamo 54 in binario
+### 3.4 Esempio 3: Convertiamo 54 in binario
 
 **Passo per passo:**
 
@@ -200,18 +198,7 @@ Il procedimento consiste nel scomporre il numero decimale sottraendo progressiva
      4 + 2   (6 contiene 4, rimane 2)
      4 + 2   (2 è pari ma non è potenza diretta, lo scompongo)
      2 + 0   (4 non contiene 2, ma il 2 precedente c'è)
-     0 + 1   (aspetta... ripartiamo meglio)
-```
-
-**Ricominciamo con più attenzione:**
-
-```
-54  →  32 + 22
-    16 + 6
-     8 + 0   (22 = 16 + 6, e 16 non contiene 8)
-     4 + 2   (6 = 4 + 2, rispettiamo la regola: pari a sinistra)
-     2 + 0   (4 non contiene 2, ma il nostro 2 va gestito)
-     0 + 1   (2 = 2 + 0, poi 2 = 0 + ... aspetta)
+     0 + 1   (arriviamo a 1 e concludiamo)
 ```
 
 **Metodo corretto per il 54:**
@@ -234,25 +221,33 @@ Il procedimento consiste nel scomporre il numero decimale sottraendo progressiva
 
 ---
 
-### 3.6 Perché questo metodo funziona?
+### 3.5 Perché questo metodo funziona?
 
 Questo metodo è efficace perché:
 
-- **Visualizza le potenze di 2**: Ogni riga corrisponde a una posizione binaria
-- **È intuitivo**: Le regole semplici evitano errori
-- **È verificabile**: Puoi sempre controllare sommando le potenze di 2
-- **È un gioco**: Le regole lo rendono divertente e memorabile
+- **Visualizza le potenze di 2**: ogni riga corrisponde a una posizione binaria
+- **È intuitivo**: le regole semplici evitano errori
+- **È verificabile**: puoi sempre controllare la risposta sommando le potenze di 2
+- **È un gioco**: le regole lo rendono divertente e memorabile
 
-### 3.7 Da binario a decimale: il metodo delle potenze
+### 3.6 Da binario a decimale: il metodo delle potenze
 
-### 3.7 Da binario a decimale: raddoppiando
+Per convertire un numero binario in decimale, ogni cifra ha un peso diverso a seconda della posizione. Partendo da destra, il primo valore è $2^0$, il secondo $2^1$, il terzo $2^2$ e così via.
 
-Per la conversione inversa (da binario a decimale), possiamo usare un metodo simile ma al contrario:
+#### Esempio: convertiamo 110110 in decimale
 
-#### Esempio: Convertiamo 110110 in decimale
+- 1 × 2⁵ = 32
+- 1 × 2⁴ = 16
+- 0 × 2³ = 0
+- 1 × 2² = 4
+- 1 × 2¹ = 2
+- 0 × 2⁰ = 0
 
-Leggiamo il binario da **sinistra a destra** e seguiamo questa regola:
-**Esercitiamoci insieme:**
+Somma: $32 + 16 + 0 + 4 + 2 + 0 = 54$
+
+**Risultato:** $110110_2 = 54_{10}$
+
+#### Esercizi rapidi
 
 1. **Decimale → Binario**:
    - 42 → ?

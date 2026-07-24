@@ -16,10 +16,10 @@ risultato = 0.1 + 0.2
 print(risultato)
 # Output: 0.30000000000000004 (invece di 0.3!)
 
-# Prova anche questo semplice calcolo....
+# Prova anche questo semplice calcolo...
 risultato2 = 10/3
 print(risultato2)
-# Output: 0.33333333333333335 (invece di 0.3!)
+# Output: 0.3333333333333333 (invece di 1/3 o di 0.333333...)
 ```
 
 Questo esempio mostra come anche un calcolo apparentemente semplice possa produrre un errore computazionale.
