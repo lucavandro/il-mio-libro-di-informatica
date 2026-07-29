@@ -5,3 +5,4 @@
 3. [Selezione](anno2/selezione.md)
 4. [Cicli](anno2/cicli.md)
 5. [Espressioni regolari](anno2/regex.md)
+6. [Automazione e sistemi robotizzati](anno2/robotica.md)

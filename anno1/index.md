@@ -9,5 +9,6 @@
 7. [Reti di comunicazione](anno1/tlc.md)
 8. [Il Cloud](anno1/cloud.md)
 9. [Documenti, presentazioni e fogli di calcolo](anno1/produttivita-digitale.md)
-10. [IA e robotica](anno1/ia-robotica.md)
-11. [Cittadinanza digitale](anno1/cittadinanza-digitale.md)
+10. [Intelligenza artificiale](anno1/intelligenza-artificiale.md)
+11. [Robotica](anno1/robotica.md)
+12. [Cittadinanza digitale](anno1/cittadinanza-digitale.md)
