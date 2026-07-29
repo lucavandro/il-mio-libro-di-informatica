@@ -787,7 +787,7 @@ La differenza tra OSI e TCP/IP è come quella tra un progetto architettonico per
 
 La lezione più importante? In informatica, a volte la soluzione "abbastanza buona" che funziona subito vale più della soluzione teoricamente perfetta che arriva troppo tardi.
 
-### 3.4 Incapsulamento: come i dati viaggiano through the stack 📦
+### 3.4 Incapsulamento: come i dati attraversano la pila protocollare 📦
 
 L'**incapsulamento** è il processo per cui ogni livello aggiunge le sue informazioni ai dati ricevuti dal livello superiore.
 

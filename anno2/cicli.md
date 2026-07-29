@@ -233,7 +233,7 @@ for lettera in parola:
 - E3.4 Simula una tabella delle partite di calcio tra 3 squadre usando cicli annidati. ⚽
 - E3.5 Stampa tutti i numeri pari da 2 a 20. 🔢
 
-## 4. Idempotenza tra ciclo while e for
+## 4. Equivalenza tra ciclo `while` e ciclo `for`
 
 ### 4.1 Risolvere lo stesso problema con while e for
 

@@ -507,7 +507,7 @@ print("Numero casuale:", numero)
 
 Quando scrivi codice, può capitare di fare errori (bug). Un bug è come un sassolino nella scarpa: ti impedisce di andare avanti finché non lo togli! Python ti mostra un messaggio di errore che ti aiuta a capire dove hai sbagliato. Se il programma non funziona, leggi con attenzione il messaggio e prova a correggere il codice.
 
-Esempio di errore:
+Esempio volutamente errato (non deve essere eseguito così com'è):
 
 ```python
 print("Ciao"

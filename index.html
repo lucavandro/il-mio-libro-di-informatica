@@ -28,8 +28,33 @@
       homepage: 'home.md',
       loadSidebar: true,
       auto2top: true,
-      subMaxLevel: 4
+      subMaxLevel: 4,
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            const blocks = document.querySelectorAll('code.lang-mermaid');
+            blocks.forEach(function (code) {
+              const container = code.parentElement;
+              container.className = 'mermaid';
+              container.removeAttribute('data-lang');
+              container.textContent = code.textContent;
+            });
+
+            if (blocks.length > 0 && window.mermaid) {
+              window.mermaid.run({ querySelector: '.mermaid' });
+            }
+          });
+        }
+      ]
     }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/mermaid@11.12.1/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: 'strict',
+      theme: 'default'
+    });
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>

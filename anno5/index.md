@@ -7,3 +7,4 @@
 5. [Reti di calcolatori](anno5/reti-di-calcolatore.md)
 6. [Cybersicurezza](anno5/cybersicurezza.md)
 7. [Crittografia](anno5/crittografia.md)
+8. [Teoria della computazione](anno5/teoria-computazione.md)
