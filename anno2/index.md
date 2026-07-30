@@ -6,11 +6,11 @@
 |---|---:|
 | problemi e algoritmi | 8 |
 | variabili, tipi, input e output | 10 |
-| selezione e logica | 12 |
-| cicli | 12 |
-| funzioni | 8 |
-| stringhe e liste introduttive | 6 |
-| test e debugging | 6 |
+| selezione e logica | 10 |
+| cicli | 10 |
+| liste | 12 |
+| tuple e insiemi | 8 |
+| stringhe ed elaborazione di dati | 4 |
 | progetto | 4 |
 | **Totale** | **66** |
 
@@ -18,8 +18,10 @@
 2. [Problemi, algoritmi e diagrammi di flusso](anno2/algoritmi.md)
 3. [Selezione](anno2/selezione.md)
 4. [Cicli](anno2/cicli.md)
-5. [Funzioni, validazione e test](anno2/funzioni-test.md)
-6. [Espressioni regolari - laboratorio facoltativo](anno2/regex.md)
+5. [Liste](anno2/liste.md)
+6. [Tuple](anno2/tuple.md)
+7. [Insiemi](anno2/insiemi.md)
+8. [Espressioni regolari - laboratorio facoltativo](anno2/regex.md)
 
 ## Percorsi opzionali - 33 ore aggiuntive
 

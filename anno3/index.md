@@ -4,27 +4,26 @@
 
 | Area | Ore |
 |---|---:|
-| strutture dati | 12 |
-| funzioni e top-down | 12 |
+| dizionari | 6 |
+| funzioni e progettazione top-down | 10 |
+| test, debugging e gestione degli errori | 8 |
+| programmazione a oggetti in Python | 12 |
 | ricerca e ordinamento | 8 |
-| file, CSV e JSON | 10 |
-| test e gestione degli errori | 6 |
-| dati e grafici | 8 |
+| file, CSV e JSON | 8 |
+| dati e grafici | 6 |
 | Git | 4 |
-| progetto con interfaccia | 6 |
+| progetto applicativo con interfaccia | 4 |
 | **Totale** | **66** |
 
-1. [Liste](anno3/liste.md)
-2. [Tuple](anno3/tuple.md)
-3. [Insiemi](anno3/insiemi.md)
-4. [Dizionari](anno3/dizionari.md)
-5. [Funzioni e progettazione top-down](anno3/funzioni.md)
-6. [Ricerca, ordinamento e prestazioni](anno3/algoritmi.md)
-7. [File, CSV e JSON](anno3/file.md)
-8. [Test e debugging](anno3/test-debugging.md)
-9. [Dati e grafici](anno3/dati-grafici.md)
-10. [Controllo di versione con Git](anno3/git.md)
-11. [Interfacce grafiche essenziali](anno3/tkinter.md)
+1. [Dizionari](anno3/dizionari.md)
+2. [Funzioni e progettazione top-down](anno3/funzioni.md)
+3. [Test, debugging e gestione degli errori](anno3/test-debugging.md)
+4. [Programmazione a oggetti in Python](anno3/oop-py.md)
+5. [Ricerca, ordinamento e prestazioni](anno3/algoritmi.md)
+6. [File, CSV e JSON](anno3/file.md)
+7. [Dati e grafici](anno3/dati-grafici.md)
+8. [Controllo di versione con Git](anno3/git.md)
+9. [Interfacce grafiche essenziali](anno3/tkinter.md)
 
 ## Percorsi opzionali - 33 ore aggiuntive
 

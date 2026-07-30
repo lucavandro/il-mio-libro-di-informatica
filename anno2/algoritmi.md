@@ -9,8 +9,8 @@ flowchart LR
     P["Problema"] --> A["Analisi: input e risultati"]
     A --> S["Algoritmo"]
     S --> C["Codice Python"]
-    C --> T{"Test superati?"}
-    T -- "No" --> D["Correzione"]
+    C --> T{"Il risultato è corretto?"}
+    T -- "No" --> D["Rilettura e correzione"]
     D --> C
     T -- "Sì" --> R["Risultato"]
 ```
@@ -62,7 +62,7 @@ flowchart LR
     A --> I["Iterazione"]
 ```
 
-## Verifica dell'algoritmo
+## Simulazione manuale dell'algoritmo
 
 | Input | Risultato atteso |
 |---|---:|
@@ -70,7 +70,10 @@ flowchart LR
 | 10, 10, 9 | 9.67 |
 | 4.5, 6, 7.5 | 6.00 |
 
-Un test serve a trovare errori, non a dimostrare che non ne esistano. Vanno provati casi normali, casi limite e dati non validi.
+Prima di introdurre i test automatici, che saranno studiati al terzo anno, si può
+**simulare a mano** l'esecuzione. Si scelgono alcuni dati, si calcolano i risultati
+attesi e si confrontano con quelli prodotti dal programma. Questa abitudine aiuta a
+ragionare sul codice senza anticipare gli strumenti di testing.
 
 ## Esercizi
 
