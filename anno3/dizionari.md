@@ -1,170 +1,70 @@
-# I Dizionari in Python
+# Dizionari
 
-I dizionari sono come dei "contenitori" dove ogni elemento ha una sua etichetta (chiamata chiave). Pensa ad una rubrica telefonica: ogni numero (valore) è associato a un nome (chiave)!
+## 1. Coppie chiave-valore
 
-## Come creare un dizionario
-
-Per creare un dizionario usiamo le parentesi graffe `{}` con il formato `chiave: valore`:
+Un dizionario associa una chiave a un valore.
 
 ```python
-# Dizionario semplice
 studente = {
-    "nome": "Mario",
-    "età": 15,
-    "classe": "3A"
+    "nome": "Ada",
+    "classe": "3A",
+    "media": 8.2
 }
 
-# Dizionario con diversi tipi di valori
-persona = {
-    "nome": "Laura",
-    "hobby": ["calcio", "pittura"],
-    "voti": (8, 7, 9),
-    "ha_fratelli": True
-}
+print(studente["nome"])
 ```
 
-## Come accedere e modificare i valori
+Le chiavi devono essere uniche.
+
+## 2. Leggere e modificare
 
 ```python
-# Leggere un valore
-print(studente["nome"])  # Stampa: Mario
+studente["media"] = 8.5
+studente["email"] = "ada@example.org"
 
-# Modificare un valore
-studente["età"] = 16
-print(studente["età"])  # Stampa: 16
-
-# Aggiungere una nuova coppia chiave-valore
-studente["sport"] = "nuoto"
-
-# Rimuovere una coppia chiave-valore
-del studente["sport"]
+telefono = studente.get("telefono")
+print(telefono)
 ```
 
-## Metodi sicuri per accedere ai valori
+`get()` restituisce `None`, o un valore scelto, quando la chiave non esiste:
 
 ```python
-# Usando get() per evitare errori
-voto = studente.get("voto_matematica", "Non disponibile")
-print(voto)  # Stampa: Non disponibile
-
-# Verificare se una chiave esiste
-if "nome" in studente:
-    print("Il nome è:", studente["nome"])
+telefono = studente.get("telefono", "non disponibile")
 ```
 
-## Operazioni comuni con i dizionari
+## 3. Attraversare
 
 ```python
-# Ottenere tutte le chiavi
-print(studente.keys())  # ["nome", "età", "classe"]
-
-# Ottenere tutti i valori
-print(studente.values())  # ["Mario", 16, "3A"]
-
-# Ottenere coppie chiave-valore
-print(studente.items())  # [("nome", "Mario"), ("età", 16), ("classe", "3A")]
-
-# Numero di elementi nel dizionario
-print(len(studente))  # 3
+for chiave, valore in studente.items():
+    print(chiave, valore)
 ```
 
-## Un esempio pratico: registro di classe
+## 4. Dizionari e liste
 
 ```python
-registro = {
-    "Mario Rossi": {
-        "voti": [8, 7, 9],
-        "assenze": 3,
-        "materia_preferita": "matematica"
-    },
-    "Laura Bianchi": {
-        "voti": [9, 9, 8],
-        "assenze": 1,
-        "materia_preferita": "italiano"
-    }
-}
+classe = [
+    {"nome": "Ada", "voti": [8, 9, 7]},
+    {"nome": "Alan", "voti": [6, 7, 6]}
+]
 
-# Stampare i voti di uno studente
-print(f"Voti di Mario: {registro['Mario Rossi']['voti']}")
-
-# Calcolare la media dei voti
-voti_mario = registro["Mario Rossi"]["voti"]
-media = sum(voti_mario) / len(voti_mario)
-print(f"Media di Mario: {media}")
+for studente in classe:
+    media = sum(studente["voti"]) / len(studente["voti"])
+    print(studente["nome"], media)
 ```
 
-## Cicli con i dizionari
+## 5. Conteggio delle frequenze
 
 ```python
-# Dizionario con materie e voti
-pagella = {
-    "Matematica": 8,
-    "Italiano": 7,
-    "Storia": 9,
-    "Inglese": 8
-}
+testo = "dati e algoritmi"
+frequenze = {}
 
-# Ciclo sulle chiavi
-for materia in pagella:
-    print(f"In {materia} ho preso: {pagella[materia]}")
+for carattere in testo:
+    if carattere != " ":
+        frequenze[carattere] = frequenze.get(carattere, 0) + 1
 
-# Ciclo su chiavi e valori insieme
-for materia, voto in pagella.items():
-    print(f"In {materia} ho preso: {voto}")
+print(frequenze)
 ```
 
-## Un esempio con i giochi
+## 6. Attività
 
-```python
-# Dizionario di giochi e punteggi
-videogiochi = {
-    "Minecraft": {
-        "ore_giocate": 50,
-        "livello": "esperto",
-        "achievements": ["costruttore", "esploratore"]
-    },
-    "Fortnite": {
-        "ore_giocate": 30,
-        "livello": "principiante",
-        "achievements": ["sopravvissuto"]
-    }
-}
-
-# Stampare informazioni sui giochi
-for gioco, info in videogiochi.items():
-    print(f"\nGioco: {gioco}")
-    print(f"Ore giocate: {info['ore_giocate']}")
-    print(f"Livello: {info['livello']}")
-    print(f"Achievement ottenuti: {', '.join(info['achievements'])}")
-```
-
-## Esercizio pratico
-Crea un dizionario con le tue informazioni:
-
-```python
-io = {
-    "nome": "Il tuo nome",
-    "età": 15,
-    "hobby": ["hobby1", "hobby2"],
-    "materie_preferite": {
-        "prima": "materia1",
-        "seconda": "materia2"
-    }
-}
-
-# Stampa alcune informazioni
-print(f"Mi chiamo {io['nome']} e ho {io['età']} anni")
-print(f"I miei hobby sono: {', '.join(io['hobby'])}")
-```
-
-## Quando usare i dizionari?
-1. Quando hai bisogno di associare valori a delle etichette (chiavi)
-2. Quando vuoi organizzare dati in modo strutturato
-3. Quando hai bisogno di cercare velocemente dei valori
-4. Quando hai dati che possono essere organizzati in coppie chiave-valore
-
-I dizionari sono molto potenti e vengono usati spesso nella programmazione reale. Per esempio:
-- Per gestire dati di utenti
-- Per configurare programmi
-- Per memorizzare punteggi di giochi
-- Per organizzare dati complessi
+Realizza un piccolo catalogo. Ogni elemento deve avere codice, descrizione, quantità e categoria. Il programma deve permettere ricerca e aggiornamento.

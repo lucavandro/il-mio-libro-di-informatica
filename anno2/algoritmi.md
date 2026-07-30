@@ -77,4 +77,3 @@ Un test serve a trovare errori, non a dimostrare che non ne esistano. Vanno prov
 1. Progetta pseudocodice e diagramma per area e perimetro di un rettangolo.
 2. Individua input e output di un algoritmo che converte i secondi in ore, minuti e secondi.
 3. Spiega perché l'istruzione “ripeti per un po'” rende un algoritmo ambiguo.
-

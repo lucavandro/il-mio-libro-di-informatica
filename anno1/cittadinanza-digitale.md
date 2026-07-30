@@ -57,4 +57,3 @@ Urgenza artificiale, richiesta di password, allegati inattesi e indirizzi quasi 
 1. Confronta email ordinaria, PEC e documento firmato digitalmente.
 2. Elenca i dati strettamente necessari per iscriversi a un laboratorio scolastico.
 3. Analizza un banner cookie: le scelte sono comprensibili e simmetriche?
-

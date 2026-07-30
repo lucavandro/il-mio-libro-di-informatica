@@ -80,4 +80,3 @@ La calcolabilità chiede *se* un problema possa essere risolto; la complessità 
 2. Simula l'automa della parità sugli input `101`, `1111` e stringa vuota.
 3. Spiega la differenza tra indecidibilità e inefficienza.
 4. Modifica il programma Python per restituire gli stati visitati.
-

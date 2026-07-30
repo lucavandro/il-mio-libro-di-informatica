@@ -12,7 +12,7 @@ Il percorso approfondisce il lavoro del primo anno. Lo studente imparerà a:
 - definire coordinate, sequenze e condizioni di sicurezza;
 - collaudare e documentare un sistema automatizzato.
 
-## Percorso annuale di 30 ore
+## Percorso annuale di 33 ore
 
 | Unità | Teoria | Laboratorio | Totale |
 |---|---:|---:|---:|
@@ -20,8 +20,8 @@ Il percorso approfondisce il lavoro del primo anno. Lo studente imparerà a:
 | 2. Microcontrollori, ingressi e uscite | 3 h | 5 h | 8 h |
 | 3. Sensori, motori e controllo in retroazione | 3 h | 5 h | 8 h |
 | 4. Braccio robotico e procedure base | 3 h | 3 h | 6 h |
-| 5. Collaudo e progetto finale | 1 h | 2 h | 3 h |
-| **Totale** | **13 h** | **17 h** | **30 h** |
+| 5. Collaudo e progetto finale | 2 h | 4 h | 6 h |
+| **Totale** | **14 h** | **19 h** | **33 h** |
 
 ## 1. Automazione e controllo
 
@@ -235,4 +235,3 @@ La relazione deve contenere requisiti, schema funzionale, collegamenti, algoritm
 5. Che cosa rappresenta lo stato di un sistema?
 6. Definisci gradi di libertà e spazio di lavoro.
 7. Progetta una prova di ripetibilità per il braccio robotico.
-

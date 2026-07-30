@@ -11,7 +11,7 @@ Al termine del percorso lo studente saprà:
 - documentare il progetto e correggere gli errori attraverso prove misurabili;
 - lavorare in gruppo rispettando ruoli e norme di sicurezza.
 
-## Percorso annuale di 30 ore
+## Percorso annuale di 33 ore
 
 | Unità | Teoria | Laboratorio | Totale |
 |---|---:|---:|---:|
@@ -19,8 +19,8 @@ Al termine del percorso lo studente saprà:
 | 2. Strutture, meccanismi e movimento | 2 h | 4 h | 6 h |
 | 3. Sensori, attuatori e controllo | 3 h | 4 h | 7 h |
 | 4. Programmazione del robot | 2 h | 5 h | 7 h |
-| 5. Progetto, collaudo e documentazione | 1 h | 4 h | 5 h |
-| **Totale** | **11 h** | **19 h** | **30 h** |
+| 5. Progetto, collaudo e documentazione | 2 h | 6 h | 8 h |
+| **Totale** | **12 h** | **21 h** | **33 h** |
 
 Le attività sono indipendenti da una marca specifica: possono essere adattate a kit educativi, simulatori o schede disponibili nel laboratorio.
 
@@ -66,7 +66,7 @@ flowchart TD
 - **pattern**: riconoscere somiglianze;
 - **astrazione**: conservare i dettagli utili;
 - **algoritmo**: ordinare azioni non ambigue;
-- **debugging**: trovare e correggere differenze tra risultato atteso e ottenuto.
+- **correzione degli errori (debugging)**: trovare e correggere le differenze tra risultato atteso e risultato ottenuto.
 
 ### Laboratorio unplugged
 
@@ -258,4 +258,3 @@ La consegna comprende:
 4. Progetta un algoritmo che accenda un LED quando la luce scende sotto una soglia.
 5. Scrivi due requisiti misurabili per un robot antirimbalzo.
 6. Descrivi una prova che permetta di valutare la precisione di movimento.
-

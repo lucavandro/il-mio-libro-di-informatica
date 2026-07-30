@@ -11,7 +11,7 @@ Al termine del percorso lo studente saprà:
 - riconoscere bias, problemi di privacy e contenuti sintetici;
 - usare strumenti di IA in modo trasparente, verificabile e responsabile.
 
-## Percorso annuale di 30 ore
+## Percorso annuale di 33 ore
 
 | Unità | Teoria | Laboratorio | Totale |
 |---|---:|---:|---:|
@@ -20,8 +20,8 @@ Al termine del percorso lo studente saprà:
 | 3. Reti neurali e riconoscimento di pattern | 2 h | 3 h | 5 h |
 | 4. IA generativa e modelli linguistici | 2 h | 3 h | 5 h |
 | 5. Bias, privacy, trasparenza e impatto sociale | 4 h | 2 h | 6 h |
-| 6. Progetto e presentazione finale | 1 h | 3 h | 4 h |
-| **Totale** | **15 h** | **15 h** | **30 h** |
+| 6. Progetto e presentazione finale | 2 h | 6 h | 8 h |
+| **Totale** | **16 h** | **17 h** | **33 h** |
 
 Le attività possono essere svolte con strumenti visuali e dataset preparati dal docente, senza richiedere competenze avanzate di programmazione.
 
@@ -251,4 +251,3 @@ In gruppi, analizzate un'applicazione dell'IA nella scuola, nella medicina, nei 
 5. Che cosa rende un contenuto generativo poco affidabile?
 6. Individua due possibili fonti di bias.
 7. Proponi una regola per l'uso trasparente dell'IA in un compito scolastico.
-
