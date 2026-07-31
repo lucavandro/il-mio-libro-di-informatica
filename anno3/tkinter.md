@@ -87,3 +87,35 @@ Costruisci una piccola interfaccia per uno dei programmi sviluppati durante l'an
 - messaggio di errore;
 - funzione di calcolo separata;
 - almeno tre test della funzione.
+
+## 7. Organizzare l'interfaccia
+
+Per applicazioni con più elementi si usa un contenitore `Frame` e il gestore
+`grid()`. Etichette associate ai campi, ordine logico del focus e messaggi testuali
+rendono l'interfaccia utilizzabile anche senza precisione nel mouse.
+
+```python
+contenitore = tk.Frame(finestra, padx=12, pady=12)
+contenitore.grid()
+
+etichetta = tk.Label(contenitore, text="Temperatura")
+etichetta.grid(row=0, column=0, sticky="w")
+campo.grid(row=0, column=1)
+```
+
+Non si mescolano `pack()` e `grid()` nello stesso contenitore.
+
+## 8. Errori frequenti
+
+- chiamare una funzione invece di passarla a `command`;
+- inserire calcoli e controlli direttamente in molti gestori;
+- bloccare il ciclo dell'interfaccia con operazioni lunghe;
+- mostrare l'errore soltanto tramite colore;
+- creare variabili globali per ogni elemento.
+
+## 9. Verifica
+
+1. Che cosa fa `mainloop()`?
+2. Perché logica e interfaccia devono restare separate?
+3. Come si gestisce un input non valido?
+4. Perché un'operazione lunga può bloccare la finestra?

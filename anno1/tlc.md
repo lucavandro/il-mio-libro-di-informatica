@@ -1,142 +1,87 @@
-# Telecomunicazioni e reti di comunicazione
+# Reti, Internet e comunicazione
 
-## 1. Che cos'è una rete
+Una rete collega dispositivi che devono scambiare dati o condividere risorse. In
+questo capitolo osserviamo i componenti e il funzionamento generale. Protocolli,
+indirizzamento e diagnosi verranno approfonditi nel quinto anno.
 
-Una **rete di comunicazione** collega due o più dispositivi e permette loro di scambiare dati. I dispositivi collegati sono chiamati **nodi**.
+## 1. Obiettivi
 
-Una rete può essere molto piccola, come il collegamento Bluetooth tra telefono e cuffie. Può anche essere enorme, come Internet.
+Al termine del capitolo saprai:
 
-Le reti permettono di:
+- distinguere rete locale e Internet;
+- riconoscere i principali dispositivi di rete;
+- confrontare collegamenti cablati e senza fili;
+- distinguere Internet e Web;
+- descrivere il percorso essenziale di una pagina Web;
+- applicare semplici regole di sicurezza nella comunicazione.
 
-- scambiare messaggi e file;
-- condividere stampanti e altri dispositivi;
-- usare servizi disponibili su computer lontani;
-- lavorare sullo stesso documento;
-- accedere a siti e piattaforme online.
+## 2. Che cos'è una rete
+
+I dispositivi collegati a una rete sono chiamati **nodi**. Possono essere computer,
+telefoni, stampanti, sensori o server.
 
 ```mermaid
 flowchart LR
-    A["Computer"] --> S["Switch o punto di accesso"]
-    B["Tablet"] --> S
-    C["Stampante"] --> S
+    C["Computer"] --> S["Switch o punto di accesso"]
+    T["Tablet"] --> S
+    P["Stampante"] --> S
     S --> R["Router"]
     R --> I["Internet"]
 ```
 
-### Vantaggi e rischi
+Una rete consente di comunicare, condividere file e dispositivi e usare servizi
+ospitati su altri computer. Introduce anche rischi: un accesso non autorizzato o un
+programma dannoso può propagarsi oltre il singolo dispositivo.
 
-Una rete rende più semplice comunicare e condividere risorse. Introduce però anche rischi: accessi non autorizzati, perdita di dati, truffe e diffusione rapida di informazioni false.
+## 3. Rete locale e rete geografica
 
-Per questo una rete deve essere progettata e usata con attenzione. Aggiornamenti, password robuste, copie di sicurezza e permessi corretti riducono i rischi.
+| Tipo | Estensione indicativa | Esempio |
+|---|---|---|
+| PAN | pochi metri | telefono e cuffie Bluetooth |
+| LAN | stanza o edificio | laboratorio scolastico |
+| WAN | territori molto ampi | rete tra sedi lontane |
 
-## 2. Classificare le reti
+Internet è una **rete di reti**: collega reti gestite da soggetti diversi grazie a
+regole comuni. Essere collegati alla LAN della scuola non significa necessariamente
+avere accesso a Internet.
 
-Le sigle seguenti descrivono soprattutto l'estensione geografica.
+## 4. Dispositivi principali
 
-| Tipo | Significato | Estensione tipica | Esempio |
-|---|---|---|---|
-| PAN | Personal Area Network | pochi metri | telefono e smartwatch |
-| LAN | Local Area Network | stanza o edificio | rete della scuola |
-| MAN | Metropolitan Area Network | area urbana | sedi comunali collegate |
-| WAN | Wide Area Network | regioni o continenti | rete di una società internazionale |
+- la **scheda di rete** collega il dispositivo tramite Ethernet o Wi-Fi;
+- lo **switch** collega i nodi della stessa rete locale;
+- il **punto di accesso** offre il collegamento Wi-Fi;
+- il **router** collega reti diverse e inoltra i dati;
+- il **modem** o l'ONT adatta il collegamento alla rete dell'operatore;
+- un **server** offre un servizio richiesto da un client.
 
-Internet collega molte reti differenti ed è quindi una **rete di reti**. Le dimensioni indicate nella tabella sono orientative: la classificazione dipende anche da proprietà, gestione e tecnologia.
-
-### PAN
-
-Una PAN collega dispositivi personali vicini. Bluetooth è una tecnologia molto usata per cuffie, tastiere, mouse e dispositivi indossabili.
-
-### LAN
-
-Una LAN collega dispositivi in un'area limitata. A scuola può comprendere computer, stampanti, server e punti di accesso Wi-Fi.
-
-Una LAN può usare cavi Ethernet oppure collegamenti senza fili. Essere collegati alla LAN non significa necessariamente avere accesso a Internet.
-
-### MAN e WAN
-
-Una MAN collega reti presenti nella stessa area urbana. Una WAN collega reti molto lontane e può usare infrastrutture di operatori diversi.
-
-Internet non appartiene a un unico soggetto. È formato da reti pubbliche e private che accettano protocolli comuni per comunicare.
-
-## 3. Componenti principali
-
-### Scheda di rete
-
-La **scheda di rete** permette al dispositivo di collegarsi. Può gestire Ethernet, Wi-Fi o altre tecnologie.
-
-### Switch
-
-Lo **switch** collega dispositivi nella stessa rete locale. Invia i dati verso la porta associata al destinatario, invece di copiarli sempre a tutti.
-
-### Router
-
-Il **router** collega reti diverse. Legge l'indirizzo di destinazione e sceglie dove inoltrare il pacchetto. Il dispositivo fornito dall'operatore per la rete domestica spesso contiene router, punto di accesso Wi-Fi e altre funzioni nello stesso apparecchio.
-
-### Punto di accesso
-
-Un **access point**, o punto di accesso, permette ai dispositivi Wi-Fi di entrare nella rete locale.
-
-### Modem
-
-Il **modem** adatta il segnale alla tecnologia usata per raggiungere l'operatore. La funzione precisa cambia tra collegamenti DSL, fibra, rete mobile e satellite.
-
-### Server e client
-
-Un **server** offre un servizio. Un **client** lo richiede. Lo stesso computer può essere client in una comunicazione e server in un'altra.
+Nelle abitazioni più funzioni sono spesso riunite nello stesso apparecchio. Il
+ruolo, però, rimane distinto.
 
 ```mermaid
 sequenceDiagram
     participant C as Browser client
     participant S as Server web
-    C->>S: Richiesta di una pagina
+    C->>S: Richiesta di una risorsa
     S-->>C: Risposta con i dati
 ```
 
-## 4. Mezzi di trasmissione
+## 5. Mezzi di trasmissione
 
-### Cavo in rame
-
-I cavi Ethernet trasportano segnali elettrici. Sono affidabili, hanno bassa latenza e risentono meno delle interferenze rispetto al Wi-Fi.
-
-### Fibra ottica
-
-La fibra trasporta impulsi luminosi. Può raggiungere velocità elevate e coprire lunghe distanze con attenuazione ridotta. È però più delicata da installare e richiede apparecchiature adatte.
-
-### Collegamenti senza fili
-
-Wi-Fi, Bluetooth e reti mobili usano onde elettromagnetiche. Sono comodi perché non richiedono un cavo fino al dispositivo. Ostacoli, distanza e altre trasmissioni possono ridurre la qualità del collegamento.
-
-| Mezzo | Vantaggio | Limite |
+| Mezzo | Punto di forza | Limite tipico |
 |---|---|---|
-| Ethernet | stabile e veloce | richiede cavi |
-| fibra | alta capacità e lunga distanza | installazione specializzata |
-| Wi-Fi | mobilità | interferenze e copertura variabile |
-| rete mobile | disponibile in movimento | qualità legata alla copertura |
+| cavo Ethernet | stabilità e bassa latenza | richiede cablaggio |
+| fibra ottica | alta capacità e lunga distanza | installazione specializzata |
+| Wi-Fi | mobilità | ostacoli e interferenze |
+| rete mobile | collegamento in movimento | copertura e congestione variabili |
 
-## 5. Protocolli
+“Senza fili” non significa senza infrastruttura: il punto di accesso e le antenne
+sono a loro volta collegati alla rete attraverso altri mezzi.
 
-Un **protocollo** è un insieme di regole condivise. Stabilisce il formato dei messaggi e il comportamento dei dispositivi.
+## 6. Protocolli e pacchetti
 
-L'analogia con una conversazione è utile: per capirsi, le persone devono usare una lingua comune e rispettare turni e convenzioni.
-
-Alcuni protocolli importanti:
-
-| Protocollo | Funzione |
-|---|---|
-| IP | identifica sorgente e destinazione dei pacchetti |
-| TCP | offre un flusso affidabile e ordinato |
-| UDP | invia datagrammi senza garantire consegna e ordine |
-| HTTP/HTTPS | trasferisce risorse del Web |
-| DNS | associa nomi di dominio e indirizzi IP |
-| SMTP | invia messaggi di posta |
-| IMAP | consulta e organizza la posta sul server |
-| DHCP | assegna automaticamente parametri di rete |
-
-HTTPS è HTTP protetto tramite TLS. La cifratura protegge i dati durante il percorso e il certificato aiuta a verificare l'identità del sito. Non garantisce però che ogni contenuto del sito sia onesto o corretto.
-
-## 6. Come viaggiano i dati
-
-Prima di attraversare Internet, un messaggio viene suddiviso in unità più piccole chiamate **pacchetti**. Ogni pacchetto contiene dati di controllo, tra cui informazioni necessarie per la consegna.
+Un **protocollo** è un insieme di regole condivise per formare e scambiare
+messaggi. Prima di attraversare una rete, i dati vengono organizzati in unità più
+piccole chiamate **pacchetti**.
 
 ```mermaid
 flowchart LR
@@ -146,135 +91,84 @@ flowchart LR
     P1 --> R["Rete"]
     P2 --> R
     P3 --> R
-    R --> D["Ricostruzione del messaggio"]
+    R --> D["Destinatario"]
 ```
 
-Pacchetti dello stesso messaggio possono attraversare percorsi differenti. I protocolli del destinatario li elaborano e, quando previsto, ricostruiscono il flusso originale.
+In prima è sufficiente comprendere che i pacchetti contengono dati e informazioni
+di controllo. Nel quinto anno studieremo i livelli TCP/IP, gli indirizzi e il modo
+in cui i router scelgono il percorso.
 
-### Indirizzo IP
+## 7. Internet e Web
 
-L'indirizzo IP identifica un'interfaccia all'interno di una rete IP. Un indirizzo IPv4 è formato da 32 bit e viene scritto spesso come quattro numeri, per esempio `192.0.2.10`.
+**Internet** è l'infrastruttura formata da reti e protocolli. Il **World Wide Web**
+è uno dei servizi che usa Internet. Posta elettronica, videoconferenza e
+messaggistica sono servizi differenti.
 
-Gli indirizzi IPv6 sono più lunghi. Sono stati introdotti soprattutto per aumentare il numero di indirizzi disponibili.
+Quando si apre una pagina:
 
-### Nome di dominio e DNS
-
-Gli esseri umani ricordano più facilmente `esempio.it` che una sequenza numerica. Il DNS permette di ottenere gli indirizzi associati a un nome.
+1. il browser interpreta l'indirizzo;
+2. il DNS associa il nome del sito a un indirizzo di rete;
+3. il browser invia una richiesta al server;
+4. il server restituisce le risorse;
+5. il browser interpreta HTML, CSS, JavaScript e immagini.
 
 ```mermaid
 sequenceDiagram
     participant B as Browser
-    participant D as Server DNS
+    participant D as DNS
     participant W as Server web
-    B->>D: Qual è l'indirizzo di esempio.it?
-    D-->>B: Risposta DNS
+    B->>D: Indirizzo associato al nome?
+    D-->>B: Risposta
     B->>W: Richiesta HTTPS
-    W-->>B: Pagina web
+    W-->>B: Risorse della pagina
 ```
 
-## 7. Velocità, banda e latenza
+HTTPS protegge la comunicazione durante il percorso e aiuta a verificare il server.
+Non garantisce che tutte le informazioni pubblicate siano vere o affidabili.
 
-La **larghezza di banda** indica la quantità di dati che il collegamento può trasportare nell'unità di tempo. Si misura spesso in bit al secondo.
+## 8. Banda, velocità e latenza
 
-La **velocità effettiva** è quella osservata durante l'uso. Può essere inferiore alla capacità teorica a causa di congestione, distanza, qualità del segnale e limiti dei server.
+La **larghezza di banda** indica quanti dati possono essere trasmessi nell'unità di
+tempo. La **latenza** indica il ritardo della comunicazione. Scaricare un file
+grande richiede buona capacità; una videoconferenza richiede soprattutto latenza
+contenuta e stabilità.
 
-La **latenza** è il tempo necessario perché un dato raggiunga la destinazione e, nelle misure di andata e ritorno, torni alla sorgente. Una videoconferenza richiede soprattutto latenza contenuta e stabilità; scaricare un file molto grande richiede soprattutto una buona capacità di trasferimento.
+La velocità effettiva può cambiare per distanza, ostacoli, congestione e limiti del
+servizio remoto. Una sola misura non descrive sempre la qualità della connessione.
 
-### Attività
-
-Esegui tre misure della stessa connessione in momenti diversi. Registra download, upload e latenza. Non limitarti a scegliere il numero più alto: spiega perché i risultati cambiano.
-
-## 8. Collegamenti a Internet
-
-Un **ISP**, o fornitore di accesso a Internet, collega la rete dell'utente alle altre reti.
-
-### DSL
-
-Le tecnologie DSL usano il doppino telefonico in rame. Le prestazioni diminuiscono con la distanza e con la qualità del cavo. Oggi sono progressivamente sostituite dalla fibra.
-
-### FTTC e FTTH
-
-- **FTTC**: la fibra arriva a un armadio stradale; l'ultimo tratto usa normalmente il rame.
-- **FTTH**: la fibra arriva fino all'abitazione o all'edificio dell'utente.
-
-Dire semplicemente “fibra” non basta quindi a descrivere il collegamento.
-
-### Rete mobile
-
-Le reti cellulari dividono il territorio in celle servite da stazioni radio. Il telefono può passare da una cella all'altra mentre l'utente si sposta.
-
-Le sigle 4G e 5G identificano generazioni di standard. Le prestazioni reali dipendono da copertura, frequenze, ostacoli, numero di utenti e collegamento della stazione radio alla rete.
-
-### Satellite
-
-Il satellite può raggiungere zone prive di infrastrutture terrestri. La latenza e le prestazioni dipendono dal tipo di orbita, dalle condizioni del collegamento e dalla rete del fornitore.
-
-## 9. Internet e World Wide Web
-
-**Internet** è l'infrastruttura di reti e protocolli. Il **World Wide Web** è uno dei servizi che usa Internet.
-
-Altri servizi sono posta elettronica, messaggistica, trasferimento di file, giochi online e videoconferenze.
-
-Un browser:
-
-1. interpreta l'indirizzo;
-2. usa il DNS quando necessario;
-3. apre una connessione;
-4. richiede la risorsa;
-5. riceve HTML, CSS, JavaScript e altri file;
-6. costruisce la pagina visibile.
-
-## 10. Posta elettronica
-
-Un indirizzo email ha la forma `nome@dominio`.
-
-Quando inviamo un messaggio:
-
-1. il programma o il sito di posta lo consegna al server;
-2. SMTP gestisce il trasferimento;
-3. il server del destinatario conserva il messaggio;
-4. il destinatario lo consulta, spesso tramite IMAP o Webmail.
-
-### Phishing e allegati
+## 9. Comunicazione sicura
 
 Prima di aprire un collegamento o un allegato:
 
 - controlla l'indirizzo completo del mittente;
 - diffida delle richieste urgenti di password o denaro;
-- verifica la destinazione reale dei link;
-- contatta il mittente con un altro canale se la richiesta è insolita;
-- non disattivare le protezioni del dispositivo.
+- verifica la destinazione reale del collegamento;
+- conferma le richieste insolite con un altro canale;
+- non disattivare le protezioni del dispositivo;
+- non inviare informazioni personali non necessarie.
 
-## 11. Web pubblico, contenuti non indicizzati e dark web
+Questi comportamenti riducono il rischio di **phishing**, cioè messaggi costruiti
+per convincere la vittima a fornire dati o compiere un'azione pericolosa.
 
-I motori di ricerca non indicizzano tutto il Web. Pagine private, aree riservate, caselle di posta e banche dati protette fanno parte del Web non indicizzato. Questo viene spesso chiamato **deep web** e non è di per sé illegale o pericoloso.
+## 10. Laboratorio: la rete di un'aula
 
-Con **dark web** si indicano servizi raggiungibili tramite reti e programmi specifici progettati per aumentare l'anonimato. Possono essere usati per scopi legittimi o illeciti. Anonimato non significa sicurezza: truffe, malware e contenuti illegali restano rischi concreti.
+Immagina un laboratorio con 24 computer, una stampante, un server e dispositivi
+Wi-Fi. Prepara:
 
-Per le attività scolastiche non è necessario accedere a questi servizi. È sufficiente comprenderne la differenza concettuale.
-
-## 12. Laboratorio: progettare la rete di un'aula
-
-Immagina un laboratorio con 24 computer, una stampante di rete, un server e dispositivi Wi-Fi.
-
-Prepara:
-
-1. elenco dei dispositivi;
+1. elenco e ruolo dei dispositivi;
 2. schema dei collegamenti;
-3. posizione di switch, router e punto di accesso;
-4. distinzione tra collegamenti cablati e senza fili;
-5. almeno quattro regole di sicurezza;
-6. spiegazione del percorso dei dati dal computer a un sito Web.
+3. scelta tra cavo e Wi-Fi, con motivazione;
+4. percorso dei dati dal computer a un sito Web;
+5. quattro regole di sicurezza;
+6. due possibili guasti e i controlli iniziali.
 
-## Domande di verifica
+## 11. Verifica
 
-1. Qual è la differenza tra LAN e WAN?
-2. Che cosa fanno switch e router?
-3. Confronta rame, fibra e Wi-Fi.
-4. Perché i protocolli sono necessari?
-5. Distingui larghezza di banda, velocità effettiva e latenza.
-6. Qual è la differenza tra Internet e Web?
-7. Perché HTTPS non rende automaticamente affidabile un sito?
-8. Spiega il ruolo di DNS usando un esempio.
-9. Descrivi due segnali tipici di phishing.
-10. Perché il deep web non coincide con il dark web?
+1. Qual è la differenza tra LAN e Internet?
+2. Confronta switch, punto di accesso e router.
+3. Quali vantaggi e limiti hanno Ethernet e Wi-Fi?
+4. Perché sono necessari protocolli comuni?
+5. Qual è la differenza tra Internet e Web?
+6. Distingui larghezza di banda e latenza.
+7. Perché HTTPS non rende automaticamente affidabile il contenuto?
+8. Indica tre segnali tipici di phishing.

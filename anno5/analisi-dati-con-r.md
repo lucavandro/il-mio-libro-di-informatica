@@ -99,3 +99,27 @@ Analizza un dataset scientifico:
 4. produci almeno due grafici;
 5. costruisci, se adatto, un modello semplice;
 6. discuti limiti e possibili spiegazioni.
+
+## 8. Rendere l'analisi riproducibile
+
+Uno script deve poter essere eseguito dall'inizio senza dipendere da comandi
+rimasti nella console. Conserva dati originali, script e risultati in cartelle
+distinte; usa percorsi relativi e annota versione di R e pacchetti necessari.
+
+Per ogni trasformazione spiega perché viene eseguita. Non modificare manualmente il
+CSV senza registrare il cambiamento nello script.
+
+## 9. Errori frequenti
+
+- confondere un vettore con un data frame;
+- ignorare i valori `NA` senza stabilire una regola;
+- trattare una categoria come numero;
+- interpretare una relazione lineare come prova di causa;
+- produrre grafici senza unità di misura o fonte.
+
+## 10. Verifica
+
+1. Qual è la differenza tra vettore e data frame?
+2. Come si controllano i valori mancanti?
+3. Perché un'analisi deve poter essere rieseguita dall'inizio?
+4. Che cosa permette e che cosa non permette di concludere `lm()`?

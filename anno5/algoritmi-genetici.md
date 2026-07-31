@@ -71,3 +71,29 @@ Un algoritmo genetico:
 ## 6. Laboratorio
 
 Realizza o completa un algoritmo genetico per una funzione semplice o per lo zaino. Confronta più esecuzioni e documenta qualità, tempo e variabilità.
+
+## 7. Esperimento controllato
+
+Esegui almeno dieci volte l'algoritmo con gli stessi parametri ma semi casuali
+diversi. Registra migliore fitness, numero di generazioni e tempo. Ripeti cambiando
+un solo parametro, per esempio dimensione della popolazione o probabilità di
+mutazione.
+
+Confronta poi il risultato con una strategia semplice o, per istanze piccole, con
+la ricerca completa. Un metodo evolutivo è utile soltanto se il confronto mostra
+un vantaggio adeguato al problema.
+
+## 8. Errori frequenti
+
+- valutare il metodo con una sola esecuzione;
+- progettare una fitness che non rappresenta il vero obiettivo;
+- modificare molti parametri insieme;
+- dichiarare “ottima” la migliore soluzione trovata senza conoscere l'ottimo;
+- usare un algoritmo genetico quando un metodo diretto è più semplice.
+
+## 9. Verifica
+
+1. Quali ruoli hanno selezione, ricombinazione e mutazione?
+2. Perché più esecuzioni possono produrre risultati diversi?
+3. Come si valuta la qualità di una funzione di fitness?
+4. Perché è necessario un metodo di confronto?

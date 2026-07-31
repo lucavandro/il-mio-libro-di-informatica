@@ -59,7 +59,28 @@ plt.show()
 
 Due valori possono variare insieme senza che uno causi l'altro. Prima di formulare una conclusione si cercano spiegazioni alternative e si controlla il metodo di raccolta.
 
-## 6. Progetto
+## 6. Scegliere il grafico
+
+| Domanda | Grafico adatto |
+|---|---|
+| come cambia un valore nel tempo? | linea |
+| come si confrontano categorie? | barre |
+| come sono distribuite le misure? | istogramma |
+| esiste una relazione tra due variabili? | dispersione |
+
+Assi, unità di misura e titolo devono permettere di capire il grafico senza
+ricostruire il codice. L'asse verticale non deve essere tagliato in modo da
+esagerare differenze piccole.
+
+## 7. Errori frequenti
+
+- calcolare una media senza esaminare valori mancanti o anomali;
+- scegliere il grafico per estetica invece che per la domanda;
+- confondere correlazione e causalità;
+- nascondere punti che non confermano l'ipotesi;
+- usare troppe categorie, colori o cifre decimali.
+
+## 8. Progetto
 
 Scegli un piccolo dataset scientifico. Consegna:
 
@@ -70,3 +91,9 @@ Scegli un piccolo dataset scientifico. Consegna:
 - due grafici;
 - interpretazione;
 - limiti dell'analisi.
+
+## 9. Verifica
+
+1. Quali controlli precedono il calcolo degli indicatori?
+2. Quando sono adatti linea, barre, istogramma e dispersione?
+3. Perché una correlazione non dimostra una causa?

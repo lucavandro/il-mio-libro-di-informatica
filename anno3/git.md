@@ -71,3 +71,28 @@ Regole:
 4. Correggi un errore e confronta le versioni.
 5. Crea un branch per un grafico.
 6. Unisci il lavoro e mostra la cronologia.
+
+## 7. Leggere le differenze
+
+Prima di creare un commit si controllano i file modificati e le righe aggiunte o
+rimosse. Non si registrano automaticamente file temporanei, password, ambienti
+virtuali o grandi dati generati: un file `.gitignore` dichiara ciò che non deve
+entrare nella cronologia.
+
+Un buon messaggio completa la frase “Questa versione…”, per esempio “aggiunge il
+controllo dei voti” o “corregge il calcolo della media”. “Modifiche” non permette
+di capire lo scopo.
+
+## 8. Conflitti
+
+Un conflitto compare quando due versioni modificano la stessa parte in modi che
+Git non può unire automaticamente. Si leggono entrambe le proposte, si costruisce
+la versione corretta, si prova il programma e soltanto dopo si registra la
+risoluzione. Non si sceglie una parte a caso per eliminare il messaggio.
+
+## 9. Verifica
+
+1. Qual è la differenza tra repository e commit?
+2. Perché sono preferibili commit piccoli e significativi?
+3. Quando è utile un branch?
+4. Come si risolve responsabilmente un conflitto?

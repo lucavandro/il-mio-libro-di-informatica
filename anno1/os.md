@@ -124,3 +124,26 @@ Una copia sullo stesso disco non è un vero backup. Una strategia semplice conse
 3. Copiala in una posizione di backup.
 4. Modifica un file.
 5. Recupera la versione precedente.
+
+## 9. Errori frequenti
+
+- salvare tutti i file nella stessa cartella senza nomi significativi;
+- confondere memoria RAM e spazio di archiviazione;
+- chiudere forzatamente un programma senza attendere il salvataggio;
+- lavorare sempre con un account amministratore;
+- considerare sincronizzazione e backup come sinonimi;
+- eseguire comandi copiati senza comprenderne destinazione ed effetto.
+
+## 10. Progetto: organizzare un ambiente di lavoro
+
+Prepara una struttura di cartelle per un progetto scolastico con documenti, dati,
+immagini e versioni finali. Definisci nomi coerenti, permessi essenziali e una
+procedura di backup. Simula poi la perdita di un file e documenta il recupero.
+
+## 11. Verifica
+
+1. Quali compiti svolge il sistema operativo?
+2. Qual è la differenza tra programma e processo?
+3. Perché i percorsi dei file sono importanti?
+4. A che cosa servono utenti e permessi?
+5. Perché una copia sullo stesso disco non è un backup sufficiente?

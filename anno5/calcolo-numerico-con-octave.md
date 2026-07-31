@@ -107,3 +107,32 @@ Scegli un problema scientifico basato su:
 - confronto tra dati e modello.
 
 Consegna codice, grafici, spiegazione, controllo dell'errore e limiti.
+
+## 8. Rendere il calcolo verificabile
+
+Prima di accettare un risultato:
+
+1. controlla dimensioni di vettori e matrici;
+2. prova un caso di cui conosci la soluzione;
+3. calcola un residuo, quando possibile;
+4. confronta il risultato con ordine di grandezza e unità attese;
+5. modifica leggermente i dati e osserva la stabilità.
+
+Per un sistema `A * x = b`, il residuo `norm(A * x - b)` dovrebbe essere piccolo.
+Un residuo piccolo non garantisce però che dati imprecisi producano una soluzione
+stabile.
+
+## 9. Errori frequenti
+
+- confondere `*` con `.*` e `/` con `./`;
+- usare matrici con dimensioni incompatibili;
+- estrapolare un'interpolazione fuori dall'intervallo;
+- mostrare molte cifre senza considerare l'errore dei dati;
+- affidarsi al grafico senza un controllo numerico.
+
+## 10. Verifica
+
+1. Qual è la differenza tra operazione matriciale ed elemento per elemento?
+2. Come si controlla la soluzione di un sistema lineare?
+3. Perché interpolazione ed estrapolazione non sono equivalenti?
+4. Quali informazioni rendono riproducibile un esperimento numerico?
